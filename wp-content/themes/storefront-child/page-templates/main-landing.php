@@ -19,74 +19,86 @@ Template Post Type: post, page, product
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6 col-12 card-product-col">
-                <div class="card-product">
-                    <div class="card-product__header">
-                        <p class="card-product__title">Готовая бетонная смесь</p>
-                        <p class="card-product__marks"><img src="/wp-content/themes/storefront-child/svg/svg-mark.svg"
-                                                            alt="mark">М-100, М-150, М-200, М-250, М-300, М-350, М-400
-                        </p>
-                    </div>
-                    <div class="card-product__body">
-                        <div class="card-product-item">
-                            <a href="#">
-                                <img src="/wp-content/themes/storefront-child/images/card-product-item-example.jpg"
-                                     alt="">
-                                <p>НА ГРАНИТНОМ ЩЕБНЕ М1000 ></p>
-                            </a>
-                        </div>
-                        <div class="card-product-item">
-                            <a href="#">
-                                <img src="/wp-content/themes/storefront-child/images/card-product-item-example.jpg"
-                                     alt="">
-                                <p>НА ГРАНИТНОМ ЩЕБНЕ М1000 ></p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-12 card-product-col">
-                <div class="card-product">
-                    <div class="card-product__header">
-                        <p class="card-product__title">Цементный кладочный раствор</p>
-                        <p class="card-product__marks">
-                            <img src="/wp-content/themes/storefront-child/svg/svg-mark.svg"
-                                 alt="mark">
-                            М-100, М-150, М-200
-                        </p>
-                    </div>
-                    <div class="card-product__body">
-                        <div class="card-product-item">
-                            <a href="#">
-                                <img src="/wp-content/themes/storefront-child/images/card-product-item-example.jpg"
-                                     alt="">
-                                <p>ПОДРОБНЕЕ ></p>
-                            </a>
-                        </div>
-                        <div class="card-product-item">
+            <?php
+            $orderby = 'name';
+            $order = 'asc';
+            $hide_empty = true;
+            $cat_args = array(
+                'orderby' => $orderby,
+                'order' => $order,
+                'hide_empty' => $hide_empty,
+            );
+
+            $product_categories = get_terms('product_cat', $cat_args);
+
+            if (!empty($product_categories)) :
+
+                foreach ($product_categories as $key => $category):
+                    ?>
+                    <div class="col-lg-6 col-12 card-product-col">
+                        <div class="card-product">
+                            <div class="card-product__header">
+                                <p class="card-product__title"><?= $category->name ?></p>
+                                <p class="card-product__marks">
+                                    <img src="/wp-content/themes/storefront-child/svg/svg-mark.svg" alt="mark">
+                                    М-100, М-150, М-200, М-250, М-300, М-350, М-400
+                                </p>
+                            </div>
+                            <div class="card-product__body">
+                                <div class="card-product-item">
+                                    <a href="/gotovaya-betonnaya-smes-na-gravijnom-granitom-shhebne">
+                                        <img src="/wp-content/themes/storefront-child/images/card-product-item-example.jpg"
+                                             alt="">
+                                        <p>НА ГРАНИТНОМ ЩЕБНЕ М1000 ></p>
+                                    </a>
+                                </div>
+                                <div class="card-product-item">
+                                    <a href="/gotovaya-betonnaya-smes-na-gravijnom-granitom-shhebne">
+                                        <img src="/wp-content/themes/storefront-child/images/card-product-item-example.jpg"
+                                             alt="">
+                                        <p>НА ГРАНИТНОМ ЩЕБНЕ М1000 ></p>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-12 card-product-col">
+                <?php endforeach; endif; ?>
+            <div class="col-lg-6 col-12 card-product-col mb-0">
                 <div class="card-product">
                     <div class="card-product__header">
                         <p class="card-product__title">Специальные добавки и пластификаторы</p>
                         <p class="card-product__marks">
-                            <img src="/wp-content/themes/storefront-child/svg/svg-mark.svg"
+                            <img src="/wp-content/themes/storefront-child/svg/svg-arrow-up.svg"
                                  alt="mark">
                             Противоморозные, водонепроницаемые, повышающие эластичность, меняющие время схватывания*
                         </p>
                     </div>
                     <div class="card-product__body">
-                        <div class="card-product-item">
-                            <a href="#">
-                                <img src="/wp-content/themes/storefront-child/images/card-product-item-example.jpg"
-                                     alt="">
-                                <p>ПОДРОБНЕЕ ></p>
-                            </a>
+                        <div class="card-product-item w-100">
+                            <img src="/wp-content/themes/storefront-child/images/card-product-adds.jpg"
+                                 alt="">
+                            <p>*Нужный тип и пропорции подбираются индивидуально</p>
                         </div>
-                        <div class="card-product-item">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 card-product-col">
+                <div class="card-product">
+                    <div class="card-product__header">
+                        <p class="card-product__title">Продукция изготовлена по нормам ГОСТ 7473-2010</p>
+                        <p class="card-product__marks">
+                            <img src="/wp-content/themes/storefront-child/svg/svg-mark.svg"
+                                 alt="mark">
+                            государственный стандарт от 01.01.2012
+                        </p>
+                    </div>
+                    <div class="card-product__body">
+                        <div class="card-product-item gost w-100">
+                            <a href="#">
+                                <img src="/wp-content/themes/storefront-child/svg/svg-product-card-gost.svg"
+                                     alt="">
+                                <p>Посмотреть сертификаты ></p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -165,5 +177,6 @@ Template Post Type: post, page, product
 </div>
 <?php get_template_part('template-parts/delivery-zone', 'delivery-zone'); ?>
 <?php get_template_part('template-parts/companies', 'companies'); ?>
+<?php get_template_part('template-parts/prefooter', 'prefooter'); ?>
 
 <?php get_footer(); ?>

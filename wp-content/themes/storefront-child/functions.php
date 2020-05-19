@@ -327,3 +327,29 @@ function jk_related_products_args($args)
     return $args;
 }
 
+add_action('init', 'storefront_remove_storefront_breadcrumbs');
+
+function storefront_remove_storefront_breadcrumbs()
+{
+    remove_action('storefront_before_content', 'woocommerce_breadcrumb', 10);
+}
+
+function add_help_banner($title = 'Не можете определиться?')
+{
+    return
+        '<div class="bg-blue help-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-12 help-banner-left">
+                        <p class="help-banner__header">' . $title . '</p>
+                        <p class="help-banner__after-header">Проконсультируем и подберем необходимую продукцию</p>
+                        <button class="btn btn-outline-white">Получить консультацию</button>
+                        <p class="help-banner__info">*Отправляя свои данные, вы соглашаетесь на обработку персональных данных</p>
+                    </div>
+                    <div class="col-lg-5 col-12 pl-0 m-auto">
+                        <img src="/wp-content/themes/storefront-child/images/img-help-banner.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>';
+}

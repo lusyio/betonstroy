@@ -266,7 +266,7 @@ ul.menu li.current-menu-item > a:before {
     height: 300px;
 }
 
-.header-card.type-1{
+.header-card.type-1 {
     margin-top: 70px;
 }
 
@@ -281,7 +281,7 @@ ul.menu li.current-menu-item > a:before {
     height: 370px;
 }
 
-.header-card.type-3 .header-card__title{
+.header-card.type-3 .header-card__title {
     font-weight: bold;
     font-size: 25px;
     line-height: 25px;
@@ -766,7 +766,6 @@ footer.site-footer {
 
 .pre-footer .pre-footer__img {
     position: relative;
-    bottom: -20px;
 }
 
 /*--------------------------------------------------------------
@@ -852,6 +851,8 @@ footer.site-footer {
     line-height: 17px;
     color: #767676;
     margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
 }
 
 .card-product .card-product__body {
@@ -879,6 +880,11 @@ footer.site-footer {
     max-height: 150px;
     width: 100%;
     height: 100%;
+}
+
+.card-product-item.gost img {
+    border-radius: 0;
+    border: 0;
 }
 
 .card-product-item a p, .card-product-item a {
@@ -1313,6 +1319,586 @@ footer.site-footer {
     border: 3px solid #0C4988;
     margin-right: 20px;
 }
+
+.company-pluses {
+    padding: 70px 0;
+}
+
+.row .company-pluses-card-col {
+    padding: 0;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+
+.row .company-pluses-card-col:first-of-type {
+    padding-left: 15px;
+}
+
+.row .company-pluses-card-col:last-of-type {
+    padding-right: 15px;
+    margin-right: 0;
+}
+
+.company-pluses-card {
+    background: #FFFFFF;
+    padding: 37px 33px;
+    height: 260px;
+    position: relative;
+}
+
+.company-pluses-card img {
+    margin-bottom: 26px;
+    display: table;
+}
+
+.company-pluses-card .company-pluses-card__title {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.company-pluses-card .company-pluses-card__info {
+    font-size: 17px;
+    line-height: 17px;
+    color: #767676;
+    margin-bottom: 0;
+    max-width: 80%;
+}
+
+.company-pluses .company-pluses-card .company-pluses-card__link {
+    position: absolute;
+    bottom: 36px;
+    left: 33px;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 17px;
+    text-decoration-line: underline;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.mini-services {
+    padding: 70px 0;
+}
+
+.card-mini-services {
+    height: 450px;
+    padding: 41px 32px;
+}
+
+.card-mini-services.type-1 {
+    background: url("/wp-content/themes/storefront-child/images/bg-mini-type-1.jpg") no-repeat center;
+}
+
+.card-mini-services.type-2 {
+    background: url("/wp-content/themes/storefront-child/images/bg-mini-type-2.jpg") no-repeat center;
+}
+
+.card-mini-services.type-3 {
+    background: url("/wp-content/themes/storefront-child/images/bg-mini-type-3.jpg") no-repeat center;
+}
+
+.card-mini-services .card-mini-services__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.card-mini-services .card-mini-services__info {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.composition {
+    padding: 70px 0 115px 0;
+}
+
+.composition .composition__header {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 42px;
+    color: #FFFFFF;
+    margin-bottom: 14px;
+}
+
+.composition .composition__after-header {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-bottom: 70px;
+}
+
+.card-composition {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+    background: #fff;
+    padding: 37px 28px;
+    margin-bottom: 46px;
+    max-width: 310px;
+}
+
+.card-composition.card-composition-mb {
+    margin-bottom: 20px;
+}
+
+.card-composition .card-composition__title {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+    color: #000000;
+    margin-bottom: 11px;
+}
+
+.card-composition .card-composition__list {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 17px;
+    color: #767676;
+    margin-bottom: 0;
+}
+
+.composition .composition__info {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 17px;
+    color: #DDDDDD;
+    margin-bottom: 65px;
+}
+
+.composition__img {
+    background: url("/wp-content/themes/storefront-child/images/img-composition-type-1.png") no-repeat center;
+    width: 100%;
+    height: 100%;
+}
+
+.products-list {
+    padding: 70px 0 40px 0;
+}
+
+.products-list .products-list__header {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 42px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.products-list .products-list__after-header {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 17px;
+    color: #767676;
+    margin-bottom: 36px;
+}
+
+.card-products-list {
+    background: #FFFFFF;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+    margin-bottom: 30px;
+}
+
+.card-products-list__header {
+    padding: 50px 30px;
+    border-bottom: 2px solid #eee;
+    height: 325px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-products-list__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 53px;
+    position: relative;
+}
+
+.card-products-list__title:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+    border-bottom: 4px solid #0A5BAC;
+    width: 100%;
+    max-width: 127px;
+}
+
+.card-products-list__property {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 15px;
+    color: #767676;
+    background: #EEEEEE;
+    border-radius: 20px;
+    padding: 7px 15px;
+}
+
+.card-products-list__property img {
+    margin-right: 10px;
+}
+
+.card-products-list__body {
+    padding: 28px 30px 40px 30px;
+}
+
+.card-products-list__price {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 35px;
+}
+
+.card-products-list__btns {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card-products-list .btn.btn-primary {
+    background: #0A5BAC;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 23px;
+    width: 100%;
+    max-width: 230px;
+}
+
+.btn.btn-outline-primary {
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: #0A5BAC;
+    text-transform: uppercase;
+    padding: 23px;
+    width: 100%;
+    max-width: 230px;
+    border-radius: 5px;
+    background: #ffffff;
+    border: 1px solid #0A5BAC;
+}
+
+.card-products-list .btn.btn-outline-primary {
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: #0A5BAC;
+    text-transform: uppercase;
+    padding: 23px;
+    width: 100%;
+    max-width: 230px;
+    border-radius: 5px;
+    background: #ffffff;
+    border: 1px solid #0A5BAC;
+}
+
+.help-banner-left {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.help-banner .help-banner__header {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 42px;
+    color: #FFFFFF;
+    margin-bottom: 14px;
+}
+
+.help-banner .help-banner__after-header {
+    font-size: 17px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-bottom: 75px;
+}
+
+.btn.btn-outline-white {
+    padding: 23px;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.help-banner .btn.btn-outline-white {
+    padding: 23px;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.help-banner .help-banner__info {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    color: #DDDDDD;
+    margin-bottom: 0;
+}
+
+.team {
+    padding: 70px 0;
+}
+
+.team .team__header {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 42px;
+    color: #000000;
+    margin-bottom: 14px;
+}
+
+.team .team__after-header {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 17px;
+    color: #767676;
+    margin-bottom: 36px;
+}
+
+.card-team {
+    background: #fff;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+.card-team .card-team__header {
+    border-bottom: 8px solid #0A5BAC;
+    height: 350px;
+    background: url("/wp-content/themes/storefront-child/images/img-team-wooman-example.jpg") center;
+}
+
+.card-team .card-team__body {
+    padding: 32px;
+}
+
+.card-team .card-team__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 12px;
+    max-width: 85%;
+}
+
+.card-team .card-team__info {
+    font-size: 17px;
+    line-height: 20px;
+    color: #767676;
+    margin-bottom: 19px;
+}
+
+.card-team .card-team__email {
+    font-size: 17px;
+    line-height: 20px;
+    color: #0A5BAC;
+}
+
+
+.about-block {
+    padding: 70px 0;
+}
+
+.about-block .about-block__header {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    color: #FFFFFF;
+    margin-bottom: 44px;
+}
+
+.about-block .about-block__after-header {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-bottom: 7px;
+}
+
+.about-block .about-block__info {
+    margin-bottom: 65px;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.about-block .about-block__point img {
+    margin-bottom: 15px;
+}
+
+.about-block .about-block__point p {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.passports {
+    padding: 70px 0 40px 0;
+}
+
+.passports .passports__header {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 42px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.passports .passports__after-header {
+    font-size: 17px;
+    line-height: 17px;
+    color: #767676;
+    margin-bottom: 35px;
+}
+
+.card-passport {
+    border: 1px solid #DDDDDD;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.card-passport .card-passport__img {
+    margin-right: 20px;
+    padding: 18px;
+    border-radius: 50%;
+    background: #0A5BAC;
+    width: 100%;
+    height: 100%;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.card-passport .card-passport__title {
+    font-size: 17px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.card-passport a {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 17px;
+    text-decoration-line: underline;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.contacts-left {
+    padding: 70px 0;
+}
+
+.contacts .contacts__header {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 42px;
+    color: #000000;
+    margin-bottom: 14px;
+}
+
+.contacts .contacts__after-header {
+    font-size: 17px;
+    line-height: 17px;
+    color: #767676;
+    margin-bottom: 70px;
+}
+
+.contacts .contacts__title {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+    color: #000000;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.contacts .contacts__title:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+    width: 100%;
+    max-width: 127px;
+    border-bottom: 4px solid #0A5BAC;
+}
+
+.contacts .contacts__map {
+    background: url("/wp-content/themes/storefront-child/images/img-contacts-map.jpg") center;
+    width: 100%;
+    height: 100%;
+}
+
+.card-certificate {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    position: relative;
+    margin-bottom: 21px;
+}
+
+.card-certificate .card-certificate__header {
+    height: 367px;
+    padding: 42px;
+    background: #EEEEEE;
+}
+
+.card-certificate .card-certificate__body {
+    padding: 30px;
+    height: 171px;
+}
+
+.card-certificate .card-certificate__title {
+    font-size: 17px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.card-certificate a {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 17px;
+    text-decoration-line: underline;
+    color: #000000;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.card-certificate__header img {
+    display: table;
+    margin: auto;
+}
+
 
 /*--------------------------------------------------------------
 # MEDIA
