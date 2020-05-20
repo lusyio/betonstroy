@@ -23,9 +23,79 @@
 <?php do_action('storefront_before_site'); ?>
 
 <div id="page" class="hfeed site">
+    <?php
+    $header_bg = get_field('header_bg');
+    $header_size = get_field('header_size');
+    $widget_type = get_field('widget_type');
+    $title_size = get_field('title_size');
+    $widget = '';
+    $after_header = null;
+
+
+    $page_slug = $post->post_name;
+
+    switch ($widget_type) {
+        case 'type_1':
+            $widget = '<div class="container">
+            <div class="header-cards container">
+                <div class="header-card type-1">
+                    <p class="header-card__title">Мы производим</p>
+                    <p class="header-card__text">цементный раствор, бетонные смеси всех классов на гравийном и гранитном
+                        щебне</p>
+                </div>
+                <div class="header-card type-2">
+                    <p class="header-card__title">156 компаний</p>
+                    <p class="header-card__text">доверяют нашей продукции</p>
+                </div>
+                <div class="header-card type-3">
+                    <p class="header-card__title">Мы производим</p>
+                    <p class="header-card__text">цементный раствор, бетонные смеси всех классов на гравийном и гранитном
+                        щебне</p>
+                </div>
+                </div>
+            </div>';
+            break;
+        case 'type_2':
+            $after_header = '<p class="header-products-list">Классы ' . get_product_titles_by_category($page_slug) . '</p>
+            <div class="row">
+                <div class="col-lg-3 col-12 header-card-products">
+                    <img src="/wp-content/themes/storefront-child/svg/svg-storage.svg" alt="">
+                    <p class="header-card-products__title">10 000 м³</p>
+                    <p>расходников на складе</p>
+                </div>
+                <div class="col-lg-3 col-12 header-card-products">
+                    <img src="/wp-content/themes/storefront-child/svg/svg-header-discount.svg" alt="">
+                    <p class="header-card-products__title">на 12 %</p>
+                    <p>дешевле рынка</p>
+                </div>
+            </div>';
+            $widget = '<div class="bg-blue header-widget-catalog">
+            <div class="container">
+                <p class="header-widget-catalog__title">Получите каталог продукции за 3 клика</p>
+                <p class="header-widget-catalog__info">Каталог даст доступ к ценам со скидкой до 15%</p>
+                <div class="header-widget-catalog__block">
+                    <div class="header-widget-catalog__inputs">
+                        <div>
+                            <label for="catalogName">Имя</label>
+                            <input id="catalogName" type="text" placeholder="Ваше имя">
+                        </div>
+                        <div>
+                            <label for="catalogPhone">Телефон</label>
+                            <input id="catalogPhone" type="text" placeholder="Ваше имя">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>';
+            break;
+        case 'none':
+            $widget = null;
+            break;
+    }
+    ?>
     <?php do_action('storefront_before_header'); ?>
     <div class="header-bg position-relative"
-         style="height: 900px;background-image: url(/wp-content/themes/storefront-child/images/bg-main.jpg);">
+         style="height: <?= $header_size === 'big' ? 900 : 633 ?>px;background-image: url(<?= $header_bg ? $header_bg : '/wp-content/themes/storefront-child/images/bg-main.jpg' ?>);">
 
         <header id="masthead" class="site-header" role="banner">
             <div class="container">
@@ -77,30 +147,18 @@
                         </div>
                     </div>
 
-                    <a href="tel:+74957732353">+7 (495) 773-23-53</a>
+                    <a class="header-phone" href="tel:+74957732353">+7 (495) 773-23-53</a>
                 </nav>
             </div>
 
         </header><!-- #masthead -->
         <div class="container">
-            <h1 class="header-h1"><?= get_bloginfo('name') ?></h1>
-            <div class="header-cards container">
-                <div class="header-card type-1">
-                    <p class="header-card__title">Мы производим</p>
-                    <p class="header-card__text">цементный раствор, бетонные смеси всех классов на гравийном и гранитном
-                        щебне</p>
-                </div>
-                <div class="header-card type-2">
-                    <p class="header-card__title">156 компаний</p>
-                    <p class="header-card__text">доверяют нашей продукции</p>
-                </div>
-                <div class="header-card type-3">
-                    <p class="header-card__title">Мы производим</p>
-                    <p class="header-card__text">цементный раствор, бетонные смеси всех классов на гравийном и гранитном
-                        щебне</p>
-                </div>
-            </div>
+            <h1 class="header-h1"
+                style="font-size: <?= $title_size ? (int)$title_size : 110 ?>px; line-height: <?= $title_size ? (int)$title_size : 110 ?>px"><?= get_field('header_title') ?></h1>
+            <?= $after_header ?>
         </div>
+        <?= $widget ?>
+
     </div>
 
 

@@ -7,7 +7,9 @@ Template Post Type: post, page, product
 
 <?php get_header(); ?>
 
-
+<?php
+$page_slug = $post->post_name;
+?>
 </div>
 </div>
 <?php get_template_part('template-parts/company-pluses', 'company-pluses'); ?>
@@ -60,62 +62,7 @@ Template Post Type: post, page, product
     </div>
 </div>
 
-<div class="bg-grey products-list">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <p class="products-list__header">Каталог продукции</p>
-                <p class="products-list__after-header">Готовая бетонная смесь на гравийном/гранитном щебне</p>
-            </div>
-        </div>
-        <div class="row">
-            <?php
-            $query = new WC_Product_Query(array(
-                'limit' => -1,
-            ));
-
-            // получаем массив с продуктами
-            $products = $query->get_products();
-            ?>
-            <div class="col-lg-6 col-12">
-                <div class="card-products-list">
-                    <div class="card-products-list__header">
-                        <div>
-                            <p class="card-products-list__title">М-100</p>
-                            <span class="card-products-list__property"><img src="/wp-content/themes/storefront-child/svg/svg-низкая-прочность.svg" alt=""> низкая прочность</span>
-                        </div>
-                        <img src="/wp-content/themes/storefront-child/images/М-100 Бетон.png" alt="">
-                    </div>
-                    <div class="card-products-list__body">
-                        <p class="card-products-list__price">3 350 ₽/м³</p>
-                        <div class="card-products-list__btns">
-                            <button class="btn btn-primary">Оставить заявку</button>
-                            <button class="btn btn-outline-primary">Расчет стоимости ></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-12">
-                <div class="card-products-list">
-                    <div class="card-products-list__header border-0">
-                        <div style="margin-right: 25px;">
-                            <p class="card-products-list__title">Получите каталог в 2 клика</p>
-                            <p>Каталог даст доступ к ценам со скидкой до 15%</p>
-                        </div>
-                        <img src="/wp-content/themes/storefront-child/svg/svg-discount.svg" alt="">
-                    </div>
-                    <div class="card-products-list__body">
-                        <div class="card-products-list__btns">
-                            <button class="btn btn-primary">Оставить заявку</button>
-                            <button class="btn btn-outline-primary">Расчет стоимости ></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?= get_products_by_category_slug($page_slug) ?>
 <?= add_help_banner() ?>
 <div class="bg-white mini-services">
     <div class="container">

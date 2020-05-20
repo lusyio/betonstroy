@@ -353,3 +353,178 @@ function add_help_banner($title = 'Не можете определиться?')
             </div>
         </div>';
 }
+
+function get_products_by_category_slug($slug)
+{
+    $args = array(
+        'category' => array($slug),
+    );
+    $products = wc_get_products($args);
+    ob_start();
+    ?>
+    <div class="bg-grey products-list">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="products-list__header">Каталог продукции</p>
+                    <p class="products-list__after-header">Готовая бетонная смесь на гравийном/гранитном щебне</p>
+                </div>
+            </div>
+            <div class="row">
+                <?php
+                foreach (array_reverse($products) as $product):
+                    $durability = mb_strtolower(get_post_meta($product->get_id(), 'durability', true));
+                    $density = get_post_meta($product->get_id(), 'density', true);
+                    $props = get_post_meta($product->get_id(), 'properties', true);
+                    $image_id = $product->get_image_id();
+                    $properties = [];
+                    $icon = '';
+                    if ($durability) {
+                        switch ($durability) {
+                            case 'пластичный':
+                                $icon = '/wp-content/themes/storefront-child/svg/пластичный.svg';
+                                $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
+                                break;
+                            case 'высокооднородный':
+                                $icon = '/wp-content/themes/storefront-child/svg/Высокооднородный.svg';
+                                $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
+                                break;
+                            case 'низкая прочность':
+                                $icon = '/wp-content/themes/storefront-child/svg/низкая прочность.svg';
+                                $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
+                                break;
+                            case 'средняя прочность':
+                                $icon = '/wp-content/themes/storefront-child/svg/средняя прочность.svg';
+                                $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
+                                break;
+                            case 'высокая прочность':
+                                $icon = '/wp-content/themes/storefront-child/svg/высокая прочность.svg';
+                                $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
+                                break;
+                            case 'повышенная прочность':
+                                $icon = '/wp-content/themes/storefront-child/svg/повышенная прочность.svg';
+                                $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
+                                break;
+                            case 'экстремальная прочность' :
+                                $icon = '/wp-content/themes/storefront-child/svg/экстремальная прочность.svg';
+                                $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
+                                break;
+                        }
+                    }
+                    if ($density) {
+                        $icon = '/wp-content/themes/storefront-child/svg/Плотность.svg';
+                        $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="плотность">плотность ' . $density . ' кг/м³</span>';
+                    }
+                    if (is_array($props)) {
+                        foreach ($props as $prop) {
+                            $lowerProp = mb_strtolower($prop);
+                            switch ($lowerProp) {
+                                case 'подготовка фундамента':
+                                case 'подготовительные работы':
+                                    $icon = '/wp-content/themes/storefront-child/svg/Подготовительные работы.svg';
+                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
+                                    break;
+                                case 'для стяжек':
+                                    $icon = '/wp-content/themes/storefront-child/svg/Стяжка.svg';
+                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
+                                    break;
+                                case 'для заливки фундамента':
+                                    $icon = '/wp-content/themes/storefront-child/svg/Заливка бетона.svg';
+                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
+                                    break;
+                                case 'несущие конструкции':
+                                    $icon = '/wp-content/themes/storefront-child/svg/Несущие конструкции.svg';
+                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
+                                    break;
+                                case 'монолитный фундамент':
+                                case 'изготовление фундамента':
+                                    $icon = '/wp-content/themes/storefront-child/svg/Монолитный фундамент.svg';
+                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
+                                    break;
+                                case 'для жби':
+                                    $icon = '/wp-content/themes/storefront-child/svg/ЖБИ.svg';
+                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
+                                    break;
+                                case 'ответственные конструкции':
+                                    $icon = '/wp-content/themes/storefront-child/svg/Важные конструкции.svg';
+                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
+                                    break;
+                                case 'для кладки':
+                                    $icon = '/wp-content/themes/storefront-child/svg/Для кладки.svg';
+                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
+                                    break;
+                                case 'для выравнивания':
+                                    $icon = '/wp-content/themes/storefront-child/svg/Выравнивание.svg';
+                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
+                                    break;
+                                case 'для затирки':
+                                    $icon = '/wp-content/themes/storefront-child/svg/Для затирки.svg';
+                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
+                                    break;
+                            }
+                        }
+                    }
+                    ?>
+                    <div class="col-lg-6 col-12">
+                        <div class="card-products-list">
+                            <div class="card-products-list__header">
+                                <div>
+                                    <p class="card-products-list__title"><?= $product->name; ?></p>
+                                    <?php foreach ($properties as $property) {
+                                        echo $property;
+                                    } ?>
+                                </div>
+                                <img src="<?= wp_get_attachment_image_url($image_id, 'full'); ?>"
+                                     alt="<?= $product->name; ?>">
+                            </div>
+                            <div class="card-products-list__body">
+                                <p class="card-products-list__price"><?= $product->get_price(); ?> ₽/м³</p>
+                                <div class="card-products-list__btns">
+                                    <button class="btn btn-primary">Оставить заявку</button>
+                                    <button class="btn btn-outline-primary">Расчет стоимости ></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+                <div class="col-lg-6 col-12">
+                    <div class="card-products-list">
+                        <div class="card-products-list__header border-0">
+                            <div style="margin-right: 25px;">
+                                <p class="card-products-list__title">Получите каталог в 2 клика</p>
+                                <p>Каталог даст доступ к ценам со скидкой до 15%</p>
+                            </div>
+                            <img src="/wp-content/themes/storefront-child/svg/svg-discount.svg" alt="">
+                        </div>
+                        <div class="card-products-list__body">
+                            <div class="card-products-list__btns">
+                                <button class="btn btn-primary">Оставить заявку</button>
+                                <button class="btn btn-outline-primary">Расчет стоимости ></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+
+function get_product_titles_by_category($slug)
+{
+    $args = array(
+        'category' => array($slug),
+    );
+    $products = wc_get_products($args);
+    $titles = [];
+    foreach (array_reverse($products) as $productKey => $product) {
+        if ($productKey === array_key_last($products)) {
+            $comma = '';
+        } else {
+            $comma = ', ';
+        }
+        $titles[] = $product->name . $comma;
+    }
+    return implode($titles);
+}

@@ -56,23 +56,23 @@ Template Post Type: post, page, product
         <div class="row">
             <div class="col-lg-6 col-12">
                 <div class="card-team">
-                    <div class="card-team__header">
+                    <div class="card-team__header" style="background: url(<?= get_field('img_first') ?>) center;">
                     </div>
                     <div class="card-team__body">
-                        <p class="card-team__title">Иванова Анастасия Александровна</p>
-                        <p class="cart-team__info">Директор производства</p>
-                        <a class="cart-item__email" href="mailto:ivanova.bs@mail.ru">ivanova.bs@mail.ru</a>
+                        <p class="card-team__title"><?= get_field('fio_first') ?></p>
+                        <p class="cart-team__info"><?= get_field('post_first') ?></p>
+                        <a class="cart-item__email" href="mailto:<?= get_field('email_first') ?>"><?= get_field('email_first') ?></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-12">
                 <div class="card-team">
-                    <div class="card-team__header">
+                    <div class="card-team__header" style="background: url(<?= get_field('img_second') ?>) center;">
                     </div>
                     <div class="card-team__body">
-                        <p class="card-team__title">Андреев Алексей Федорович</p>
-                        <p class="cart-team__info">Директор отдела продаж</p>
-                        <a class="cart-item__email" href="mailto:andreev.bs@mail.ru">andreev.bs@mail.ru</a>
+                        <p class="card-team__title"><?= get_field('fio_second') ?></p>
+                        <p class="cart-team__info"><?= get_field('post_second') ?></p>
+                        <a class="cart-item__email" href="mailto:<?= get_field('email_second') ?>"><?= get_field('email_second') ?></a>
                     </div>
                 </div>
             </div>

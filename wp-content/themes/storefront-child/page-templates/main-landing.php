@@ -14,7 +14,7 @@ Template Post Type: post, page, product
     <div class="container">
         <div class="row main-products__header">
             <div class="col-12">
-                <p class="main-products__title">Продукция</p>
+                <p id="products" class="main-products__title">Продукция</p>
                 <p class="main-products__after-title">В соответствии с ГОСТ 7473-2010</p>
             </div>
         </div>
@@ -41,19 +41,19 @@ Template Post Type: post, page, product
                                 <p class="card-product__title"><?= $category->name ?></p>
                                 <p class="card-product__marks">
                                     <img src="/wp-content/themes/storefront-child/svg/svg-mark.svg" alt="mark">
-                                    М-100, М-150, М-200, М-250, М-300, М-350, М-400
+                                    <?= get_product_titles_by_category($category->slug) ?>
                                 </p>
                             </div>
                             <div class="card-product__body">
                                 <div class="card-product-item">
-                                    <a href="/gotovaya-betonnaya-smes-na-gravijnom-granitom-shhebne">
+                                    <a href="/<?= $category->slug; ?>">
                                         <img src="/wp-content/themes/storefront-child/images/card-product-item-example.jpg"
                                              alt="">
                                         <p>НА ГРАНИТНОМ ЩЕБНЕ М1000 ></p>
                                     </a>
                                 </div>
                                 <div class="card-product-item">
-                                    <a href="/gotovaya-betonnaya-smes-na-gravijnom-granitom-shhebne">
+                                    <a href="/<?= $category->slug; ?>">
                                         <img src="/wp-content/themes/storefront-child/images/card-product-item-example.jpg"
                                              alt="">
                                         <p>НА ГРАНИТНОМ ЩЕБНЕ М1000 ></p>
@@ -110,7 +110,7 @@ Template Post Type: post, page, product
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p class="main-services__header">Услуги</p>
+                <p id="services" class="main-services__header">Услуги</p>
             </div>
             <div class="col-12 card-service-col">
                 <div class="card-service type-1">
