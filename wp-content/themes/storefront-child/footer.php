@@ -12,6 +12,47 @@
 </div><!-- .row -->
 </div><!-- .container -->
 
+<div class="modal fade modal-primary" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-primary__close" data-dismiss="modal">
+                    <img src="/wp-content/themes/storefront-child/svg/svg-close-modal.svg" alt="">
+                </div>
+                <p class="modal-primary__title">Задайте интересующий вопрос</p>
+                <p class="modal-primary__info">Мы скоро перезвоним. Обычно это занимает 5-10 минут, в зависимости от
+                    загрузки операторов</p>
+                <div class="modal-primary-form">
+                    <?= do_shortcode('[caldera_form id="CF5ec6726734070"]') ?>
+                </div>
+                <p class="modal-primary__call">или перезвоните по телефону:</p>
+                <a class="modal-primary__phone" href="tel:79097007070">+7 (909) 700-70-70</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade modal-primary" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-primary__close" data-dismiss="modal">
+                    <img src="/wp-content/themes/storefront-child/svg/svg-close-modal.svg" alt="">
+                </div>
+                <p class="modal-primary__title">Не можете определиться?</p>
+                <p class="modal-primary__info">Проконсультируем и подберем необходимую продукцию</p>
+                <div class="modal-primary-form">
+                    <?= do_shortcode('[caldera_form id="CF5ec6726734070"]') ?>
+                </div>
+                <p class="modal-primary__call">или перезвоните по телефону:</p>
+                <a class="modal-primary__phone" href="tel:79097007070">+7 (909) 700-70-70</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <?php do_action('storefront_before_footer'); ?>
 
 <footer id="colophon" class="site-footer" role="contentinfo">

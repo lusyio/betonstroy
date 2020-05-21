@@ -62,6 +62,144 @@ $page_slug = $post->post_name;
     </div>
 </div>
 
+<div id="mySidenav" class="sidenav">
+    <div class="sidenav-header">
+        <a id="closeNav" class="closebtn">&times;</a>
+        <p class="sidenav-header__title">Рассчитать стоимость</p>
+    </div>
+    <div class="sidenav-body container">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <div class="payment-form">
+                    <div class="payment-form-block">
+                        <p class="payment-form__title">1. Выберите тип продукции</p>
+                        <label class="payment-form__label" for="">Готовая бетонная смесь</label>
+                        <select class="payment-form__select" name="" id="">
+                            <option value="М-100">М-100</option>
+                            <option value="М-150">М-150</option>
+                            <option value="М-200">М-200</option>
+                        </select>
+                        <label class="payment-form__label" for="">Цементный кладочный раствор</label>
+                        <select class="payment-form__select" name="" id="">
+                            <option value="М-100">М-100</option>
+                            <option value="М-150">М-150</option>
+                            <option value="М-200">М-200</option>
+                        </select>
+                    </div>
+                    <div class="payment-form-block">
+                        <p class="payment-form__title">2. Укажите необходимый объем</p>
+                        <label class="payment-form__label" for="">Объем поставки</label>
+                        <input class="input input-primary" placeholder="Например, 14м³" type="text">
+                    </div>
+                    <div class="payment-form-block">
+                        <p class="payment-form__title">3. Выберите вид доставки</p>
+                        <div class="card-delivery">
+                            <div class="d-flex">
+                                <img src="/wp-content/themes/storefront-child/svg/2м.svg" alt="">
+                                <p class="card-delivery__title">
+                                    Миксер
+                                    <span>2 м³, 2 500₽</span>
+                                </p>
+                            </div>
+                            <div class="card-delivery-counter">
+                                - 1 +
+                            </div>
+                        </div>
+                        <div class="card-delivery">
+                            <div class="d-flex">
+                                <img src="/wp-content/themes/storefront-child/svg/7м.svg" alt="">
+                                <p class="card-delivery__title">
+                                    Автобетонсмеситель 1
+                                    <span>7 м³, 3 500₽</span>
+                                </p>
+                            </div>
+                            <div class="card-delivery-counter">
+                                - 1 +
+                            </div>
+                        </div>
+                        <div class="card-delivery">
+                            <div class="d-flex">
+                                <img src="/wp-content/themes/storefront-child/svg/9м.svg" alt="">
+                                <p class="card-delivery__title">
+                                    Автобетонсмеситель 2
+                                    <span>9 м³, 3 500₽</span>
+                                </p>
+                            </div>
+                            <div class="card-delivery-counter">
+                                - 1 +
+                            </div>
+                        </div>
+                        <div class="card-delivery">
+                            <div class="d-flex">
+                                <img src="/wp-content/themes/storefront-child/svg/10м.svg" alt="">
+                                <p class="card-delivery__title">
+                                    Автобетонсмеситель 3
+                                    <span>10 м³, 3 500₽</span>
+                                </p>
+                            </div>
+                            <div class="card-delivery-counter">
+                                - 1 +
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-form-block">
+                        <p class="payment-form__title">4. Куда доставить продукцию</p>
+                        <label for="">
+                            <input name="delivery-km" type="radio">
+                            До 25 км от Сергиев Посада
+                        </label>
+                        <label for="">
+                            <input name="delivery-km" type="radio">
+                            Более 50 км от Сергиев Посада
+                        </label>
+                        <label for="">
+                            <input name="delivery-km" type="radio">
+                            Более 100 км от Сергиев Посада
+                        </label>
+                    </div>
+                    <div class="payment-form-block">
+                        <p class="payment-form__title">5. Когда доставить продукцию</p>
+                        <label class="payment-form__label" for="">Дата поставки</label>
+                        <input type="date" class="input input-primary" placeholder="22.03.20">
+                    </div>
+                    <div class="payment-form-block">
+                        <p class="payment-form__title">6. Подтвердить расчет</p>
+                        <?= do_shortcode('[caldera_form id="CF5ec694accab7e"]') ?>
+                    </div>
+                    <p>Мы перезвоним 1 раз, чтобы подтвердить расчет</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="card-cost">
+                    <div class="card-cost__header">
+                        <p class="card-cost__title">Стоимость доставки</p>
+                        <img src="/wp-content/themes/storefront-child/images/card-cost.png" alt="">
+                        <p class="card-cost__price">232 000 ₽*</p>
+                    </div>
+                    <div class="card-cost__footer">
+                        <p>*Конечная стоимость может отличаться от расчетной за счет: - дополнительного
+                            строительного оборудования - состава бетонного раствора - вида выбранного щебня -
+                            дополнительных добавок</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    jQuery(function ($) {
+        $('#closeNav').on('click', () => {
+            document.getElementById("mySidenav").style.width = '0'
+        })
+
+        $('.openNav').on('click', () => {
+            console.log('qwe')
+            document.getElementById("mySidenav").style.width = '80%'
+        })
+    })
+</script>
+
 <?= get_products_by_category_slug($page_slug) ?>
 <?= add_help_banner() ?>
 <div class="bg-white mini-services">

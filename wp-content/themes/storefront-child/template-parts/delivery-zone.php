@@ -1,5 +1,10 @@
 <div class="bg-grey delivery-zone">
-    <div class="container">
+    <div class="container position-relative">
+        <div class="delivery-zone__absolute">
+            <p>100 км</p>
+            <p>Радиус доставки нашего производства</p>
+        </div>
+
         <div class="row">
             <div class="col-12">
                 <p class="delivery-zone__header">Зона доставки</p>
@@ -11,9 +16,24 @@
                         чтобы узнать стоимость.</p>
                 </div>
                 <div class="position-relative">
-                    <div class="zone-100km"><div class="zone-100km__btn"><p>100</p><p>км</p></div></div>
-                    <div class="zone-50km"></div>
-                    <div class="zone-25km"></div>
+                    <div class="zone zone-100km">
+                        <div class="zone-100km__btn">
+                            <p>100</p>
+                            <p>км</p>
+                        </div>
+                    </div>
+                    <div class="zone zone-50km">
+                        <div class="zone-50km__btn">
+                            <p>50</p>
+                            <p>км</p>
+                        </div>
+                    </div>
+                    <div class="zone zone-25km">
+                        <div class="zone-25km__btn">
+                            <p>25</p>
+                            <p>км</p>
+                        </div>
+                    </div>
                     <img src="/wp-content/themes/storefront-child/svg/Доставка.svg" alt="delivery-zone">
                 </div>
             </div>

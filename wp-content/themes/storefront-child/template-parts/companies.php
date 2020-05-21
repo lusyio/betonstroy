@@ -1,4 +1,4 @@
-<div class="bg-companies companies">
+<div id="companies" class="bg-companies companies">
     <div class="container">
         <div class="row">
             <div class="col-12">

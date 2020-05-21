@@ -10,11 +10,11 @@ Template Post Type: post, page, product
 
 </div>
 </div>
-<div class="bg-grey main-products">
+<div id="products" class="bg-grey main-products">
     <div class="container">
         <div class="row main-products__header">
             <div class="col-12">
-                <p id="products" class="main-products__title">Продукция</p>
+                <p class="main-products__title">Продукция</p>
                 <p class="main-products__after-title">В соответствии с ГОСТ 7473-2010</p>
             </div>
         </div>
@@ -94,9 +94,9 @@ Template Post Type: post, page, product
                     </div>
                     <div class="card-product__body">
                         <div class="card-product-item gost w-100">
+                            <p class="text-gost">ГОСТ <br> 7473-2010</p>
+
                             <a href="#">
-                                <img src="/wp-content/themes/storefront-child/svg/svg-product-card-gost.svg"
-                                     alt="">
                                 <p>Посмотреть сертификаты ></p>
                             </a>
                         </div>
@@ -106,11 +106,11 @@ Template Post Type: post, page, product
         </div>
     </div>
 </div>
-<div class="bg-white main-services">
+<div id="services" class="bg-white main-services">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p id="services" class="main-services__header">Услуги</p>
+                <p class="main-services__header">Услуги</p>
             </div>
             <div class="col-12 card-service-col">
                 <div class="card-service type-1">
@@ -130,7 +130,7 @@ Template Post Type: post, page, product
                     <p class="card-service__info">
                         Бетононасос со стрелой 22 м, 42 м Миксер на 2 м3, 3 м3, 7 м3, 9 м3, 10 м3
                     </p>
-                    <a href="#">Узнать о наличии техники</a>
+                    <a data-toggle="modal" data-target="#questionModal" href="#">Узнать о наличии техники</a>
                 </div>
             </div>
         </div>

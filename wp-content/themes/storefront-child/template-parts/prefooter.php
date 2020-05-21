@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <p class="pre-footer__or">или оставьте заявку</p>
-                <button class="btn btn-primary">Задать вопрос</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#questionModal">Задать вопрос</button>
             </div>
             <div class="col-lg-5 col-12 m-auto">
                 <img class="pre-footer__img" src="/wp-content/themes/storefront-child/images/pre-footer.png"

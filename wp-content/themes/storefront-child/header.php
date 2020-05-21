@@ -39,18 +39,22 @@
             $widget = '<div class="container">
             <div class="header-cards container">
                 <div class="header-card type-1">
+                    <img src="/wp-content/themes/storefront-child/svg/Завод.svg" alt="">
                     <p class="header-card__title">Мы производим</p>
                     <p class="header-card__text">цементный раствор, бетонные смеси всех классов на гравийном и гранитном
                         щебне</p>
+                    <a class="header-card__link" href="/#products">Продукция ></a>
                 </div>
                 <div class="header-card type-2">
+                    <img src="/wp-content/themes/storefront-child/svg/Доверие.svg" alt="">
                     <p class="header-card__title">156 компаний</p>
                     <p class="header-card__text">доверяют нашей продукции</p>
+                    <a class="header-card__link" href="/#companies">О компании ></a>
                 </div>
                 <div class="header-card type-3">
-                    <p class="header-card__title">Мы производим</p>
-                    <p class="header-card__text">цементный раствор, бетонные смеси всех классов на гравийном и гранитном
-                        щебне</p>
+                    <p class="header-card__title">Быстрый расчет стоимости заказа</p>
+                    <p class="header-card__text">Мы перезвоним в течении 5 минут</p>
+                    ' . do_shortcode("[caldera_form id=\"CF5ec66084d9ee4\"]") . '
                 </div>
                 </div>
             </div>';
@@ -73,18 +77,9 @@
             <div class="container">
                 <p class="header-widget-catalog__title">Получите каталог продукции за 3 клика</p>
                 <p class="header-widget-catalog__info">Каталог даст доступ к ценам со скидкой до 15%</p>
-                <div class="header-widget-catalog__block">
-                    <div class="header-widget-catalog__inputs">
-                        <div>
-                            <label for="catalogName">Имя</label>
-                            <input id="catalogName" type="text" placeholder="Ваше имя">
-                        </div>
-                        <div>
-                            <label for="catalogPhone">Телефон</label>
-                            <input id="catalogPhone" type="text" placeholder="Ваше имя">
-                        </div>
-                    </div>
-                </div>
+             
+                       ' . do_shortcode("[caldera_form id=\"CF5ec6632547f29\"]") . '
+       
             </div>
         </div>';
             break;
@@ -101,7 +96,13 @@
             <div class="container">
                 <nav class="navbar navbar-dark navbar-expand-xl p-0 justify-content-between">
                     <div class="navbar-brand">
-                        Производство в
+                        <a class="navbar-brand__link" href="/">
+                            <img src="/wp-content/themes/storefront-child/svg/Местоположение.svg" alt="">
+                            <p>
+                                <span>Производство в</span>
+                                Сергиевом Посаде
+                            </p>
+                        </a>
                     </div>
 
                     <div class="d-flex">

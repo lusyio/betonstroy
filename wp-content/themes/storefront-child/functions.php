@@ -45,8 +45,8 @@ function enqueue_child_theme_styles()
     wp_script_add_data('html5hiv', 'conditional', 'lt IE 9');
 
 // load swiper js and css
-    wp_enqueue_script('wp-swiper-js', get_stylesheet_directory_uri() . '/inc/assets/js/swiper.min.js', array(), '', true);
-    wp_enqueue_style('wp-swiper-js', get_stylesheet_directory_uri() . '/inc/assets/css/swiper.min.css', array(), '', true);
+    wp_enqueue_script('wp-swiper-js', get_stylesheet_directory_uri() . '/inc/assets/js/swiper.min.js', array(), '');
+    wp_enqueue_style('wp-swiper-css', get_stylesheet_directory_uri() . '/inc/assets/css/swiper.min.css', array(), '');
 
 // load bootstrap js
     wp_enqueue_script('wp-bootstrap-starter-popper', get_stylesheet_directory_uri() . '/inc/assets/js/popper.min.js', array(), '', true);
@@ -336,6 +336,10 @@ function storefront_remove_storefront_breadcrumbs()
 
 function add_help_banner($title = 'Не можете определиться?')
 {
+    $modal = '';
+    $title
+        ? $modal = '#helpModal'
+        : $modal = '#questionModal';
     return
         '<div class="bg-blue help-banner">
             <div class="container">
@@ -343,7 +347,7 @@ function add_help_banner($title = 'Не можете определиться?')
                     <div class="col-lg-7 col-12 help-banner-left">
                         <p class="help-banner__header">' . $title . '</p>
                         <p class="help-banner__after-header">Проконсультируем и подберем необходимую продукцию</p>
-                        <button class="btn btn-outline-white">Получить консультацию</button>
+                        <button data-toggle="modal" data-target="' . $modal . '" class="btn btn-outline-white">Получить консультацию</button>
                         <p class="help-banner__info">*Отправляя свои данные, вы соглашаетесь на обработку персональных данных</p>
                     </div>
                     <div class="col-lg-5 col-12 pl-0 m-auto">
@@ -481,7 +485,7 @@ function get_products_by_category_slug($slug)
                                 <p class="card-products-list__price"><?= $product->get_price(); ?> ₽/м³</p>
                                 <div class="card-products-list__btns">
                                     <button class="btn btn-primary">Оставить заявку</button>
-                                    <button class="btn btn-outline-primary">Расчет стоимости ></button>
+                                    <button class="btn btn-outline-primary openNav">Расчет стоимости ></button>
                                 </div>
                             </div>
                         </div>
@@ -489,18 +493,15 @@ function get_products_by_category_slug($slug)
                 <?php endforeach; ?>
                 <div class="col-lg-6 col-12">
                     <div class="card-products-list">
-                        <div class="card-products-list__header border-0">
-                            <div style="margin-right: 25px;">
-                                <p class="card-products-list__title">Получите каталог в 2 клика</p>
-                                <p>Каталог даст доступ к ценам со скидкой до 15%</p>
+                        <div class="card-products-list__header d-block card-products-list-discount border-0">
+                            <div class="d-flex">
+                                <div style="margin-right: 25px;">
+                                    <p class="card-products-list__title">Получите каталог в 2 клика</p>
+                                    <p>Каталог даст доступ к ценам со скидкой до 15%</p>
+                                </div>
+                                <img src="/wp-content/themes/storefront-child/svg/svg-discount.svg" alt="">
                             </div>
-                            <img src="/wp-content/themes/storefront-child/svg/svg-discount.svg" alt="">
-                        </div>
-                        <div class="card-products-list__body">
-                            <div class="card-products-list__btns">
-                                <button class="btn btn-primary">Оставить заявку</button>
-                                <button class="btn btn-outline-primary">Расчет стоимости ></button>
-                            </div>
+                            <?= do_shortcode('[caldera_form id="CF5ec699f132044"]') ?>
                         </div>
                     </div>
                 </div>
@@ -527,4 +528,32 @@ function get_product_titles_by_category($slug)
         $titles[] = $product->name . $comma;
     }
     return implode($titles);
+}
+
+function get_post_gallery_images_with_info($postvar = NULL, $pos = 0)
+{
+    if (!isset($postvar)) {
+        global $post;
+        $postvar = $post;
+    }
+    $post_content = $postvar->post_content;
+    if ($pos) {
+        $post_content = preg_split('~\(:\)~', $post_content)[1];
+    }
+    preg_match('/\[gallery.*ids=.(.*).\]/', $post_content, $ids);
+    $images_id = explode(",", $ids[1]);
+    $image_gallery_with_info = array();
+    foreach ($images_id as $image_id) {
+        $attachment = get_post($image_id);
+        array_push($image_gallery_with_info, array(
+                'alt' => get_post_meta($attachment->ID, '_wp_attachment_image_alt', true),
+                'caption' => $attachment->post_excerpt,
+                'description' => $attachment->post_content,
+                'href' => get_permalink($attachment->ID),
+                'src' => $attachment->guid,
+                'title' => $attachment->post_title
+            )
+        );
+    }
+    return $image_gallery_with_info;
 }
