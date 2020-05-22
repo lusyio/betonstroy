@@ -320,6 +320,11 @@ $products2 = wc_get_products($args2);
         $beton.on('change', function () {
             let optionSelected = $("option:selected", this);
             let value = this.value;
+            if (value === 'none'){
+                $($beton).css('color', '#a4a4a4')
+            } else {
+                $($beton).css('color', '#000000')
+            }
             let price = optionSelected[0].dataset.price
             $('.beton').val(value);
             beton = price
@@ -329,6 +334,11 @@ $products2 = wc_get_products($args2);
         $cement.on('change', function () {
             let optionSelected = $("option:selected", this);
             let value = this.value;
+            if (value === 'none'){
+                $($cement).css('color', '#a4a4a4')
+            } else {
+                $($cement).css('color', '#000000')
+            }
             let price = optionSelected[0].dataset.price
             $('.cement').val(value);
             cement = price

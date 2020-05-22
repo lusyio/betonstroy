@@ -121,19 +121,57 @@
                 </div><!-- close .site-info -->
             </div>
             <div class="col-12 col-lg-5">
-                <?php
-                if ($menu_items = wp_get_nav_menu_items('second')) {
-                    echo '<div class="footer-menu">';
-                    echo '<ul class="menu" id="menu-second">';
-                    foreach ((array)$menu_items as $key => $menu_item) {
-                        $title = $menu_item->title; // заголовок элемента меню (анкор ссылки)
-                        $url = $menu_item->url; // URL ссылки
-                        echo '<li class="mb-lg-3 mb-3"><a href="' . $url . '">' . $title . '</a></li>';
-                    }
-                    echo '</ul>';
-                    echo '</div>';
-                }
-                ?>
+                <div class="footer-menu">
+                    <ul id="menu-second" class="menu">
+                        <?php
+                        $menu_name = 'second';
+                        $menu = wp_get_nav_menu_object($menu_name);
+                        $menuitems = wp_get_nav_menu_items($menu->term_id, array('order' => 'DESC'));
+
+                        $count = 0;
+                        $submenu = false;
+
+                        foreach ($menuitems as $item):
+
+                            $link = $item->url;
+                            $title = $item->title;
+                            // item does not have a parent so menu_item_parent equals 0 (false)
+                            if (!$item->menu_item_parent):
+
+                                // save this id for later comparison with sub-menu items
+                                $parent_id = $item->ID;
+                                ?>
+
+                                <li class="item mb-lg-3 mb-3">
+                                <a href="<?php echo $link; ?>" class="title">
+                                    <?php echo $title; ?>
+                                </a>
+                            <?php endif; ?>
+
+                            <?php if ($parent_id == $item->menu_item_parent): ?>
+
+                            <?php if (!$submenu): $submenu = true; ?>
+                                <ul class="sub-menu">
+                            <?php endif; ?>
+
+                            <li class="item">
+                                <a href="<?php echo $link; ?>" class="title"><?php echo $title; ?></a>
+                            </li>
+
+                            <?php if ($menuitems[$count + 1]->menu_item_parent != $parent_id && $submenu): ?>
+                                </ul>
+                                <?php $submenu = false; endif; ?>
+
+                        <?php endif; ?>
+
+                            <?php if ($menuitems[$count + 1]->menu_item_parent != $parent_id): ?>
+                            </li>
+                            <?php $submenu = false; endif; ?>
+
+                            <?php $count++; endforeach; ?>
+
+                    </ul>
+                </div>
             </div>
             <div class="col-12 col-lg-3">
                 <div class="footer-socials">
@@ -152,7 +190,8 @@
                     <p class="footer-name-p">
                         &copy; 2012 - <?= date('Y'); ?> <?= get_bloginfo('name') ?>
                     </p>
-                    <p class="mb-0 with-love">Сделано с любовью в <a target="_blank" href="http://yurin.biz/">Студии Юрина</a></p>
+                    <p class="mb-0 with-love">Сделано с любовью в <a target="_blank" href="http://yurin.biz/">Студии
+                            Юрина</a></p>
                 </div>
             </div>
         </div>
