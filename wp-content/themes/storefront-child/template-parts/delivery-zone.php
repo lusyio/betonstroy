@@ -20,18 +20,39 @@
                         <div class="zone-100km__btn">
                             <p>100</p>
                             <p>км</p>
+                            <div class="card-zone">
+                                <div>
+                                    <img src="/wp-content/themes/storefront-child/svg/Расстояние.svg" alt="">
+                                    <span>100 км</span>
+                                </div>
+                                <p><?= get_field('price_100km', 9) ?></p>
+                            </div>
                         </div>
                     </div>
                     <div class="zone zone-50km">
                         <div class="zone-50km__btn">
                             <p>50</p>
                             <p>км</p>
+                            <div class="card-zone">
+                                <div>
+                                    <img src="/wp-content/themes/storefront-child/svg/Расстояние.svg" alt="">
+                                    <span>50 км</span>
+                                </div>
+                                <p><?= get_field('price_50km', 9) ?></p>
+                            </div>
                         </div>
                     </div>
                     <div class="zone zone-25km">
                         <div class="zone-25km__btn">
                             <p>25</p>
                             <p>км</p>
+                            <div class="card-zone">
+                                <div>
+                                    <img src="/wp-content/themes/storefront-child/svg/Расстояние.svg" alt="">
+                                    <span>25 км</span>
+                                </div>
+                                <p><?= get_field('price_25km', 9) ?></p>
+                            </div>
                         </div>
                     </div>
                     <img src="/wp-content/themes/storefront-child/svg/Доставка.svg" alt="delivery-zone">

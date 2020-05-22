@@ -148,7 +148,7 @@
                         </div>
                     </div>
 
-                    <a class="header-phone" href="tel:+74957732353">+7 (495) 773-23-53</a>
+                    <a class="header-phone" href="tel:<?= get_field('general_phone', 44) ?>"><?= get_field('general_phone', 44) ?></a>
                 </nav>
             </div>
 

@@ -45,20 +45,32 @@ Template Post Type: post, page, product
                                 </p>
                             </div>
                             <div class="card-product__body">
-                                <div class="card-product-item">
-                                    <a href="/<?= $category->slug; ?>">
-                                        <img src="/wp-content/themes/storefront-child/images/card-product-item-example.jpg"
-                                             alt="">
-                                        <p>НА ГРАНИТНОМ ЩЕБНЕ М1000 ></p>
-                                    </a>
-                                </div>
-                                <div class="card-product-item">
-                                    <a href="/<?= $category->slug; ?>">
-                                        <img src="/wp-content/themes/storefront-child/images/card-product-item-example.jpg"
-                                             alt="">
-                                        <p>НА ГРАНИТНОМ ЩЕБНЕ М1000 ></p>
-                                    </a>
-                                </div>
+                                <?php if ($category->slug === 'gotovaya-betonnaya-smes'): ?>
+                                    <div class="card-product-item">
+                                        <a href="/<?= $category->slug; ?>">
+                                            <img src="/wp-content/themes/storefront-child/images/card-product-item-example.jpg"
+                                                 alt="">
+                                            <p>НА ГРАНИТНОМ ЩЕБНЕ М1000 ></p>
+                                        </a>
+                                    </div>
+                                    <div class="card-product-item">
+                                        <a href="/<?= $category->slug; ?>">
+                                            <img src="/wp-content/themes/storefront-child/images/img-gravi.jpg"
+                                                 alt="">
+                                            <p>НА ГРАВИЙНОМ ЩЕБНЕ М1300 ></p>
+                                        </a>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="card-product-item">
+                                        <a href="/<?= $category->slug; ?>">
+                                            <img src="/wp-content/themes/storefront-child/images/cement.jpg"
+                                                 alt="">
+                                            <p>Подробнее ></p>
+                                        </a>
+                                    </div>
+                                    <div class="card-product-item">
+                                    </div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -83,11 +95,11 @@ Template Post Type: post, page, product
                 </div>
             </div>
             <div class="col-lg-6 col-12 card-product-col">
-                <div class="card-product">
-                    <div class="card-product__header">
+                <div class="card-product bg-grey">
+                    <div class="card-product__header card-product__header-gost">
                         <p class="card-product__title">Продукция изготовлена по нормам ГОСТ 7473-2010</p>
                         <p class="card-product__marks">
-                            <img src="/wp-content/themes/storefront-child/svg/svg-mark.svg"
+                            <img src="/wp-content/themes/storefront-child/svg/ГОСТ.svg"
                                  alt="mark">
                             государственный стандарт от 01.01.2012
                         </p>
@@ -96,7 +108,7 @@ Template Post Type: post, page, product
                         <div class="card-product-item gost w-100">
                             <p class="text-gost">ГОСТ <br> 7473-2010</p>
 
-                            <a href="#">
+                            <a href="/about/#passports">
                                 <p>Посмотреть сертификаты ></p>
                             </a>
                         </div>

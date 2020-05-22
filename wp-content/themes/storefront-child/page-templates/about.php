@@ -82,7 +82,7 @@ Template Post Type: post, page, product
     </div>
 </div>
 
-<div class="bg-white passports">
+<div id="passports" class="bg-white passports">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -113,10 +113,14 @@ Template Post Type: post, page, product
             </div>
         </div>
         <div class="passports-arrows">
-            <div class="passports-arrows-prev"><img src="/wp-content/themes/storefront-child/svg/svg-arrow-left.svg"
-                                                    alt=""></div>
-            <div class="passports-arrows-next"><img src="/wp-content/themes/storefront-child/svg/svg-arrow-right.svg"
-                                                    alt=""></div>
+            <div class="passports-arrows-prev"><svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.74031 1.08008L2.32031 8.50008L9.74031 15.9201" stroke="black" stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="passports-arrows-next"><svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.25969 1.08008L8.67969 8.50008L1.25969 15.9201" stroke="black" stroke-width="2"/>
+                </svg>
+            </div>
         </div>
 
         <div class="row">
@@ -158,35 +162,33 @@ Template Post Type: post, page, product
                 <div class="contacts__list">
                     <img src="/wp-content/themes/storefront-child/svg/navigation.svg" alt="">
                     <div>
-                        <p>г. Сергив Посад, дер. Тураково</p>
+                        <p><?= get_field('about_address') ?></p>
                     </div>
                 </div>
                 <div class="contacts__list">
                     <img src="/wp-content/themes/storefront-child/svg/svg-worktime.svg" alt="">
                     <div>
-                        <p>Ежедневно с 10-00 до 20-00</p>
-                        <p>Воскресенье — выходной</p>
+                        <p><?= get_field('about_worktime') ?></p>
                     </div>
                 </div>
                 <div class="contacts__list">
                     <img src="/wp-content/themes/storefront-child/svg/svg-phone.svg" alt="">
                     <div>
-                        <a href="tel:+79269919510">+7 (926) 991-95-10</a>
-                        <a href="tel:+79269919512">+7 (926) 991-95-12</a>
-                        <a href="tel:+74965516991">+7 (496) 551-69-91</a>
+                        <a href="tel:<?= get_field('about_phone1') ?>"><?= get_field('about_phone1') ?></a>
+                        <a href="tel:<?= get_field('about_phone2') ?>"><?= get_field('about_phone2') ?></a>
+                        <a href="tel:<?= get_field('about_phone3') ?>"><?= get_field('about_phone3') ?></a>
                     </div>
                 </div>
                 <div class="contacts__list">
                     <img src="/wp-content/themes/storefront-child/svg/svg-mail.svg" alt="">
                     <div>
-                        <a href="mailto:bs5516991@mail.ru">bs5516991@mail.ru</a>
+                        <a href="mailto:<?= get_field('about_email') ?>"><?= get_field('about_email') ?></a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7 col-12">
-                <div class="contacts__map">
-
-                </div>
+            <div class="contacts__map">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab78ff9a0398894c79b4d7789f0e62d644266cc8ce0fb893157dd55ff2790db07&amp;source=constructor"
+                        width="100%" height="100%" frameborder="0"></iframe>
             </div>
         </div>
     </div>

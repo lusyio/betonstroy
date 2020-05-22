@@ -5,13 +5,13 @@
                 <p class="pre-footer__header">Остались вопросы?</p>
                 <div class="pre-footer__body">
                     <img class="pre-footer__avatar"
-                         src="/wp-content/themes/storefront-child/images/pre-footer-avatar.jpg" alt="avatar">
+                         src="<?= get_field('general_avatar', 44) ?>" alt="avatar">
                     <div>
-                        <p class="pre-footer__name">Иван Иванов</p>
+                        <p class="pre-footer__name"><?= get_field('general_fio', 44) ?></p>
                         <p class="pre-footer__info">Менеджер по работе с клиентами</p>
                         <p class="pre-footer__contacts">
-                            <a href="#">+7 (495) 773-23-53</a>
-                            <a href="#">example@mail.ru</a>
+                            <a href="tel:<?= get_field('general_phone', 44) ?>"><?= get_field('general_phone', 44) ?></a>
+                            <a href="mailto:<?= get_field('general_email', 44) ?>"><?= get_field('general_email', 44) ?></a>
                         </p>
                     </div>
                 </div>

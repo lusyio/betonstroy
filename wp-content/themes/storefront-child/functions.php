@@ -484,7 +484,7 @@ function get_products_by_category_slug($slug)
                             <div class="card-products-list__body">
                                 <p class="card-products-list__price"><?= $product->get_price(); ?> ₽/м³</p>
                                 <div class="card-products-list__btns">
-                                    <button class="btn btn-primary">Оставить заявку</button>
+                                    <button data-toggle="modal" data-target="#questionModal" class="btn btn-primary">Оставить заявку</button>
                                     <button class="btn btn-outline-primary openNav">Расчет стоимости ></button>
                                 </div>
                             </div>
@@ -492,7 +492,7 @@ function get_products_by_category_slug($slug)
                     </div>
                 <?php endforeach; ?>
                 <div class="col-lg-6 col-12">
-                    <div class="card-products-list">
+                    <div class="card-products-list bg-grey">
                         <div class="card-products-list__header d-block card-products-list-discount border-0">
                             <div class="d-flex">
                                 <div style="margin-right: 25px;">

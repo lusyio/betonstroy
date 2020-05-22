@@ -26,7 +26,7 @@ html body .text-gost {
     margin-bottom: 70px;
     text-transform: uppercase;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #C4C4C4
 }
 
@@ -174,11 +174,10 @@ ul.menu li.current-menu-item > a:before {
     display: inline-block;
     width: 100%;
     cursor: pointer;
-    line-height: 2;
     font-weight: normal;
-    font-size: 1.13rem;
-    color: #1C1C1C;
-
+    font-size: 17px;
+    line-height: 2;
+    color: #767676;
 }
 
 /* Circle */
@@ -187,8 +186,8 @@ ul.menu li.current-menu-item > a:before {
     display: inline-block;
     box-sizing: border-box;
     margin: 2px 10px 2px 0;
-    border: solid 2px; /* Safari */
-    border-color: rgba(0, 0, 0, 0.6);
+    border: 0;
+    background: #eee;
     border-radius: 50%;
     width: 28px;
     height: 28px;
@@ -206,18 +205,18 @@ ul.menu li.current-menu-item > a:before {
     border-radius: 50%;
     width: 16px;
     height: 16px;
-    background-color: #F25E2F;
+    background-color: #0A5BAC;
     transform: translate(5px, 5px) scale(0);
     transition: transform 0.2s;
 }
 
 /* Checked */
 .pure-material-radio > input:checked {
-    background-color: #F25E2F;
+    background-color: #0A5BAC;
 }
 
 .pure-material-radio > input:checked + span::before {
-    border-color: #F25E2F;
+    border-color: #0A5BAC;
 }
 
 .pure-material-radio > input:checked + span::after {
@@ -245,7 +244,7 @@ ul.menu li.current-menu-item > a:before {
 }
 
 .pure-material-radio > input:active + span::before {
-    border-color: #F25E2F;
+    border-color: #0A5BAC;
 }
 
 /* Disabled */
@@ -480,7 +479,7 @@ ul.menu li.current-menu-item > a:before {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     right: 0;
     background-color: #ffffff;
@@ -540,6 +539,19 @@ ul.menu li.current-menu-item > a:before {
     background: #EEEEEE;
     position: sticky;
     top: 0;
+}
+
+.card-cost__footer ul {
+    padding: 0;
+    margin: 0;
+}
+
+.card-cost__footer ul li {
+    font-size: 17px;
+    line-height: 17px;
+    color: #767676;
+    margin-bottom: 0;
+    list-style: none;
 }
 
 .card-cost .card-cost__header {
@@ -623,7 +635,7 @@ ul.menu li.current-menu-item > a:before {
     margin-bottom: 10px;
 }
 
-.card-products-list .card-products-list-discount .btn.btn-primary{
+.card-products-list .card-products-list-discount .btn.btn-primary {
     max-width: 300px;
 }
 
@@ -642,6 +654,27 @@ ul.menu li.current-menu-item > a:before {
     justify-content: space-between;
     flex-direction: row;
     margin-bottom: 15px;
+}
+
+.card-delivery-counter span {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+    color: #767676;
+}
+
+.card-delivery-counter .btn-type:hover {
+    cursor: pointer;
+}
+
+.card-delivery-counter .target-type-1, .card-delivery-counter .target-type-2, .card-delivery-counter .target-type-3, .card-delivery-counter .target-type-4 {
+    color: #000;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .card-delivery:last-of-type {
@@ -747,11 +780,43 @@ ul.menu li.current-menu-item > a:before {
     margin-bottom: 40px;
 }
 
+.modal-primary.thank-you .modal-primary__call {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.modal-primary.thank-you .modal-primary__phone {
+    margin-bottom: 70px;
+}
+
 .modal-primary .modal-primary__call {
     font-size: 17px;
     line-height: 18px;
     color: #767676;
     margin-bottom: 0;
+}
+
+.modal-primary__wait {
+    font-size: 17px;
+    line-height: 17px;
+    color: #767676;
+    margin-bottom: 0;
+}
+
+.modal-primary__wait-link {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 90%;
+}
+
+.modal-primary__wait-link a {
+    color: #0A5BAC;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: uppercase;
 }
 
 .modal-primary-form {
@@ -808,12 +873,23 @@ ul.menu li.current-menu-item > a:before {
     color: #A4A4A4;
 }
 
+.input.input-primary.caldera-custom input:focus {
+    border: 1px solid #0A5BAC;
+    background: #FFFFFF;
+}
+
 .caldera-grid form {
     margin-bottom: 0;
 }
 
 html .header-widget-catalog .btn.btn-outline-white {
     width: 300px;
+}
+
+html .btn.btn-outline-white:hover {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    color: #0A5BAC;
 }
 
 .header-widget-catalog .input.input-primary.caldera-custom label {
@@ -867,6 +943,11 @@ html .help-block {
     margin-bottom: 30px;
 }
 
+.input.input-primary:not(.caldera-custom):focus {
+    background: #FFFFFF;
+    border: 1px solid #0A5BAC;
+}
+
 /*.header-widget-catalog__inputs input {*/
 /*    background: #FFFFFF;*/
 /*    border: 1px solid #FFFFFF;*/
@@ -914,14 +995,14 @@ header#masthead {
     border-bottom: 1px solid #ffffff20;
 }
 
-.navbar-dark .navbar-collapse .navbar-nav .nav-item:not(.active) a:hover::after, .navbar-dark .navbar-collapse .navbar-nav .nav-item:not(.active) a:focus::after {
+.navbar-dark .navbar-collapse .navbar-nav .nav-item:not(.active):not(.hide-active) a:hover::after, .navbar-dark .navbar-collapse .navbar-nav .nav-item:not(.active):not(.hide-active) a:focus::after {
     opacity: 1;
     -webkit-transform: translateY(0px);
     -moz-transform: translateY(0px);
     transform: translateY(0px);
 }
 
-.navbar-dark .navbar-collapse .navbar-nav .nav-item:not(.active) a::after {
+.navbar-dark .navbar-collapse .navbar-nav .nav-item:not(.active):not(.hide-active) a::after {
     content: '';
     display: block;
     position: absolute;
@@ -934,7 +1015,7 @@ header#masthead {
     transition: transform 0.3s, opacity 0.3s;
 }
 
-.navbar-dark .navbar-nav .active > .nav-link:before, .navbar-dark .navbar-nav .nav-link.active:before, .navbar-dark .navbar-nav .nav-link.show:before, .navbar-dark .navbar-nav .show > .nav-link:before {
+.navbar-dark .navbar-nav .active:not(.hide-active) > .nav-link:before, .navbar-dark .navbar-nav .nav-link.active:not(.hide-active):before, .navbar-dark .navbar-nav .nav-link.show:before, .navbar-dark .navbar-nav .show > .nav-link:before {
     content: '';
     display: block;
     position: absolute;
@@ -985,10 +1066,6 @@ header#masthead {
 
 .header-phone:hover {
     color: #FFFFFF;
-}
-
-.navbar-dark .navbar-collapse .navbar-nav .nav-item:not(.active) a:hover {
-    color: #fff !important;
 }
 
 #searchBtn {
@@ -1300,6 +1377,7 @@ footer.site-footer {
 
 .pre-footer {
     padding: 21px 0 0 0;
+    overflow: hidden;
 }
 
 .pre-footer .pre-footer__header {
@@ -1376,6 +1454,11 @@ html .btn.btn-primary {
     text-align: center;
     color: #FFFFFF;
     text-transform: uppercase;
+    transition: 135ms ease-in-out;
+}
+
+html .btn.btn-primary:hover {
+    background: #0C4988;
 }
 
 .pre-footer .btn.btn-primary {
@@ -1394,17 +1477,18 @@ html .btn.btn-primary {
 
 .pre-footer .pre-footer__img {
     position: relative;
+    transform: scale(1.09);
 }
 
 /*--------------------------------------------------------------
 # MAIN
 --------------------------------------------------------------*/
 
-.bg-grey {
+html .bg-grey {
     background: #EEEEEE;
 }
 
-.bg-white {
+html .bg-white {
     background: #ffffff;
 }
 
@@ -1441,6 +1525,14 @@ html .btn.btn-primary {
 .card-product .card-product__header {
     padding: 50px 30px 30px 30px;
     border-bottom: 2px solid #eee;
+}
+
+.card-product .card-product__header-gost {
+    border-color: #ddd;
+}
+
+.card-product .card-product__header-gost .card-product__title {
+    margin-bottom: 33px;
 }
 
 .card-product .card-product__title {
@@ -1628,6 +1720,11 @@ html .btn.btn-primary {
     text-align: center;
     color: #FFFFFF;
     text-transform: uppercase;
+    transition: 145ms ease-in-out;
+}
+
+.card-service.type-3 a:hover{
+    background: #0C4988;
 }
 
 .card-service.type-2 .card-service__info {
@@ -1824,6 +1921,52 @@ html .btn.btn-primary {
     border-radius: 50%;
     padding: 14px 14px;
     transition: 145ms ease-in-out;
+}
+
+.card-zone {
+    background: #FFFFFF;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    padding: 20px 25px 46px;
+    width: 250px;
+    top: -150px;
+    left: -5.5rem;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    opacity: 0;
+    display: none;
+    transition: 145ms ease-in-out;
+}
+
+.card-zone img {
+    margin-right: 5px;
+}
+
+.card-zone div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-zone span {
+    font-size: 17px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.zone-100km__btn:hover > .card-zone, .zone-50km__btn:hover > .card-zone, .zone-25km__btn:hover > .card-zone {
+    opacity: 1;
+    display: block;
+}
+
+html body .delivery-zone .card-zone > p:last-of-type {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    color: #000000 !important;
+    margin-bottom: 0;
+    text-align: left;
 }
 
 
@@ -2116,6 +2259,10 @@ html .btn.btn-primary {
     padding: 70px 0 115px 0;
 }
 
+.composition__img {
+    transform: scale(1.7);
+}
+
 .composition .composition__header {
     font-weight: bold;
     font-size: 42px;
@@ -2138,6 +2285,32 @@ html .btn.btn-primary {
     padding: 37px 28px;
     margin-bottom: 46px;
     max-width: 310px;
+    position: relative;
+}
+
+.card-composition__number {
+    background: #000000;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    z-index: 4;
+    top: 40%;
+    font-weight: bold;
+    font-size: 22px;
+    border-radius: 50%;
+    line-height: 22px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.card-composition__number.left {
+    right: -7rem;
+}
+
+.card-composition__number.right {
+    left: -7rem;
 }
 
 .card-composition.card-composition-mb {
@@ -2166,12 +2339,7 @@ html .btn.btn-primary {
     line-height: 17px;
     color: #DDDDDD;
     margin-bottom: 65px;
-}
-
-.composition__img {
-    background: url("/wp-content/themes/storefront-child/images/img-composition-type-1.png") no-repeat center;
-    width: 100%;
-    height: 100%;
+    max-width: 310px;
 }
 
 .products-list {
@@ -2286,7 +2454,7 @@ html .btn.btn-primary {
     max-width: 230px;
 }
 
-.btn.btn-outline-primary {
+html .btn.btn-outline-primary {
     font-size: 15px;
     line-height: 15px;
     text-align: center;
@@ -2298,6 +2466,13 @@ html .btn.btn-primary {
     border-radius: 5px;
     background: #ffffff;
     border: 1px solid #0A5BAC;
+    transition: 145ms ease-in-out;
+}
+
+html .btn.btn-outline-primary:hover {
+    background: #0C4988;
+    border: 1px solid #0C4988;
+    color: #FFFFFF;
 }
 
 .card-products-list .btn.btn-outline-primary {
@@ -2348,6 +2523,7 @@ html .btn.btn-outline-white {
     margin-bottom: 20px;
     text-transform: uppercase;
     max-height: 60px;
+    transition: 145ms ease-in-out;
 }
 
 .help-banner .btn.btn-outline-white {
@@ -2476,7 +2652,7 @@ html .btn.btn-outline-white {
     justify-content: flex-end;
 }
 
-.passports-arrows-next img, .passports-arrows-prev img {
+.passports-arrows-next svg, .passports-arrows-prev svg {
     vertical-align: super;
 }
 
@@ -2489,20 +2665,34 @@ html .btn.btn-outline-white {
 }
 
 .passports-arrows-next {
-    padding: 20px;
+    padding: 17px 20px;
     background: #EEEEEE;
     border-radius: 4px;
     width: 50px;
     height: 50px;
+    transition: 145ms ease-in-out;
+}
+
+.passports-arrows-prev:hover, .passports-arrows-next:hover {
+    background: #0C4988;
+}
+
+.passports-arrows-prev svg path, .passports-arrows-next svg path {
+    transition: 145ms ease-in-out;
+}
+
+.passports-arrows-prev:hover svg path, .passports-arrows-next:hover svg path {
+    stroke: white;
 }
 
 .passports-arrows-prev {
-    padding: 20px;
+    padding: 17px 20px;
     background: #EEEEEE;
     border-radius: 4px;
     margin-right: 20px;
     width: 50px;
     height: 50px;
+    transition: 145ms ease-in-out;
 }
 
 .passports {
@@ -2561,6 +2751,10 @@ html .btn.btn-outline-white {
 
 .contacts-left {
     padding: 70px 0;
+}
+
+.contacts {
+    position: relative;
 }
 
 .contacts .contacts__header {
@@ -2623,9 +2817,11 @@ html .btn.btn-outline-white {
 }
 
 .contacts .contacts__map {
-    background: url("/wp-content/themes/storefront-child/images/img-contacts-map.jpg") center;
-    width: 100%;
+    position: absolute;
+    top: 0;
     height: 100%;
+    width: 55%;
+    right: 0;
 }
 
 .card-certificate {
