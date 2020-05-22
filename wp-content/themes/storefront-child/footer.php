@@ -152,7 +152,7 @@
                     <p class="footer-name-p">
                         &copy; 2012 - <?= date('Y'); ?> <?= get_bloginfo('name') ?>
                     </p>
-                    <p class="mb-0 with-love">Сделано с любовью в <a href="#">Студии Юрина</a></p>
+                    <p class="mb-0 with-love">Сделано с любовью в <a target="_blank" href="http://yurin.biz/">Студии Юрина</a></p>
                 </div>
             </div>
         </div>

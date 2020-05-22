@@ -199,6 +199,7 @@ Template Post Type: post, page, product
         slidesPerView: 3,
         spaceBetween: 30,
         freeMode: true,
+        loop: true,
         navigation: {
             nextEl: '.passports-arrows-next',
             prevEl: '.passports-arrows-prev',
