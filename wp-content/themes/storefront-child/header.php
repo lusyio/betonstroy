@@ -179,7 +179,7 @@
         </header><!-- #masthead -->
         <div class="container">
             <h1 class="header-h1"
-                style="font-size: <?= $title_size ? (int)$title_size : 110 ?>px; line-height: <?= $title_size ? (int)$title_size : 110 ?>px"><?= get_field('header_title') ?></h1>
+                style="font-size: <?= $title_size ? (int)$title_size : 110 ?>px;"><?= get_field('header_title') ?></h1>
             <?= $after_header ?>
         </div>
         <?= $widget ?>
