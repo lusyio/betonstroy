@@ -82,7 +82,7 @@ a:focus, input:focus, textarea:focus, button:focus {
     outline: none;
 }
 
-a:hover {
+html a:hover {
     text-decoration: none;
 }
 
@@ -2359,7 +2359,7 @@ html body .delivery-zone .card-zone > p:last-of-type {
     padding: 70px 0;
 }
 
-html body .btn.blick {
+html body .btn.blick, html body .btn-blick {
     position: relative;
     overflow: hidden;
 }
