@@ -120,6 +120,14 @@ h1.entry-title {
     text-decoration: none;
 }
 
+.navbar-nav .menu-item {
+    transition: 145ms ease-in-out;
+}
+
+.navbar-nav .menu-item:hover {
+    background: #ffffff10;
+}
+
 ul.menu li.menu-item > a {
     position: relative;
     padding-left: 0;
@@ -1083,10 +1091,6 @@ header#masthead {
     background: transparent;
     border-bottom: 1px solid #ffffff20;
     transition: 145ms ease-in-out;
-}
-
-header#masthead:hover {
-    background: #ffffff10;
 }
 
 .navbar-dark .navbar-collapse .navbar-nav .nav-item:not(.hide-hover) a:hover::after, .navbar-dark .navbar-collapse .navbar-nav .nav-item:not(.hide-hover) a:focus::after {
