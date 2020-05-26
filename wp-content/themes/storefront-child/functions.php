@@ -47,6 +47,9 @@ function enqueue_child_theme_styles()
 // load swiper js and css
     wp_enqueue_script('wp-swiper-js', get_stylesheet_directory_uri() . '/inc/assets/js/swiper.min.js', array(), '');
     wp_enqueue_style('wp-swiper-css', get_stylesheet_directory_uri() . '/inc/assets/css/swiper.min.css', array(), '');
+    // load lightbox js and css
+    wp_enqueue_script('wp-lightbox-js', get_stylesheet_directory_uri() . '/inc/assets/js/lightbox.min.js', array(), '');
+    wp_enqueue_style('wp-lightbox-css', get_stylesheet_directory_uri() . '/inc/assets/css/lightbox.min.css', array(), '');
 
 // load bootstrap js
     wp_enqueue_script('wp-bootstrap-starter-popper', get_stylesheet_directory_uri() . '/inc/assets/js/popper.min.js', array(), '', true);
@@ -346,7 +349,7 @@ function add_help_banner($title = 'Не можете определиться?')
                     <div class="col-lg-7 col-12 help-banner-left">
                         <p class="help-banner__header">' . $title . '</p>
                         <p class="help-banner__after-header">Проконсультируем и подберем необходимую продукцию</p>
-                        <button data-toggle="modal" data-target="' . $modal . '" class="btn btn-outline-white">Получить консультацию</button>
+                        <button data-toggle="modal" data-target="' . $modal . '" class="btn btn-outline-white blick">Получить консультацию</button>
                         <p class="help-banner__info">*Отправляя свои данные, вы соглашаетесь на обработку персональных данных</p>
                     </div>
                     <div class="col-lg-5 col-12 pl-0 m-auto">
@@ -365,7 +368,7 @@ function get_products_by_category_slug($slug)
     $products = wc_get_products($args);
     ob_start();
     ?>
-    <div class="bg-grey products-list">
+    <div id="<?= $slug; ?>" class="bg-grey products-list">
         <div class="container">
             <div class="row">
                 <div class="col-12">

@@ -28,7 +28,7 @@
                 <div class="company-pluses-card">
                     <img src="/wp-content/themes/storefront-child/svg/svg-company-pluses-4.svg" alt="">
                     <p class="company-pluses-card__title">Продукция сертифицирована</p>
-                    <a class="company-pluses-card__link">Сертификаты ></a>
+                    <a href="/about/#passports" class="company-pluses-card__link">Сертификаты ></a>
                 </div>
             </div>
         </div>

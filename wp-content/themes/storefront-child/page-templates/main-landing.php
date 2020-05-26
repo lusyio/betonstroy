@@ -106,8 +106,8 @@ Template Post Type: post, page, product
                     </div>
                     <div class="card-product__body">
                         <div class="card-product-item gost w-100">
-                            <p class="text-gost">ГОСТ <br> 7473-2010</p>
 
+                            <p class="text-gost">ГОСТ <br> 7473-2010</p>
                             <a href="/about/#passports">
                                 <p>Посмотреть сертификаты ></p>
                             </a>
@@ -142,7 +142,7 @@ Template Post Type: post, page, product
                     <p class="card-service__info">
                         Бетононасос со стрелой 22 м, 42 м Миксер на 2 м3, 3 м3, 7 м3, 9 м3, 10 м3
                     </p>
-                    <a data-toggle="modal" data-target="#questionModal" href="#">Узнать о наличии техники</a>
+                    <a class="btn blick" data-toggle="modal" data-target="#questionModal" href="#">Узнать о наличии техники</a>
                 </div>
             </div>
         </div>

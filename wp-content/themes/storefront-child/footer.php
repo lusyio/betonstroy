@@ -12,6 +12,351 @@
 </div><!-- .row -->
 </div><!-- .container -->
 
+
+<div class="fixed-btn openNav">
+    <span>
+        Рассчитать стоимость
+    </span>
+</div>
+
+<?php
+$args1 = array(
+    'category' => array('gotovaya-betonnaya-smes'),
+);
+$args2 = array(
+    'category' => array('czementnyj-kladochnyj-rastvor'),
+);
+$products1 = wc_get_products($args1);
+$products2 = wc_get_products($args2);
+?>
+<div id="sidenavContainer" class="sidenav-container">
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenav-header">
+            <a id="closeNav" class="closebtn">&times;</a>
+            <p class="sidenav-header__title">Рассчитать стоимость</p>
+        </div>
+        <div class="sidenav-body container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="payment-form">
+                        <div class="payment-form-block">
+                            <p class="payment-form__title">1. Выберите тип продукции</p>
+                            <label class="payment-form__label" for="beton">Готовая бетонная смесь</label>
+                            <select class="payment-form__select" name="beton" id="beton">
+                                <option data-price="0" value="none">Не выбрано</option>
+                                <?php foreach (array_reverse($products1) as $product1): ?>
+                                    <option data-price="<?= $product1->get_price(); ?>"
+                                            value="<?= $product1->name; ?>"><?= $product1->name; ?>
+                                        - <?= $product1->get_price(); ?> ₽/м³
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                            <label class="payment-form__label" for="cement">Цементный кладочный раствор</label>
+                            <select class="payment-form__select" name="cement" id="cement">
+                                <option data-price="0" value="none">Не выбрано</option>
+                                <?php foreach (array_reverse($products2) as $product2): ?>
+                                    <option data-price="<?= $product2->get_price(); ?>"
+                                            value="<?= $product2->name; ?>"><?= $product2->name; ?>
+                                        - <?= $product2->get_price(); ?> ₽/м³
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="payment-form-block">
+                            <p class="payment-form__title">2. Укажите необходимый объем</p>
+                            <label class="payment-form__label" for="volume">Объем поставки</label>
+                            <input class="input input-primary" id="volume" placeholder="Например, 14м³" type="number">
+                        </div>
+                        <div class="payment-form-block">
+                            <p class="payment-form__title">3. Выберите вид доставки</p>
+                            <div class="card-delivery">
+                                <div class="d-flex">
+                                    <img src="/wp-content/themes/storefront-child/svg/2м.svg" alt="">
+                                    <p class="card-delivery__title">
+                                        Миксер
+                                        <span>2 м³, 2 500₽</span>
+                                    </p>
+                                </div>
+                                <div class="card-delivery-counter">
+                                    <span class="btn-type minus-type-1">-</span><span
+                                            class="target-type-1">0</span><span
+                                            class="btn-type plus-type-1">+</span>
+                                </div>
+                            </div>
+                            <div class="card-delivery">
+                                <div class="d-flex">
+                                    <img src="/wp-content/themes/storefront-child/svg/7м.svg" alt="">
+                                    <p class="card-delivery__title">
+                                        Автобетонсмеситель 1
+                                        <span>7 м³, 3 500₽</span>
+                                    </p>
+                                </div>
+                                <div class="card-delivery-counter">
+                                    <span class="btn-type minus-type-2">-</span><span
+                                            class="target-type-2">0</span><span
+                                            class="btn-type plus-type-2">+</span>
+                                </div>
+                            </div>
+                            <div class="card-delivery">
+                                <div class="d-flex">
+                                    <img src="/wp-content/themes/storefront-child/svg/9м.svg" alt="">
+                                    <p class="card-delivery__title">
+                                        Автобетонсмеситель 2
+                                        <span>9 м³, 4 500₽</span>
+                                    </p>
+                                </div>
+                                <div class="card-delivery-counter">
+                                    <span class="btn-type minus-type-3">-</span><span
+                                            class="target-type-3">0</span><span
+                                            class="btn-type plus-type-3">+</span>
+                                </div>
+                            </div>
+                            <div class="card-delivery">
+                                <div class="d-flex">
+                                    <img src="/wp-content/themes/storefront-child/svg/10м.svg" alt="">
+                                    <p class="card-delivery__title">
+                                        Автобетонсмеситель 3
+                                        <span>10 м³, 5 500₽</span>
+                                    </p>
+                                </div>
+                                <div class="card-delivery-counter">
+                                    <span class="btn-type minus-type-4">-</span><span
+                                            class="target-type-4">0</span><span
+                                            class="btn-type plus-type-4">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-form-block">
+                            <p class="payment-form__title">4. Куда доставить продукцию</p>
+                            <label class="pure-material-radio" for="delivery_zone_1">
+                                <input id="delivery_zone_1" value="25км" name="delivery-km" type="radio">
+                                <span>До 25 км от Сергиев Посада</span>
+                            </label>
+                            <label class="pure-material-radio" for="delivery_zone_2">
+                                <input id="delivery_zone_2" value="50км" name="delivery-km" type="radio">
+                                <span>Более 50 км от Сергиев Посада</span>
+                            </label>
+                            <label class="pure-material-radio" for="delivery_zone_3">
+                                <input id="delivery_zone_3" value="100км" name="delivery-km" type="radio">
+                                <span>Более 100 км от Сергиев Посада</span>
+                            </label>
+                        </div>
+                        <div class="payment-form-block">
+                            <p class="payment-form__title">5. Когда доставить продукцию</p>
+                            <label class="payment-form__label" for="delivery_date">Дата поставки</label>
+                            <input type="date" value="<?= date('Y-m-d') ?>" min='<?= date('Y-m-d') ?>'
+                                   id="delivery_date"
+                                   class="input input-primary" placeholder="22.03.20">
+                        </div>
+                        <div class="payment-form-block mb-1">
+                            <p class="payment-form__title">6. Подтвердить расчет</p>
+                            <?= do_shortcode('[caldera_form id="CF5ec694accab7e"]') ?>
+                        </div>
+                        <p>Мы перезвоним 1 раз, чтобы подтвердить расчет</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="card-cost">
+                        <div class="card-cost__header">
+                            <p class="card-cost__title">Стоимость доставки</p>
+                            <img src="/wp-content/themes/storefront-child/images/card-cost.png" alt="">
+                            <p id="costPrice" class="card-cost__price">0 ₽*</p>
+                        </div>
+                        <div class="card-cost__footer">
+                            <p>*Конечная стоимость может отличаться от расчетной за счет:</p>
+                            <ul>
+                                <li>- дополнительного строительного оборудования</li>
+                                <li>- состава бетонного раствора</li>
+                                <li>- вида выбранного щебня</li>
+                                <li>- дополнительных добавок</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    jQuery(function ($) {
+        const $costPrice = $('#costPrice');
+        const $beton = $('#beton');
+        const $cement = $('#cement');
+        const $volume = $('#volume');
+        const $deliveryDate = $('#delivery_date');
+
+        let beton = null
+        let cement = null
+        let volume = null
+        let deliveryKm = null
+        let counter1 = 0;
+        let counter2 = 0;
+        let counter3 = 0;
+        let counter4 = 0;
+
+        const calculate = () => {
+            if (beton !== null && volume !== null) {
+                let calculetedPrice = Number(beton) * Number(volume) + Number(deliveryKm) + counter1 * 2500 + counter2 * 3500 + counter3 * 4500 + counter4 + 5500;
+                $costPrice.text(calculetedPrice + ' ₽*')
+            }
+        }
+
+        $beton.on('change', function () {
+            let optionSelected = $("option:selected", this);
+            let value = this.value;
+            if (value === 'none') {
+                $($cement).prop('disabled', false)
+                $($beton).css('color', '#a4a4a4')
+            } else {
+                $($cement).prop('disabled', true)
+                $($beton).css('color', '#000000')
+            }
+            let price = optionSelected[0].dataset.price
+            $('.beton').val(value);
+            beton = price
+            calculate()
+        })
+
+        $cement.on('change', function () {
+            let optionSelected = $("option:selected", this);
+            let value = this.value;
+            if (value === 'none') {
+                $($beton).prop('disabled', false)
+                $($cement).css('color', '#a4a4a4')
+            } else {
+                $($beton).prop('disabled', true)
+                $($cement).css('color', '#000000')
+            }
+            let price = optionSelected[0].dataset.price
+            $('.cement').val(value);
+            cement = price
+            calculate()
+        })
+
+        $('input[type=radio][name=delivery-km]').on('change', () => {
+            let value = $("input[type=radio][name=delivery-km]:checked").val()
+            if (value === '100км') {
+                deliveryKm = 10500;
+            }
+            if (value === '50км') {
+                deliveryKm = 7500;
+            }
+            if (value === '25км') {
+                deliveryKm = 5000;
+            }
+            $('.delivery_zone').val(value)
+            calculate()
+        })
+
+        $deliveryDate.on('change', () => {
+            let value = $($deliveryDate).val()
+            $('.delivery_date').val(value)
+        })
+
+        $volume.on('change', () => {
+            let value = $($volume).val();
+            $('.volume').val(value);
+            volume = value
+            if (volume < 10 && volume % 2 === 0) {
+                nullCounters()
+                counter1 = volume / 2
+                $('.target-type-1').text(counter1)
+            }
+            if (volume >= 7 && volume % 7 === 0) {
+                nullCounters()
+                counter2 = volume / 7
+                $('.target-type-2').text(counter2)
+            }
+            if (volume >= 9 && volume % 9 === 0) {
+                nullCounters()
+                counter3 = volume / 9
+                $('.target-type-3').text(counter3)
+            }
+            if (volume >= 10 && volume % 10 === 0) {
+                nullCounters()
+                counter4 = volume / 10
+                $('.target-type-4').text(counter4)
+            }
+            calculate()
+        })
+
+        const nullCounters = () => {
+            counter1 = 0
+            counter2 = 0
+            counter3 = 0
+            counter4 = 0
+            $('.target-type-1').text(counter1)
+            $('.target-type-2').text(counter2)
+            $('.target-type-3').text(counter3)
+            $('.target-type-4').text(counter4)
+        }
+
+        $('.btn-type').on('click', function () {
+            if ($(this).hasClass('minus-type-1')) {
+                if (counter1 > 0) {
+                    counter1--
+                }
+                $('.target-type-1').text(counter1)
+            }
+            if ($(this).hasClass('plus-type-1')) {
+                counter1++
+                $('.target-type-1').text(counter1)
+            }
+
+            if ($(this).hasClass('minus-type-2')) {
+                if (counter2 > 0) {
+                    counter2--
+                }
+                $('.target-type-2').text(counter2)
+            }
+            if ($(this).hasClass('plus-type-2')) {
+                counter2++
+                $('.target-type-2').text(counter2)
+            }
+
+            if ($(this).hasClass('minus-type-3')) {
+                if (counter3 > 0) {
+                    counter3--
+                }
+                $('.target-type-3').text(counter3)
+            }
+            if ($(this).hasClass('plus-type-3')) {
+                counter3++
+                $('.target-type-3').text(counter3)
+            }
+
+            if ($(this).hasClass('minus-type-4')) {
+                if (counter4 > 0) {
+                    counter4--
+                }
+                $('.target-type-4').text(counter4)
+            }
+            if ($(this).hasClass('plus-type-4')) {
+                counter4++
+                $('.target-type-4').text(counter4)
+            }
+            $('.delivery_type').val('Миксер: ' + counter1 + ';' + 'Автобетонсмеситель1: ' + counter2 + ';' + 'Автобетонсмеситель2: ' + counter3 + ';' + 'Автобетонсмеситель4: ' + counter4 + ';')
+            calculate()
+        })
+
+        $('#closeNav, #sidenavContainer').on('click', function (e) {
+            if (e.target !== this) {
+                return;
+            }
+            document.getElementById("mySidenav").style.width = '0'
+            document.getElementById("sidenavContainer").style.width = '0'
+            document.body.style.overflowY = 'auto'
+        })
+
+        $('.openNav').on('click', () => {
+            document.getElementById("mySidenav").style.width = '80%'
+            document.getElementById("sidenavContainer").style.width = '100%'
+            document.body.style.overflowY = 'hidden'
+        })
+    })
+</script>
+
 <div class="modal fade modal-primary" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog">

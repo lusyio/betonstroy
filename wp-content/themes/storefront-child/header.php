@@ -49,7 +49,7 @@
                     <img src="/wp-content/themes/storefront-child/svg/Доверие.svg" alt="">
                     <p class="header-card__title">156 компаний</p>
                     <p class="header-card__text">доверяют нашей продукции</p>
-                    <a class="header-card__link" href="/#companies">О компании ></a>
+                    <a class="header-card__link" href="/about">О компании ></a>
                 </div>
                 <div class="header-card type-3">
                     <p class="header-card__title">Быстрый расчет стоимости заказа</p>
@@ -71,6 +71,30 @@
                     <img src="/wp-content/themes/storefront-child/svg/svg-header-discount.svg" alt="">
                     <p class="header-card-products__title">на 12 %</p>
                     <p>дешевле рынка</p>
+                </div>
+            </div>';
+            $widget = '<div class="bg-blue header-widget-catalog">
+            <div class="container">
+                <p class="header-widget-catalog__title">Получите каталог продукции за 3 клика</p>
+                <p class="header-widget-catalog__info">Каталог даст доступ к ценам со скидкой до 15%</p>
+             
+                       ' . do_shortcode("[caldera_form id=\"CF5ec6632547f29\"]") . '
+       
+            </div>
+        </div>';
+            break;
+        case 'type_3':
+            $after_header = '<p class="header-products-list">Классы ' . get_product_titles_by_category($page_slug) . '</p>
+            <div class="row">
+                <div class="col-lg-3 col-12 header-card-products">
+                    <img src="/wp-content/themes/storefront-child/svg/svg-storage.svg" alt="">
+                    <p class="header-card-products__title">10 000 м³</p>
+                    <p>расходников на складе</p>
+                </div>
+                <div class="col-lg-3 col-12 header-card-products">
+                    <img src="/wp-content/themes/storefront-child/svg/10min.svg" alt="">
+                    <p class="header-card-products__title">За 10 минут</p>
+                    <p>до нужного времени поставки <br> уже будем на месте</p>
                 </div>
             </div>';
             $widget = '<div class="bg-blue header-widget-catalog">

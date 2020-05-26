@@ -99,11 +99,11 @@ Template Post Type: post, page, product
                     <div class="swiper-slide">
                         <div class="card-certificate">
                             <div class="card-certificate__header">
-                                <img src="<?php echo $image_obj['src'] ?> ?>" alt="">
+                                <img src="<?= $image_obj['src'] ?> ?>" alt="">
                             </div>
                             <div class="card-certificate__body">
                                 <p class="card-certificate__title"><?= $image_obj['caption'] ?></p>
-                                <a href="<?= $image_obj['href'] ?>">Показать ></a>
+                                <a data-lightbox="<?= $image_obj['caption'] ?>" href="<?= $image_obj['src'] ?>">Показать ></a>
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@ Template Post Type: post, page, product
                         </div>
                         <div>
                             <p class="card-passport__title"><?= $image_obj['caption'] ?></p>
-                            <a href="<?= $image_obj['href'] ?>">Показать ></a>
+                            <a data-lightbox="<?= $image_obj['caption'] ?>" href="<?= $image_obj['src'] ?>">Показать ></a>
                         </div>
                     </div>
                 </div>
@@ -195,6 +195,11 @@ Template Post Type: post, page, product
 </div>
 <?= add_help_banner('Остались вопросы?') ?>
 <script>
+    lightbox.option({
+        'resizeDuration': 100,
+        'wrapAround': true,
+        'disableScrolling': true
+    })
     const swiper = new Swiper('.swiper-container', {
         slidesPerView: 3,
         spaceBetween: 30,

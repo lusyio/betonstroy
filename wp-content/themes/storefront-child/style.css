@@ -3,7 +3,7 @@ Theme Name:   	Richbee
 Author:       	Richbee
 Template:     	storefront
 Description:  	Дочерняя тема для storefront
-Version:      	1.0.0
+Version:      	1.0.1
 Theme URI:    https://richbee.ru/
 Author URI:   https://richbee.ru/
 
@@ -18,7 +18,7 @@ html header, html body, html footer {
     src: url("/wp-content/themes/storefront-child/inc/assets/fonts/GOST-Common.ttf") format("ttf");
 }
 
-html body .text-gost {
+html body .card-product-item .text-gost {
     font-family: 'GOST Common';
     font-size: 48px;
     line-height: 45px;
@@ -27,7 +27,24 @@ html body .text-gost {
     text-transform: uppercase;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #C4C4C4
+    -webkit-text-stroke-color: #C4C4C4;
+    transition: 150ms ease-in-out;
+}
+
+html body .card-product-item.gost:hover a p {
+    color: #0A5BAC;
+}
+
+html body .card-product-item.gost:hover .text-gost {
+    -webkit-text-stroke-color: #0A5BAC;
+}
+
+* img {
+    transition: 145ms ease-in-out;
+}
+
+* img:not(.composition__img):not(.pre-footer__img):not(.dont-hover):hover {
+    transform: scale(1.02);
 }
 
 body {
@@ -66,7 +83,7 @@ a:focus, input:focus, textarea:focus, button:focus {
 }
 
 a:hover {
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 img {
@@ -488,6 +505,19 @@ ul.menu li.current-menu-item > a:before {
     transition: 0.5s;
 }
 
+.sidenav-container {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    background-color: #00000010;
+    overflow-x: hidden;
+    padding: 70px 0;
+    transition: 0.5s;
+}
+
 .sidenav .sidenav-body {
     position: relative;
     padding-top: 40px;
@@ -617,9 +647,10 @@ ul.menu li.current-menu-item > a:before {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
+    font-size: 50px;
     margin-left: 50px;
     z-index: 5;
+    transition: 145ms ease-in-out;
 }
 
 .card-products-list .card-products-list-discount {
@@ -713,12 +744,53 @@ ul.menu li.current-menu-item > a:before {
     margin-bottom: 20px;
 }
 
+.fixed-btn:hover {
+    background: #0C4988;
+    cursor: pointer;
+}
+
+.fixed-btn {
+    transition: 145ms ease-in-out;
+    position: fixed;
+    left: 0;
+    -webkit-transform: rotate(-90deg) translate(-40.2%);
+    transform: rotate(-90deg) translate(-40.2%);
+    -webkit-transform-origin: calc(0% - 1px) 0;
+    transform-origin: calc(0% - 1px) 0;
+    top: 50%;
+    z-index: 99999;
+    border-radius: 0 0 4px 4px;
+    background: #0A5BAC;
+    color: #fff;
+    height: 48px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    white-space: nowrap;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 7px 20px 7px 20px;
+    font-size: 19px;
+}
+
+.payment-form__select:focus {
+    outline: none;
+    background: #FFFFFF;
+    border: 1px solid #0A5BAC;
+}
+
+.payment-form__select:disabled {
+    cursor: not-allowed;
+    background: #eee;
+}
+
 .payment-form__select:last-of-type {
     margin-bottom: 0;
 }
 
 .sidenav .closebtn:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 .modal-primary .modal-content {
@@ -993,6 +1065,11 @@ header#masthead {
     position: relative;
     background: transparent;
     border-bottom: 1px solid #ffffff20;
+    transition: 145ms ease-in-out;
+}
+
+header#masthead:hover {
+    background: #ffffff10;
 }
 
 .navbar-dark .navbar-collapse .navbar-nav .nav-item:not(.hide-hover) a:hover::after, .navbar-dark .navbar-collapse .navbar-nav .nav-item:not(.hide-hover) a:focus::after {
@@ -1045,10 +1122,14 @@ header#masthead {
     box-shadow: 2px 4px 10px rgba(0, 0, 0, .2);
 }
 
+.navbar-dark .dropdown-item.active, .navbar-dark .dropdown-item:active {
+    background-color: #0A5BAC;
+}
+
 .navbar-dark .navbar-nav .nav-link {
     position: relative;
     padding: 1rem 0 !important;
-    margin: 0 20px;
+    margin: 0 15px;
     color: #fff !important;
     transition: color .1s cubic-bezier(.4, 0, .2, 1);
     font-size: 15px;
@@ -1471,7 +1552,7 @@ html .btn.btn-primary {
     padding: 22px 24px;
     max-width: 300px;
     width: 100%;
-
+    font-weight: 500;
     font-size: 15px;
     line-height: 15px;
     text-align: center;
@@ -1489,6 +1570,7 @@ html .btn.btn-primary:hover {
     border-radius: 5px;
     padding: 22px 24px;
     max-width: 300px;
+    font-weight: 500;
     width: 100%;
 
     font-size: 15px;
@@ -1541,8 +1623,13 @@ html .bg-white {
 }
 
 .card-product {
+    transition: 145ms ease-in-out;
     background: #FFFFFF;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+.card-product:hover {
+    transform: scale(1.02);
 }
 
 .card-product .card-product__header {
@@ -1671,10 +1758,15 @@ html .bg-white {
 }
 
 .card-service {
+    transition: 145ms ease-in-out;
     background-color: #0A5BAC;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
     height: 390px;
     padding: 90px 60px;
+}
+
+.card-service:hover {
+    transform: scale(1.02);
 }
 
 .card-service-col {
@@ -1787,9 +1879,14 @@ html .bg-white {
 }
 
 .card-control {
+    transition: 145ms ease-in-out;
     background: #FFFFFF;
     padding: 32px;
     height: 340px;
+}
+
+.card-control:hover {
+    transform: translateY(-4px);
 }
 
 .card-control .card-control__img {
@@ -2037,8 +2134,13 @@ html body .delivery-zone .card-zone > p:last-of-type {
 }
 
 .card-companies-big {
+    transition: 145ms ease-in-out;
     background: #FFFFFF;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+.card-companies-big:hover {
+    transform: translateY(-4px);
 }
 
 .card-companies-big-col {
@@ -2203,10 +2305,15 @@ html body .delivery-zone .card-zone > p:last-of-type {
 }
 
 .company-pluses-card {
+    transition: 145ms ease-in-out;
     background: #FFFFFF;
     padding: 37px 33px;
     height: 260px;
     position: relative;
+}
+
+.company-pluses-card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
 .company-pluses-card img {
@@ -2224,7 +2331,7 @@ html body .delivery-zone .card-zone > p:last-of-type {
 
 .company-pluses-card .company-pluses-card__info {
     font-size: 17px;
-    line-height: 17px;
+    line-height: 19px;
     color: #767676;
     margin-bottom: 0;
     max-width: 80%;
@@ -2240,15 +2347,52 @@ html body .delivery-zone .card-zone > p:last-of-type {
     text-decoration-line: underline;
     color: #000000;
     text-transform: uppercase;
+    transition: 145ms ease-in-out;
+}
+
+.company-pluses .company-pluses-card .company-pluses-card__link:hover {
+    color: #0A5BAC;
+    text-decoration-line: underline;
 }
 
 .mini-services {
     padding: 70px 0;
 }
 
+html body .btn.blick {
+    position: relative;
+    overflow: hidden;
+}
+
+html body .blick:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.5rem;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: scaleY(1.1) translateX(-4rem) skewX(-45deg);
+    animation: movelight 2.5s infinite;
+}
+
+@keyframes movelight {
+    60% {
+        transform: scaleY(1.1) translateX(-4rem) skewX(-45deg);
+    }
+    100% {
+        transform: scaleY(1.1) translateX(30rem) skewX(-45deg);
+    }
+}
+
 .card-mini-services {
+    transition: 145ms ease-in-out;
     height: 450px;
     padding: 41px 32px;
+}
+
+.card-mini-services:hover {
+    transform: scale(1.02);
 }
 
 .card-mini-services.type-1 {
@@ -2303,12 +2447,18 @@ html body .delivery-zone .card-zone > p:last-of-type {
 }
 
 .card-composition {
+    transition: 145ms ease-in-out;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
     background: #fff;
     padding: 37px 28px;
     margin-bottom: 46px;
     max-width: 310px;
     position: relative;
+    z-index: 2;
+}
+
+.card-composition:hover {
+    transform: translateY(-4px);
 }
 
 .card-composition__number {
@@ -2359,7 +2509,7 @@ html body .delivery-zone .card-zone > p:last-of-type {
 .composition .composition__info {
     font-weight: normal;
     font-size: 17px;
-    line-height: 17px;
+    line-height: 19px;
     color: #DDDDDD;
     margin-bottom: 65px;
     max-width: 310px;
@@ -2475,11 +2625,13 @@ html body .delivery-zone .card-zone > p:last-of-type {
     padding: 22px 24px;
     width: 100%;
     max-width: 230px;
+    font-weight: 500;
 }
 
 html .btn.btn-outline-primary {
     font-size: 15px;
     line-height: 15px;
+    font-weight: 500;
     text-align: center;
     color: #0A5BAC;
     text-transform: uppercase;
@@ -2510,6 +2662,7 @@ html .btn.btn-outline-primary:hover {
     border-radius: 5px;
     background: #ffffff;
     border: 1px solid #0A5BAC;
+    font-weight: 500;
 }
 
 .help-banner-left {
@@ -2547,6 +2700,7 @@ html .btn.btn-outline-white {
     text-transform: uppercase;
     max-height: 60px;
     transition: 145ms ease-in-out;
+    font-weight: 500;
 }
 
 .help-banner .btn.btn-outline-white {
@@ -2561,6 +2715,7 @@ html .btn.btn-outline-white {
     border-radius: 5px;
     margin-bottom: 20px;
     text-transform: uppercase;
+    font-weight: 500;
 }
 
 .help-banner .help-banner__info {
@@ -2593,8 +2748,13 @@ html .btn.btn-outline-white {
 }
 
 .card-team {
+    transition: 145ms ease-in-out;
     background: #fff;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+.card-team:hover {
+    transform: scale(1.03);
 }
 
 .card-team .card-team__header {
@@ -2744,6 +2904,11 @@ html .btn.btn-outline-white {
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
+    transition: 145ms ease-in-out;
+}
+
+.card-passport:hover {
+    border: 1px solid #0A5BAC;
 }
 
 .card-passport .card-passport__img {
@@ -2852,6 +3017,11 @@ html .btn.btn-outline-white {
     border: 1px solid #DDDDDD;
     position: relative;
     margin-bottom: 21px;
+    transition: 145ms ease-in-out;
+}
+
+.card-certificate:hover {
+    border: 1px solid #0A5BAC;
 }
 
 .card-certificate .card-certificate__header {

@@ -55,7 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="/wp-content/themes/storefront-child/svg/Доставка.svg" alt="delivery-zone">
+                    <img class="dont-hover" src="/wp-content/themes/storefront-child/svg/Доставка.svg" alt="delivery-zone">
                 </div>
             </div>
         </div>
