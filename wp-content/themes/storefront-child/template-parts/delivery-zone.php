@@ -30,6 +30,13 @@
                         </div>
                     </div>
                     <div class="zone zone-50km">
+                        <img class="pin" src="/wp-content/themes/storefront-child/svg/pin.svg" alt="">
+                        <div class="pin-trace">
+                            <span class="first"></span>
+                            <span class="second"></span>
+                            <span class="third"></span>
+                            <span class="fourth"></span>
+                        </div>
                         <div class="zone-50km__btn">
                             <p>50</p>
                             <p>км</p>
@@ -55,7 +62,8 @@
                             </div>
                         </div>
                     </div>
-                    <img class="dont-hover" src="/wp-content/themes/storefront-child/svg/Доставка.svg" alt="delivery-zone">
+                    <img class="dont-hover" src="/wp-content/themes/storefront-child/svg/Доставка.svg"
+                         alt="delivery-zone">
                 </div>
             </div>
         </div>
