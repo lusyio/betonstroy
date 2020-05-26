@@ -3,7 +3,7 @@ Theme Name:   	Richbee
 Author:       	Richbee
 Template:     	storefront
 Description:  	Дочерняя тема для storefront
-Version:      	1.0.1
+Version:      	1.0.2
 Theme URI:    https://richbee.ru/
 Author URI:   https://richbee.ru/
 
@@ -884,11 +884,23 @@ ul.menu li.current-menu-item > a:before {
     max-width: 90%;
 }
 
+html .alert-success {
+    background-color: transparent;
+    border-color: #0A5BAC;
+    color: #000000;
+}
+
 .modal-primary__wait-link a {
     color: #0A5BAC;
     font-size: 22px;
     line-height: 22px;
+    font-weight: 500;
     text-transform: uppercase;
+}
+
+html .header-widget-catalog  .alert-success, html .sidenav  .alert-success{
+    color: #fff;
+    display: table;
 }
 
 .modal-primary-form {
