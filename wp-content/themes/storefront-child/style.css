@@ -343,6 +343,11 @@ ul.menu li.current-menu-item > a:before {
     position: absolute;
     left: 32px;
     bottom: 58px;
+    transition: 145ms ease-in-out;
+}
+
+.header-card .header-card__link:hover {
+    color: #FFFFFF90;
 }
 
 .header-card label {
@@ -898,7 +903,7 @@ html .alert-success {
     text-transform: uppercase;
 }
 
-html .header-widget-catalog  .alert-success, html .sidenav  .alert-success{
+html .header-widget-catalog .alert-success, html .sidenav .alert-success {
     color: #fff;
     display: table;
 }
@@ -1549,6 +1554,10 @@ footer.site-footer {
 
 .pre-footer .pre-footer__contacts a:first-of-type {
     margin-right: 50px;
+}
+
+.pre-footer .pre-footer__contacts a:hover {
+    color: #0C4988;
 }
 
 .pre-footer .pre-footer__contacts a {
@@ -3033,6 +3042,10 @@ html .btn.btn-outline-white {
 .contacts .contacts__list a {
     color: #0A5BAC;
     display: table;
+}
+
+.contacts .contacts__list a:hover{
+    color: #0C4988;
 }
 
 .contacts .contacts__map {
