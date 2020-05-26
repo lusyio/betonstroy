@@ -1425,6 +1425,15 @@ footer .site-info .site-title .site-title__a {
     color: #FFFFFF;
     display: table;
     margin-bottom: 10px;
+    transition: 145ms ease-in-out;
+}
+
+.with-love a {
+    color: #FFFFFF;
+}
+
+.footer-socials a:hover, .with-love a:hover {
+    color: #FFFFFF90 !important;
 }
 
 .footer-socials a:last-of-type {
