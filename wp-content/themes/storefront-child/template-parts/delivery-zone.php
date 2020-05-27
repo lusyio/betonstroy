@@ -36,6 +36,8 @@
                             <span class="second"></span>
                             <span class="third"></span>
                             <span class="fourth"></span>
+                            <span class="fifth"></span>
+                            <span class="sixth"></span>
                         </div>
                         <div class="zone-50km__btn">
                             <p>50</p>
