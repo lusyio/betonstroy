@@ -575,14 +575,14 @@ ul.menu li.current-menu-item > a:before {
 
 .header-card.type-3 .header-card__title {
     font-weight: bold;
-    font-size: 1.5625rem;
+    font-size: 25px;
     line-height: 25px;
     color: #000000;
 }
 
 .header-card .header-card__title {
     font-weight: bold;
-    font-size: 1.5625rem;
+    font-size: 25px;
     line-height: 25px;
     color: #FFFFFF;
     margin-bottom: 20px;
@@ -608,7 +608,7 @@ ul.menu li.current-menu-item > a:before {
     font-size: 110px;
     line-height: 110%;
     color: #FFFFFF;
-    margin-top: 145px;
+    margin-top: 50px;
     padding: 0;
     position: relative;
     text-transform: uppercase;
@@ -637,16 +637,16 @@ ul.menu li.current-menu-item > a:before {
 
 .header-card-products .header-card-products__title {
     font-weight: bold;
-    font-size: 1.375rem;
-    line-height: 1.375rem;
+    font-size: 22px;
+    line-height: 22px;
     color: #FFFFFF;
     margin-bottom: 5px;
 }
 
 .header-widget-catalog .header-widget-catalog__title {
     font-weight: bold;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 32px;
+    line-height: 32px;
     color: #FFFFFF;
     margin-bottom: 19px;
 }
@@ -737,8 +737,8 @@ ul.menu li.current-menu-item > a:before {
 
 .payment-form .payment-form__title {
     font-weight: bold;
-    font-size: 1.5625rem;
-    line-height: 1.5625rem;
+    font-size: 25px;
+    line-height: 25px;
     color: #000000;
     margin-bottom: 19px;
 }
@@ -787,8 +787,8 @@ ul.menu li.current-menu-item > a:before {
 
 .card-cost .card-cost__title {
     font-weight: bold;
-    font-size: 1.5625rem;
-    line-height: 1.5625rem;
+    font-size: 25px;
+    line-height: 25px;
     color: #000000;
     margin-bottom: 34px;
 }
@@ -802,8 +802,8 @@ ul.menu li.current-menu-item > a:before {
 
 .card-cost .card-cost__price {
     font-weight: bold;
-    font-size: 32rem;
-    line-height: 2rem;
+    font-size: 32px;
+    line-height: 32px;
     color: #000000;
     margin-bottom: 0;
 }
@@ -822,8 +822,8 @@ ul.menu li.current-menu-item > a:before {
 
 .sidenav-header .sidenav-header__title {
     font-weight: bold;
-    font-size: 2.625rem;
-    line-height: 2.625rem;
+    font-size: 42px;
+    line-height: 42px;
     color: #000000;
     margin-bottom: 56px;
     position: relative;
@@ -897,8 +897,8 @@ ul.menu li.current-menu-item > a:before {
 .card-delivery-counter .target-type-1, .card-delivery-counter .target-type-2, .card-delivery-counter .target-type-3, .card-delivery-counter .target-type-4 {
     color: #000;
     font-weight: bold;
-    font-size: 1.5625rem;
-    line-height: 1.5625rem;
+    font-size: 25px;
+    line-height: 25px;
     margin-bottom: 0;
     margin-left: 5px;
     margin-right: 5px;
@@ -1024,8 +1024,8 @@ ul.menu li.current-menu-item > a:before {
 
 .modal-primary .modal-primary__title {
     font-weight: bold;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 32px;
+    line-height: 32px;
     color: #000000;
     margin-bottom: 67px;
     position: relative;
@@ -1050,8 +1050,8 @@ ul.menu li.current-menu-item > a:before {
 
 .modal-primary.thank-you .modal-primary__call {
     font-weight: bold;
-    font-size: 1.5625rem;
-    line-height: 1.5625rem;
+    font-size: 25px;
+    line-height: 25px;
     color: #000000;
 }
 
@@ -1088,8 +1088,8 @@ html .alert-success {
 
 .modal-primary__wait-link a {
     color: #0A5BAC;
-    font-size: 1.375rem;
-    line-height: 1.375rem;
+    font-size: 22px;
+    line-height: 22px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -1137,7 +1137,7 @@ html .header-widget-catalog .alert-success, html .sidenav .alert-success {
 .modal-primary .modal-primary__phone {
     color: #0A5BAC;
     display: table;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 500;
 }
 
@@ -1510,7 +1510,7 @@ header#masthead {
 .outer-menu .menu li {
     padding: 0;
     margin: 1em;
-    font-size: 1.5rem;
+    font-size: 24px;
     display: block;
 }
 
@@ -1571,7 +1571,7 @@ footer .site-info .site-title .site-description {
 }
 
 footer .site-info .site-title .site-title__a {
-    font-size: 2rem;
+    font-size: 32px;
     line-height: 37px;
     color: #FFFFFF;
     position: relative;
@@ -1624,8 +1624,8 @@ footer .site-info .site-title .site-title__a {
 
 .footer-socials a {
     font-weight: bold;
-    font-size: 1.5625rem;
-    line-height: 1.5625rem;
+    font-size: 25px;
+    line-height: 25px;
     color: #FFFFFF;
     display: table;
     margin-bottom: 10px;
@@ -1699,8 +1699,8 @@ footer.site-footer {
 
 .pre-footer .pre-footer__header {
     font-weight: bold;
-    font-size: 2.625rem;
-    line-height: 2.625rem;
+    font-size: 42px;
+    line-height: 42px;
     color: #000000;
     margin-bottom: 65px;
     margin-top: 50px;
@@ -1721,8 +1721,8 @@ footer.site-footer {
 
 .pre-footer .pre-footer__name {
     font-weight: bold;
-    font-size: 1.5625rem;
-    line-height: 1.5625rem;
+    font-size: 25px;
+    line-height: 25px;
     color: #000000;
     margin-bottom: 2px;
 }
@@ -1749,8 +1749,8 @@ footer.site-footer {
 
 .pre-footer .pre-footer__contacts a {
     font-weight: bold;
-    font-size: 1.5625rem;
-    line-height: 1.5625rem;
+    font-size: 25px;
+    line-height: 25px;
     text-decoration-line: underline;
     color: #0A5BAC;
 }
@@ -1821,8 +1821,8 @@ html .btn.btn-primary:hover {
 .pre-footer-img-container__contacts p {
     padding: 0 22px;
     font-weight: bold;
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+    font-size: 20px;
+    line-height: 20px;
     color: #000000;
     margin-bottom: 15px;
 }
@@ -1859,8 +1859,8 @@ html .bg-white {
 
 .main-products .main-products__title {
     font-weight: bold;
-    font-size: 2.625rem;
-    line-height: 2.625rem;
+    font-size: 42px;
+    line-height: 42px;
     color: #000000;
     margin-bottom: 14px;
     text-transform: uppercase;
@@ -1903,8 +1903,8 @@ html .bg-white {
 
 .card-product .card-product__title {
     font-weight: bold;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 32px;
+    line-height: 32px;
     color: #000000;
     margin-bottom: 50px;
     max-width: 80%;
@@ -2007,8 +2007,8 @@ html .bg-white {
 
 .main-services .main-services__header {
     font-weight: bold;
-    font-size: 2.625rem;
-    line-height: 2.625rem;
+    font-size: 42px;
+    line-height: 42px;
     color: #000000;
     margin-bottom: 30px;
 }
@@ -2047,8 +2047,8 @@ html .bg-white {
 
 .card-service .card-service__title {
     font-weight: bold;
-    font-size: 2.5rem;
-    line-height: 2.5rem;
+    font-size: 40px;
+    line-height: 40px;
     color: #FFFFFF;
     max-width: 475px;
     margin-bottom: 16px;
@@ -2112,8 +2112,8 @@ html .bg-white {
 
 .main-control .main-control__header {
     font-weight: bold;
-    font-size: 2.625rem;
-    line-height: 2.625rem;
+    font-size: 42px;
+    line-height: 42px;
     color: #FFFFFF;
     text-transform: uppercase;
     margin-bottom: 14px;
@@ -2161,8 +2161,8 @@ html .bg-white {
 
 .card-control .card-control__title {
     font-weight: bold;
-    font-size: 1.5625rem;
-    line-height: 1.5625rem;
+    font-size: 25px;
+    line-height: 25px;
     color: #000000;
     margin-bottom: 12px;
 }
@@ -2195,8 +2195,8 @@ html .bg-white {
 
 .delivery-zone .delivery-zone__header {
     font-weight: bold;
-    font-size: 2.625rem;
-    line-height: 2.625rem;
+    font-size: 42px;
+    line-height: 42px;
     color: #000000;
     margin-bottom: 78px;
     text-transform: uppercase;
@@ -2212,8 +2212,8 @@ html .bg-white {
 
 .delivery-zone__absolute p:first-of-type {
     font-weight: bold;
-    font-size: 3.125rem;
-    line-height: 3.125rem;
+    font-size: 50px;
+    line-height: 50px;
     color: #0A5BAC;
     margin-bottom: 9px;
 }
@@ -2339,8 +2339,8 @@ html .bg-white {
 
 html body .delivery-zone .card-zone > p:last-of-type {
     font-weight: bold;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 32px;
+    line-height: 32px;
     color: #000000 !important;
     margin-bottom: 0;
     text-align: left;
@@ -2358,8 +2358,8 @@ html body .delivery-zone .card-zone > p:last-of-type {
 
 .zone p:first-of-type {
     font-weight: bold;
-    font-size: 1.375rem;
-    line-height: 1.375rem;
+    font-size: 22px;
+    line-height: 22px;
     color: #000000;
     margin-bottom: 0;
     text-align: center;
@@ -2375,8 +2375,8 @@ html body .delivery-zone .card-zone > p:last-of-type {
 
 .zone-100km .zone-100km__btn p:first-of-type {
     font-weight: bold;
-    font-size: 1.375rem;
-    line-height: 1.375rem;
+    font-size: 22px;
+    line-height: 22px;
     color: #000000;
     margin-bottom: 0;
     text-align: center;
@@ -2425,8 +2425,8 @@ html body .delivery-zone .card-zone > p:last-of-type {
 
 .companies .companies__header {
     font-weight: bold;
-    font-size: 2.625rem;
-    line-height: 2.625rem;
+    font-size: 42px;
+    line-height: 42px;
     color: #FFFFFF;
     margin-bottom: 14px;
 }
@@ -2444,7 +2444,7 @@ html body .delivery-zone .card-zone > p:last-of-type {
 }
 
 .card-companies-big .card-companies-big__title {
-    font-size: 1.5625rem;
+    font-size: 25px;
     line-height: 29px;
     color: #000000;
     margin-bottom: 12px;
@@ -2532,8 +2532,8 @@ html body .delivery-zone .card-zone > p:last-of-type {
 
 .card-companies__footer span {
     font-weight: bold;
-    font-size: 2.625rem;
-    line-height: 2.625rem;
+    font-size: 42px;
+    line-height: 42px;
     color: #FFFFFF;
     padding: 28px 14px;
     border-radius: 50%;
@@ -2675,8 +2675,8 @@ html body .blick:before {
 
 .card-mini-services .card-mini-services__title {
     font-weight: bold;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 32px;
+    line-height: 32px;
     color: #FFFFFF;
     margin-bottom: 20px;
 }
@@ -2698,8 +2698,8 @@ html body .blick:before {
 
 .composition .composition__header {
     font-weight: bold;
-    font-size: 2.625rem;
-    line-height: 2.625rem;
+    font-size: 42px;
+    line-height: 42px;
     color: #FFFFFF;
     margin-bottom: 14px;
 }
@@ -2734,7 +2734,7 @@ html body .blick:before {
     z-index: 4;
     top: 40%;
     font-weight: bold;
-    font-size: 1.375rem;
+    font-size: 22px;
     border-radius: 50%;
     line-height: 22px;
     color: #FFFFFF;
@@ -2758,8 +2758,8 @@ html body .blick:before {
 
 .card-composition .card-composition__title {
     font-weight: bold;
-    font-size: 1.5625rem;
-    line-height: 1.5625rem;
+    font-size: 25px;
+    line-height: 25px;
     color: #000000;
     margin-bottom: 11px;
 }
@@ -2787,8 +2787,8 @@ html body .blick:before {
 
 .products-list .products-list__header {
     font-weight: bold;
-    font-size: 2.625rem;
-    line-height: 2.625rem;
+    font-size: 42px;
+    line-height: 42px;
     color: #000000;
     text-transform: uppercase;
     margin-bottom: 14px;
@@ -2830,8 +2830,8 @@ html body .blick:before {
 
 .card-products-list__title {
     font-weight: bold;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 32px;
+    line-height: 32px;
     color: #000000;
     margin-bottom: 53px;
     position: relative;
@@ -2873,8 +2873,8 @@ html body .blick:before {
 
 .card-products-list__price {
     font-weight: bold;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 32px;
+    line-height: 32px;
     color: #000000;
     margin-bottom: 35px;
 }
@@ -2961,8 +2961,8 @@ html .btn.btn-outline-primary:hover {
 
 .help-banner .help-banner__header {
     font-weight: bold;
-    font-size: 2.625rem;
-    line-height: 2.625rem;
+    font-size: 42px;
+    line-height: 42px;
     color: #FFFFFF;
     margin-bottom: 14px;
 }
@@ -3021,8 +3021,8 @@ html .btn.btn-outline-white {
 
 .team .team__header {
     font-weight: bold;
-    font-size: 2.625rem;
-    line-height: 2.625rem;
+    font-size: 42px;
+    line-height: 42px;
     color: #000000;
     margin-bottom: 14px;
     text-transform: uppercase;
@@ -3057,8 +3057,8 @@ html .btn.btn-outline-white {
 
 .card-team .card-team__title {
     font-weight: bold;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 32px;
+    line-height: 32px;
     color: #000000;
     margin-bottom: 12px;
     max-width: 85%;
@@ -3084,8 +3084,8 @@ html .btn.btn-outline-white {
 
 .about-block .about-block__header {
     font-weight: bold;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 32px;
+    line-height: 32px;
     color: #FFFFFF;
     margin-bottom: 44px;
 }
@@ -3173,8 +3173,8 @@ html .btn.btn-outline-white {
 
 .passports .passports__header {
     font-weight: bold;
-    font-size: 2.625rem;
-    line-height: 2.625rem;
+    font-size: 42px;
+    line-height: 42px;
     color: #000000;
     text-transform: uppercase;
     margin-bottom: 14px;
@@ -3236,8 +3236,8 @@ html .btn.btn-outline-white {
 
 .contacts .contacts__header {
     font-weight: bold;
-    font-size: 2.625rem;
-    line-height: 2.625rem;
+    font-size: 42px;
+    line-height: 42px;
     color: #000000;
     margin-bottom: 14px;
 }
@@ -3251,8 +3251,8 @@ html .btn.btn-outline-white {
 
 .contacts .contacts__title {
     font-weight: bold;
-    font-size: 1.5625rem;
-    line-height: 1.5625rem;
+    font-size: 25px;
+    line-height: 25px;
     color: #000000;
     margin-bottom: 60px;
     position: relative;
@@ -3414,49 +3414,4 @@ and (max-width: 576px) {
         margin-left: 0;
     }
 
-}
-
-/*--------------------------------------------------------------
-## Notebook
---------------------------------------------------------------*/
-@media only screen and (max-width: 1280px) {
-    html {
-        font-size: 92%;
-    }
-}
-
-/*--------------------------------------------------------------
-## Netbook
---------------------------------------------------------------*/
-@media only screen and (max-width: 1024px) {
-    html {
-        font-size: 90%;
-    }
-}
-
-/*--------------------------------------------------------------
-## iPad
---------------------------------------------------------------*/
-@media only screen and (max-width: 960px) {
-    html {
-        font-size: 85%;
-    }
-}
-
-/*--------------------------------------------------------------
-## iPad
---------------------------------------------------------------*/
-@media only screen and (max-width: 768px) {
-    html {
-        font-size: 80%;
-    }
-}
-
-/*--------------------------------------------------------------
-## iPad
---------------------------------------------------------------*/
-@media only screen and (max-width: 480px) {
-    html {
-        font-size: 75%;
-    }
 }
