@@ -1802,6 +1802,45 @@ html .btn.btn-primary:hover {
     transform: scale(1.09);
 }
 
+.pre-footer-img-container {
+    position: relative;
+}
+
+.pre-footer-img-container__avatar {
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+
+.pre-footer-img-container__contacts {
+    position: absolute;
+    top: 9.3rem;
+    left: 4.2rem;
+    max-width: 336px;
+}
+
+.pre-footer-img-container__contacts p {
+    padding: 0 22px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.pre-footer-img-container__contacts a {
+    display: table;
+    padding: 0 22px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #767676;
+    transition: 145ms ease-in-out;
+}
+
+.pre-footer-img-container__contacts a:hover {
+    color: #0C4988;
+}
+
 /*--------------------------------------------------------------
 # MAIN
 --------------------------------------------------------------*/
@@ -2247,8 +2286,8 @@ html .bg-white {
 }
 
 .zone .zone-100km__btn, .zone .zone-50km__btn, .zone .zone-25km__btn {
-    width: 65px;
-    height: 65px;
+    width: 66px;
+    height: 66px;
     position: absolute;
     top: -2rem;
     left: 0;

@@ -130,15 +130,18 @@ $products2 = wc_get_products($args2);
                             <p class="payment-form__title">4. Куда доставить продукцию</p>
                             <label class="pure-material-radio" for="delivery_zone_1">
                                 <input id="delivery_zone_1" value="25км" name="delivery-km" type="radio">
-                                <span>До 25 км от Сергиев Посада</span>
+                                <span>До 25 км от Сергиев Посада <span
+                                            id="25km-target"><?= get_field('price_25km', 9) ?></span>₽ за м³</span>
                             </label>
                             <label class="pure-material-radio" for="delivery_zone_2">
                                 <input id="delivery_zone_2" value="50км" name="delivery-km" type="radio">
-                                <span>Более 50 км от Сергиев Посада</span>
+                                <span>25-50 км от Сергиев Посада <span
+                                            id="50km-target"><?= get_field('price_50km', 9) ?></span>₽ за м³</span>
                             </label>
                             <label class="pure-material-radio" for="delivery_zone_3">
                                 <input id="delivery_zone_3" value="100км" name="delivery-km" type="radio">
-                                <span>Более 100 км от Сергиев Посада</span>
+                                <span>Более 50 км от Сергиев Посада <span
+                                            id="100km-target"><?= get_field('price_100km', 9) ?></span>₽ за м³</span>
                             </label>
                         </div>
                         <div class="payment-form-block">
@@ -197,7 +200,7 @@ $products2 = wc_get_products($args2);
 
         const calculate = () => {
             if (beton !== null && volume !== null) {
-                let calculetedPrice = Number(beton) * Number(volume) + Number(deliveryKm) + counter1 * 2500 + counter2 * 3500 + counter3 * 4500 + counter4 + 5500;
+                let calculetedPrice = Number(beton) * Number(volume) + Number(deliveryKm) * Number(volume) + counter1 * 2500 + counter2 * 3500 + counter3 * 4500 + counter4 * 5500;
                 $costPrice.text(calculetedPrice + ' ₽*')
             }
         }
@@ -237,13 +240,13 @@ $products2 = wc_get_products($args2);
         $('input[type=radio][name=delivery-km]').on('change', () => {
             let value = $("input[type=radio][name=delivery-km]:checked").val()
             if (value === '100км') {
-                deliveryKm = 10500;
+                deliveryKm = $('#100km-target').text();
             }
             if (value === '50км') {
-                deliveryKm = 7500;
+                deliveryKm = $('#50km-target').text();
             }
             if (value === '25км') {
-                deliveryKm = 5000;
+                deliveryKm = $('#25km-target').text();
             }
             $('.delivery_zone').val(value)
             calculate()
@@ -258,25 +261,25 @@ $products2 = wc_get_products($args2);
             let value = $($volume).val();
             $('.volume').val(value);
             volume = value
-            if (volume < 10 && volume % 2 === 0) {
+            if (volume >= 10 && volume % 10 === 0) {
                 nullCounters()
-                counter1 = volume / 2
-                $('.target-type-1').text(counter1)
-            }
-            if (volume >= 7 && volume % 7 === 0) {
-                nullCounters()
-                counter2 = volume / 7
-                $('.target-type-2').text(counter2)
+                counter4 = volume / 10
+                $('.target-type-4').text(counter4)
             }
             if (volume >= 9 && volume % 9 === 0) {
                 nullCounters()
                 counter3 = volume / 9
                 $('.target-type-3').text(counter3)
             }
-            if (volume >= 10 && volume % 10 === 0) {
+            if (volume >= 7 && volume % 7 === 0) {
                 nullCounters()
-                counter4 = volume / 10
-                $('.target-type-4').text(counter4)
+                counter2 = volume / 7
+                $('.target-type-2').text(counter2)
+            }
+            if (volume < 10 && volume % 2 === 0) {
+                nullCounters()
+                counter1 = volume / 2
+                $('.target-type-1').text(counter1)
             }
             calculate()
         })

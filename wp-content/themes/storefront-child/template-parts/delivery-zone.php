@@ -18,14 +18,14 @@
                 <div class="position-relative">
                     <div class="zone zone-100km">
                         <div class="zone-100km__btn">
-                            <p>100</p>
+                            <p>>50</p>
                             <p>км</p>
                             <div class="card-zone">
                                 <div>
                                     <img src="/wp-content/themes/storefront-child/svg/Расстояние.svg" alt="">
-                                    <span>100 км</span>
+                                    <span> более 50 км</span>
                                 </div>
-                                <p><?= get_field('price_100km', 9) ?></p>
+                                <p><?= get_field('price_100km', 9) ?>₽ за 1м³</p>
                             </div>
                         </div>
                     </div>
@@ -45,9 +45,9 @@
                             <div class="card-zone">
                                 <div>
                                     <img src="/wp-content/themes/storefront-child/svg/Расстояние.svg" alt="">
-                                    <span>50 км</span>
+                                    <span>25-50 км</span>
                                 </div>
-                                <p><?= get_field('price_50km', 9) ?></p>
+                                <p><?= get_field('price_50km', 9) ?>₽ за 1м³</p>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                                     <img src="/wp-content/themes/storefront-child/svg/Расстояние.svg" alt="">
                                     <span>25 км</span>
                                 </div>
-                                <p><?= get_field('price_25km', 9) ?></p>
+                                <p><?= get_field('price_25km', 9) ?>₽ за 1м³</p>
                             </div>
                         </div>
                     </div>
