@@ -1142,8 +1142,13 @@ html .alert-success {
     text-transform: uppercase;
 }
 
-html .header-widget-catalog .alert-success, html .sidenav .alert-success {
+html .header-widget-catalog .alert-success {
     color: #fff;
+    display: table;
+}
+
+html .sidenav .alert-success {
+    color: #000;
     display: table;
 }
 
@@ -2879,7 +2884,7 @@ html body .blick:before {
     transition: 145ms ease-in-out;
 }
 
-.card-products-list:hover .card-products-list-hover{
+.card-products-list:hover .card-products-list-hover {
     transform: scale(1.02);
 }
 
@@ -3638,15 +3643,15 @@ and (max-width: 991px) {
         margin-bottom: 25px;
     }
 
-    .card-composition{
+    .card-composition {
         display: none;
     }
 
-    .card-products-list .btn.btn-primary{
+    .card-products-list .btn.btn-primary {
         margin-bottom: 0;
     }
 
-    .composition .composition__info{
+    .composition .composition__info {
         display: none;
     }
 
