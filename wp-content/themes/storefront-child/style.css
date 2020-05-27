@@ -802,7 +802,7 @@ ul.menu li.current-menu-item > a:before {
 
 .card-cost .card-cost__price {
     font-weight: bold;
-    font-size: 32rem;
+    font-size: 2rem;
     line-height: 2rem;
     color: #000000;
     margin-bottom: 0;
