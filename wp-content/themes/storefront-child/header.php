@@ -15,6 +15,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <meta property=”og:image” content=”/wp-content/themes/storefront-child/open-graph-img.jpg”/>
+    <meta property=”og:title” content='ООО "Бетонстрой" - производство бетона в Сергиевом Посаде'/>
+    <meta property=”og:description” content='Доставка и производство бетонной смеси и цементно кладочного раствора. Производство в Сергиевом Посаде'/>
     <?php wp_head(); ?>
 </head>
 
