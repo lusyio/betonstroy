@@ -3,7 +3,7 @@ Theme Name:   	Richbee
 Author:       	Richbee
 Template:     	storefront
 Description:  	Дочерняя тема для storefront
-Version:      	1.0.5
+Version:      	1.0.6
 Theme URI:    https://richbee.ru/
 Author URI:   https://richbee.ru/
 
@@ -1347,6 +1347,12 @@ header#masthead {
     font-size: 16px;
     line-height: 16px;
     color: #FFFFFF;
+    padding: 1rem;
+    transition: 145ms ease-in-out;
+}
+
+.header-phone:hover {
+    background: #ffffff10;
 }
 
 .header-phone:hover {
