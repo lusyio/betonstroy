@@ -2413,6 +2413,8 @@ html body .delivery-zone .card-zone > p:last-of-type {
 .card-companies-big .card-companies-big__header img {
     display: table;
     margin: auto;
+    max-width: 223px;
+    max-height: 125px;
 }
 
 .bg-companies {
@@ -2507,6 +2509,8 @@ html body .delivery-zone .card-zone > p:last-of-type {
 .card-companies img {
     display: table;
     margin: auto;
+    max-width: 223px;
+    max-height: 125px;
 }
 
 .row .card-companies-col:first-of-type {

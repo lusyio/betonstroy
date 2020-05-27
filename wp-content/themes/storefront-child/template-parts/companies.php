@@ -8,22 +8,22 @@
             <div class="col-lg-5 col-12 card-companies-big-col">
                 <div class="card-companies-big">
                     <div class="card-companies-big__header">
-                        <img src="/wp-content/themes/storefront-child/svg/svg-gazprom.svg" alt="gazprom">
+                        <img src="<?= get_field('client_img_big', 9); ?>" alt="gazprom">
                     </div>
                     <div class="card-companies-big__body">
-                        <p class="card-companies-big__title">ПАО “Газпром”</p>
-                        <p class="card-companies-big__city">г. Москва</p>
+                        <p class="card-companies-big__title"><?= get_field('client_title_big', 9) ?></p>
+                        <p class="card-companies-big__city"><?= get_field('client_city_big', 9) ?></p>
                         <div class="card-companies-big__list">
                             <p>Поставляемая продукция:</p>
-                            <p>Готовая бетонная смесь М-350 на гранитном щебне М1000</p>
+                            <p><?= get_field('client_products_big', 9) ?></p>
                         </div>
                         <div class="card-companies-big__list">
                             <p>Объем:</p>
-                            <p>3000 кг</p>
+                            <p><?= get_field('client_products_volume_big', 9) ?></p>
                         </div>
                         <div class="card-companies-big__list">
                             <p>Срок годности</p>
-                            <p>10 кг</p>
+                            <p><?= get_field('client_exp_date_big', 9) ?></p>
                         </div>
                     </div>
                 </div>
@@ -32,24 +32,24 @@
                 <div class="row">
                     <div class="col card-companies-col">
                         <div class="card-companies">
-                            <img src="/wp-content/themes/storefront-child/svg/svg-lukoil.svg" alt="lukoil">
+                            <img src="<?= get_field('img_client_2', 9); ?>" alt="">
                         </div>
                     </div>
                     <div class="col card-companies-col">
                         <div class="card-companies">
-                            <img src="/wp-content/themes/storefront-child/svg/svg-nornikel.svg" alt="nornikel">
+                            <img src="<?= get_field('img_client_3', 9); ?>" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col card-companies-col">
                         <div class="card-companies">
-                            <img src="/wp-content/themes/storefront-child/svg/svg-gazprom.svg" alt="gazprom">
+                            <img src="<?= get_field('img_client_4', 9); ?>" alt="">
                         </div>
                     </div>
                     <div class="col card-companies-col">
                         <div class="card-companies">
-                            <img src="/wp-content/themes/storefront-child/svg/svg-roscosmos.svg" alt="roscosmos">
+                            <img src="<?= get_field('img_client_5', 9); ?>" alt="">
                         </div>
                     </div>
                 </div>
