@@ -2810,8 +2810,7 @@ html body .blick:before {
 }
 
 .card-products-list
-
-.card-products-list:hover{
+.card-products-list:hover {
     transform: scale(1.02);
 }
 

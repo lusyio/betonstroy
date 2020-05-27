@@ -14,10 +14,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="http://gmpg.org/xfn/11">
+    <?php if (is_front_page()) : ?>
+        <title>ООО "Бетонстрой" - доставка и производство бетона в Сергиевом Посаде</title>
+    <?php endif; ?>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-    <meta property=”og:image” content=”/wp-content/themes/storefront-child/open-graph-img.jpg”/>
-    <meta property=”og:title” content='ООО "Бетонстрой" - производство бетона в Сергиевом Посаде'/>
-    <meta property=”og:description” content='Доставка и производство бетонной смеси и цементно кладочного раствора. Производство в Сергиевом Посаде'/>
+    <meta property="og:image" content=”/wp-content/themes/storefront-child/open-graph-img.jpg”/>
+    <meta property="og:title" content='ООО "Бетонстрой" - производство бетона в Сергиевом Посаде'/>
+    <meta property="og:description"
+          content='Доставка и производство бетонной смеси и цементно кладочного раствора. Производство в Сергиевом Посаде'/>
     <?php wp_head(); ?>
 </head>
 
@@ -175,7 +179,8 @@
                         </div>
                     </div>
 
-                    <a class="header-phone" href="tel:<?= get_field('general_phone', 44) ?>"><?= get_field('general_phone', 44) ?></a>
+                    <a class="header-phone"
+                       href="tel:<?= get_field('general_phone', 44) ?>"><?= get_field('general_phone', 44) ?></a>
                 </nav>
             </div>
 
