@@ -480,13 +480,16 @@ function get_products_by_category_slug($slug)
                                         echo $property;
                                     } ?>
                                 </div>
-                                <img src="<?= wp_get_attachment_image_url($image_id, 'full'); ?>"
+                                <img class="card-products-list-hover"
+                                     src="<?= wp_get_attachment_image_url($image_id, 'full'); ?>"
                                      alt="<?= $product->name; ?>">
                             </div>
                             <div class="card-products-list__body">
                                 <p class="card-products-list__price"><?= $product->get_price(); ?> ₽/м³</p>
                                 <div class="card-products-list__btns">
-                                    <button data-toggle="modal" data-target="#questionModal" class="btn btn-primary">Оставить заявку</button>
+                                    <button data-toggle="modal" data-target="#questionModal" class="btn btn-primary">
+                                        Оставить заявку
+                                    </button>
                                     <button class="btn btn-outline-primary openNav">Расчет стоимости ></button>
                                 </div>
                             </div>
@@ -501,7 +504,8 @@ function get_products_by_category_slug($slug)
                                     <p class="card-products-list__title">Получите каталог в 2 клика</p>
                                     <p>Каталог даст доступ к ценам со скидкой до 15%</p>
                                 </div>
-                                <img src="/wp-content/themes/storefront-child/svg/svg-discount.svg" alt="">
+                                <img class="card-products-list-hover"
+                                     src="/wp-content/themes/storefront-child/svg/svg-discount.svg" alt="">
                             </div>
                             <?= do_shortcode('[caldera_form id="CF5ec699f132044"]') ?>
                         </div>

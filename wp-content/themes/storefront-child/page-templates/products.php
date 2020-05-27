@@ -44,7 +44,7 @@ if (mb_strtolower(get_field('sostav')) === 'кладочного раствор�
                     </div>
                     <p class="composition__info">Согласно ГОСТ 23732-2011. Вода для бетонов и строительных растворов</p>
                 </div>
-                <div class="col-lg-4 col-12 p-0">
+                <div class="col-lg-4 col-12 pl-lg-0 pr-lg-0 pl-3 pr-3 ">
                     <img class="composition__img mt-5"
                          src="/wp-content/themes/storefront-child/images/img-composition-type-2.png" alt="">
                 </div>
@@ -112,7 +112,7 @@ if (mb_strtolower(get_field('sostav')) === 'бетонного раствора'
                     <p class="composition__info mb-0">Согласно СНиП 5.01.23-83. Расхода цемента для приготовления
                         бетонов</p>
                 </div>
-                <div class="col-lg-4 col-12 p-0">
+                <div class="col-lg-4 col-12 pl-lg-0 pr-lg-0 pl-3 pr-3">
                     <img class="composition__img mt-5"
                          src="/wp-content/themes/storefront-child/images/img-composition-type-1.png" alt="">
                 </div>

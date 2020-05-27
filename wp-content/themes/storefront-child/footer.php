@@ -261,24 +261,24 @@ $products2 = wc_get_products($args2);
             let value = $($volume).val();
             $('.volume').val(value);
             volume = value
-            if (volume >= 10 && volume % 10 === 0) {
-                nullCounters()
-                counter4 = volume / 10
+            if (volume >= 10) {
+                counter4 = Math.floor(volume / 10)
+                console.log(counter4)
                 $('.target-type-4').text(counter4)
+                volume %= 10;
             }
-            if (volume >= 9 && volume % 9 === 0) {
-                nullCounters()
-                counter3 = volume / 9
+            if (volume >= 9) {
+                counter3 = Math.floor(volume / 9)
                 $('.target-type-3').text(counter3)
+                volume %= 9;
             }
-            if (volume >= 7 && volume % 7 === 0) {
-                nullCounters()
-                counter2 = volume / 7
+            if (volume >= 7) {
+                counter2 = Math.floor(volume / 7)
                 $('.target-type-2').text(counter2)
+                volume %= 7;
             }
-            if (volume < 10 && volume % 2 === 0) {
-                nullCounters()
-                counter1 = volume / 2
+            if (volume) {
+                counter1 = Math.ceil(volume / 2)
                 $('.target-type-1').text(counter1)
             }
             calculate()
@@ -348,12 +348,14 @@ $products2 = wc_get_products($args2);
                 return;
             }
             document.getElementById("mySidenav").style.width = '0'
+            document.getElementById("mySidenav").style.right = '-70%'
             document.getElementById("sidenavContainer").style.width = '0'
             document.body.style.overflowY = 'auto'
         })
 
         $('.openNav').on('click', () => {
             document.getElementById("mySidenav").style.width = '80%'
+            document.getElementById("mySidenav").style.right = '0'
             document.getElementById("sidenavContainer").style.width = '100%'
             document.body.style.overflowY = 'hidden'
         })
@@ -468,7 +470,7 @@ $products2 = wc_get_products($args2);
 
                 </div><!-- close .site-info -->
             </div>
-            <div class="col-12 col-lg-5">
+            <div class="col-6 col-lg-5">
                 <div class="footer-menu">
                     <ul id="menu-second" class="menu">
                         <?php
@@ -521,7 +523,7 @@ $products2 = wc_get_products($args2);
                     </ul>
                 </div>
             </div>
-            <div class="col-12 col-lg-3">
+            <div class="col-6 col-lg-3">
                 <div class="footer-socials">
                     <p class="footer-contacts">Наши контакты</p>
                     <a href="tel:<?= get_field('general_phone', 44) ?>"><?= get_field('general_phone', 44) ?></a>

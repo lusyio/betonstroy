@@ -69,12 +69,12 @@
         case 'type_2':
             $after_header = '<p class="header-products-list">Классы ' . get_product_titles_by_category($page_slug) . '</p>
             <div class="row">
-                <div class="col-lg-3 col-12 header-card-products">
+                <div class="col-lg-3 col-6 header-card-products">
                     <img src="/wp-content/themes/storefront-child/svg/svg-storage.svg" alt="">
                     <p class="header-card-products__title">10 000 м³</p>
                     <p>расходников на складе</p>
                 </div>
-                <div class="col-lg-3 col-12 header-card-products">
+                <div class="col-lg-3 col-6 header-card-products">
                     <img src="/wp-content/themes/storefront-child/svg/svg-header-discount.svg" alt="">
                     <p class="header-card-products__title">на 12 %</p>
                     <p>дешевле рынка</p>
@@ -186,8 +186,7 @@
 
         </header><!-- #masthead -->
         <div class="container">
-            <h1 class="header-h1"
-                style="font-size: <?= $title_size ? (int)$title_size : 110 ?>px;"><?= get_field('header_title') ?></h1>
+            <h1 class="header-h1 h<?=$title_size ? $title_size : 110 ?>"><?= get_field('header_title') ?></h1>
             <?= $after_header ?>
         </div>
         <?= $widget ?>

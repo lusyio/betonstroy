@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-xl-6 col-12">
                         <p class="card-companies__footer">
                             <span>156</span>Компаний доверяют нашей продукции
                         </p>

@@ -18,7 +18,7 @@
                 <div class="position-relative">
                     <div class="zone zone-100km">
                         <div class="zone-100km__btn">
-                            <p>>50</p>
+                            <p>100</p>
                             <p>км</p>
                             <div class="card-zone">
                                 <div>
@@ -38,6 +38,8 @@
                             <span class="fourth"></span>
                             <span class="fifth"></span>
                             <span class="sixth"></span>
+                            <span class="seventh"></span>
+                            <span class="eighth"></span>
                         </div>
                         <div class="zone-50km__btn">
                             <p>50</p>
