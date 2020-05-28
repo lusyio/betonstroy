@@ -2912,7 +2912,7 @@ html body .blick:before {
     max-height: 208px;
 }
 
-.card-products-list__title {
+.card-products-list .card-products-list__title {
     font-weight: bold;
     font-size: 2rem;
     line-height: 2rem;
@@ -2921,7 +2921,7 @@ html body .blick:before {
     position: relative;
 }
 
-.card-products-list__title:after {
+.card-products-list .card-products-list__title:after {
     content: '';
     position: absolute;
     left: 0;
@@ -3462,6 +3462,10 @@ and (max-width: 1199px) {
 
     .input.input-primary.caldera-custom input {
         width: 100%;
+    }
+
+    .sidenav .input.input-primary.caldera-custom input {
+        max-width: 300px;
     }
 
     .card-product .card-product__title {
@@ -4179,10 +4183,51 @@ and (max-width: 768px) {
     .card-products-list .card-products-list-discount .btn.btn-primary {
         max-width: 100%;
     }
+
+    .mini-services {
+        padding: 50px 0;
+    }
+
+    .card-mini-services-col:last-of-type .card-mini-services {
+        margin-bottom: 0;
+    }
 }
 
 @media screen
 and (max-width: 576px) {
+
+    html .container {
+        padding: 0 30px;
+    }
+
+    .header-h1.h110 {
+        font-size: 60px;
+    }
+
+    .card-service.type-3 .card-service__title {
+        font-size: 28px;
+    }
+
+    .card-service.type-3 .card-service__info {
+        margin-bottom: 9rem;
+    }
+
+    .with-love {
+        max-width: 45%;
+    }
+
+    .card-companies-big .card-companies-big__list p:first-of-type {
+        min-width: 33%;
+    }
+
+    .card-service .card-service__title {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .card-service {
+        padding: 50px 30px;
+    }
 
     .woocommerce-shipping-methods .pure-material-radio > span::after {
         top: 3px;
@@ -4192,10 +4237,70 @@ and (max-width: 576px) {
         padding: 0;
     }
 
+    .card-products-list-discount p {
+        font-size: 17px;
+        line-height: 19px;
+        color: #767676;
+    }
+
+    .card-products-list-discount img {
+        max-width: 32%;
+    }
+
+    .card-products-list__header > img {
+        max-width: 130px;
+        height: 155px;
+    }
+
     .outer-menu .menu li {
         margin-left: 0;
     }
 
+    .card-products-list__property {
+        max-width: 100%;
+    }
+
+    .card-products-list .btn.btn-outline-primary {
+        max-width: 100%;
+    }
+
+    .card-products-list .btn.btn-primary {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .header-h1.h32 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .help-banner .help-banner__header {
+        font-size: 2.425rem;
+    }
+
+    .header-h1.h70 {
+        font-size: 43px;
+    }
+
+    .about-block .about-block__point img {
+        max-height: 120px;
+    }
+
+    .card-team .card-team__title {
+        max-width: 100%;
+    }
+
+    .contacts .contacts-left {
+        padding: 50px 30px;
+    }
+
+    html .contacts .container {
+        padding: 0;
+    }
+
+    .company-pluses-card .company-pluses-card__title {
+        font-size: 24px;
+    }
 }
 
 /*--------------------------------------------------------------
