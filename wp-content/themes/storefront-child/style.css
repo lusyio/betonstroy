@@ -4751,6 +4751,10 @@ and (max-width: 320px) {
         padding: 23px 16px;
     }
 
+    header#masthead {
+        padding: 30px 15px !important;
+    }
+
     .header-card {
         padding: 28px 15px 30px 15px;
     }
