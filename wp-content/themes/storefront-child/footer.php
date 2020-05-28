@@ -257,9 +257,9 @@ $products2 = wc_get_products($args2);
             $('.delivery_date').val(value)
         })
 
-        $volume.on('change', () => {
+        $volume.on('keyup', function () {
             let value = $($volume).val();
-            $('.volume').val(value);
+            $(this).val(value);
             volume = value
             if (volume >= 10) {
                 counter4 = Math.floor(volume / 10)
