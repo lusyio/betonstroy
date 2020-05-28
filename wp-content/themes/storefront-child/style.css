@@ -2782,6 +2782,7 @@ html body .blick:before {
     line-height: 2.625rem;
     color: #FFFFFF;
     margin-bottom: 14px;
+    text-transform: uppercase;
 }
 
 .composition .composition__after-header {
@@ -4104,38 +4105,79 @@ and (max-width: 768px) {
         justify-content: space-between;
     }
 
-    .swiper-container{
+    .swiper-container {
         width: 107%;
         max-width: 110%;
     }
 
-    .contacts .contacts__after-header{
+    .contacts .contacts__after-header {
         margin-bottom: 40px;
         font-size: 19px;
         line-height: 19px;
     }
 
-    .contacts .contacts__title{
+    .contacts .contacts__title {
         font-size: 25px;
         line-height: 25px;
         margin-bottom: 55px;
     }
 
-    .contacts .contacts__list p, .contacts .contacts__list a{
+    .contacts .contacts__list p, .contacts .contacts__list a {
         font-size: 19px;
         line-height: 19px;
     }
 
-    .help-banner .btn.btn-outline-white{
+    .help-banner .btn.btn-outline-white {
         max-width: 100%;
     }
 
-    .help-banner-left{
+    .help-banner-left {
         padding-top: 50px;
     }
 
-    .storefront-handheld-footer-bar{
+    .storefront-handheld-footer-bar {
         display: none;
+    }
+
+    .header-h1.h32 {
+        margin-top: 120px;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .header-products-list {
+        max-width: 80%;
+    }
+
+    html .header-widget-catalog .btn.btn-outline-white {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .header-widget-catalog .input.input-primary.caldera-custom {
+        margin-right: 0;
+    }
+
+    .row .company-pluses-card-col {
+        padding: 0 15px;
+        margin-right: 0;
+    }
+
+    .company-pluses {
+        padding: 50px 0;
+    }
+
+    .card-products-list .btn.btn-primary {
+        max-width: 210px;
+    }
+
+    .card-products-list .card-products-list-discount .input.input-primary.caldera-custom input {
+        max-width: 100%;
+    }
+
+    .card-products-list .card-products-list-discount .btn.btn-primary {
+        max-width: 100%;
     }
 }
 
