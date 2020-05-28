@@ -199,8 +199,8 @@ $products2 = wc_get_products($args2);
         let counter4 = 0;
 
         const calculate = () => {
-            if (beton !== null && volume !== null) {
-                let calculetedPrice = Number(beton) * Number(volume) + Number(deliveryKm) * Number(volume) + counter1 * 2500 + counter2 * 3500 + counter3 * 4500 + counter4 * 5500;
+            if ((beton !== null && volume !== null) || (cement !== null && volume !== null)) {
+                let calculetedPrice = Number(beton) * Number(volume) + Number(cement) * Number(volume) + Number(deliveryKm) * Number(volume) + counter1 * 2500 + counter2 * 3500 + counter3 * 4500 + counter4 * 5500;
                 $costPrice.text(calculetedPrice + ' ₽*')
             }
         }
@@ -257,30 +257,33 @@ $products2 = wc_get_products($args2);
             $('.delivery_date').val(value)
         })
 
+        $('.delivery_date').val($($deliveryDate).val())
+
         $volume.on('keyup', function () {
             let value = $($volume).val();
-            $(this).val(value);
-            volume = value
-            if (volume >= 10) {
-                counter4 = Math.floor(volume / 10)
-                console.log(counter4)
+            $('.volume').val(value);
+            volume = value;
+            nullCounters()
+            if (value >= 10) {
+                counter4 = Math.floor(value / 10)
                 $('.target-type-4').text(counter4)
-                volume %= 10;
+                value %= 10;
             }
-            if (volume >= 9) {
-                counter3 = Math.floor(volume / 9)
+            if (value >= 9) {
+                counter3 = Math.floor(value / 9)
                 $('.target-type-3').text(counter3)
-                volume %= 9;
+                value %= 9;
             }
-            if (volume >= 7) {
-                counter2 = Math.floor(volume / 7)
+            if (value >= 7) {
+                counter2 = Math.floor(value / 7)
                 $('.target-type-2').text(counter2)
-                volume %= 7;
+                value %= 7;
             }
-            if (volume) {
-                counter1 = Math.ceil(volume / 2)
+            if (value) {
+                counter1 = Math.ceil(value / 2)
                 $('.target-type-1').text(counter1)
             }
+            $('.delivery_type').val('Миксер: ' + counter1 + '; ' + 'Автобетонсмеситель1: ' + counter2 + '; ' + 'Автобетонсмеситель2: ' + counter3 + '; ' + 'Автобетонсмеситель4: ' + counter4 + ';')
             calculate()
         })
 
