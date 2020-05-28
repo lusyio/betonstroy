@@ -354,7 +354,11 @@ $products2 = wc_get_products($args2);
         })
 
         $('.openNav').on('click', () => {
-            document.getElementById("mySidenav").style.width = '80%'
+            if (document.documentElement.clientWidth < 576) {
+                document.getElementById("mySidenav").style.width = '100%'
+            } else {
+                document.getElementById("mySidenav").style.width = '80%'
+            }
             document.getElementById("mySidenav").style.right = '0'
             document.getElementById("sidenavContainer").style.width = '100%'
             document.body.style.overflowY = 'hidden'
@@ -565,6 +569,14 @@ $products2 = wc_get_products($args2);
 
 <script>
     jQuery(function ($) {
+
+        $('.checkbox-toggle').on('change', function () {
+            if ($('.checkbox-toggle').is(':checked')) {
+                $('body').addClass('overflow-hidden');
+            } else {
+                $('body').removeClass('overflow-hidden');
+            }
+        });
         $(document).ready(function () {
             let pathArray = window.location.pathname.split('/');
             let secondLevelLocation = pathArray[1];

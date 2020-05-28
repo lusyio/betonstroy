@@ -46,14 +46,14 @@
             $widget = '
             <div class="header-cards container">
                 <div class="header-card type-1">
-                    <img src="/wp-content/themes/storefront-child/svg/Завод.svg" alt="">
+                    <img src="/wp-content/themes/storefront-child/svg/Zavod.svg" alt="">
                     <p class="header-card__title">Мы производим</p>
                     <p class="header-card__text">цементный раствор, бетонные смеси всех классов на гравийном и гранитном
                         щебне</p>
                     <a class="header-card__link" href="/#products">Продукция ></a>
                 </div>
                 <div class="header-card type-2">
-                    <img src="/wp-content/themes/storefront-child/svg/Доверие.svg" alt="">
+                    <img src="/wp-content/themes/storefront-child/svg/Doverie.svg" alt="">
                     <p class="header-card__title">156 компаний</p>
                     <p class="header-card__text">доверяют нашей продукции</p>
                     <a class="header-card__link" href="/about">О компании ></a>
@@ -93,12 +93,12 @@
         case 'type_3':
             $after_header = '<p class="header-products-list">Классы ' . get_product_titles_by_category($page_slug) . '</p>
             <div class="row">
-                <div class="col-lg-3 col-12 header-card-products">
+                <div class="col-lg-3 col-6 header-card-products">
                     <img src="/wp-content/themes/storefront-child/svg/svg-storage.svg" alt="">
                     <p class="header-card-products__title">10 000 м³</p>
                     <p>расходников на складе</p>
                 </div>
-                <div class="col-lg-3 col-12 header-card-products">
+                <div class="col-lg-3 col-6 header-card-products">
                     <img src="/wp-content/themes/storefront-child/svg/10min.svg" alt="">
                     <p class="header-card-products__title">За 10 минут</p>
                     <p>до нужного времени поставки <br> уже будем на месте</p>
@@ -124,11 +124,11 @@
          style="height: <?= $header_size === 'big' ? 900 : 633 ?>px;background-image: url(<?= $header_bg ? $header_bg : '/wp-content/themes/storefront-child/images/bg-main.jpg' ?>);">
 
         <header id="masthead" class="site-header" role="banner">
-            <div class="container">
+            <div class="container masthead-container">
                 <nav class="navbar navbar-dark navbar-expand-xl p-0 justify-content-between">
                     <div class="navbar-brand">
                         <a class="navbar-brand__link" href="/">
-                            <img src="/wp-content/themes/storefront-child/svg/Местоположение.svg" alt="">
+                            <img src="/wp-content/themes/storefront-child/svg/Mestopolozhenie.svg" alt="">
                             <p>
                                 <span>Производство в</span>
                                 Сергиевом Посаде
@@ -173,6 +173,9 @@
                                             'walker' => new wp_bootstrap_navwalker()
                                         ));
                                         ?>
+                                        <a class="header-phone-mobile"
+                                           href="tel:<?= get_field('general_phone', 44) ?>"><?= get_field('general_phone', 44) ?></a>
+                                        <a data-toggle="modal" data-target="#questionModal" class="btn btn-primary" href="">Оставить заявку</a>
                                     </div>
                                 </div>
                             </div>
@@ -186,7 +189,7 @@
 
         </header><!-- #masthead -->
         <div class="container">
-            <h1 class="header-h1 h<?=$title_size ? $title_size : 110 ?>"><?= get_field('header_title') ?></h1>
+            <h1 class="header-h1 h<?= $title_size ? $title_size : 110 ?>"><?= get_field('header_title') ?></h1>
             <?= $after_header ?>
         </div>
         <?= $widget ?>

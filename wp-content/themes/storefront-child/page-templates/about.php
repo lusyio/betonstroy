@@ -212,7 +212,7 @@ Template Post Type: post, page, product
             prevEl: '.passports-arrows-prev',
         },
         breakpoints: {
-            350: {
+            450: {
                 slidesPerView: 1.5,
                 spaceBetween: 30,
             },

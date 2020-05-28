@@ -388,37 +388,37 @@ function get_products_by_category_slug($slug)
                     if ($durability) {
                         switch ($durability) {
                             case 'пластичный':
-                                $icon = '/wp-content/themes/storefront-child/svg/пластичный.svg';
+                                $icon = '/wp-content/themes/storefront-child/svg/plastichnyj.svg';
                                 $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                                 break;
                             case 'высокооднородный':
-                                $icon = '/wp-content/themes/storefront-child/svg/Высокооднородный.svg';
+                                $icon = '/wp-content/themes/storefront-child/svg/Vysokoodnorodnyj.svg';
                                 $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                                 break;
                             case 'низкая прочность':
-                                $icon = '/wp-content/themes/storefront-child/svg/низкая прочность.svg';
+                                $icon = '/wp-content/themes/storefront-child/svg/nizkaya-prochnost.svg';
                                 $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                                 break;
                             case 'средняя прочность':
-                                $icon = '/wp-content/themes/storefront-child/svg/средняя прочность.svg';
+                                $icon = '/wp-content/themes/storefront-child/svg/srednyaya-prochnost.svg';
                                 $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                                 break;
                             case 'высокая прочность':
-                                $icon = '/wp-content/themes/storefront-child/svg/высокая прочность.svg';
+                                $icon = '/wp-content/themes/storefront-child/svg/vysokaya-prochnost.svg';
                                 $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                                 break;
                             case 'повышенная прочность':
-                                $icon = '/wp-content/themes/storefront-child/svg/повышенная прочность.svg';
+                                $icon = '/wp-content/themes/storefront-child/svg/povyshennaya-prochnost.svg';
                                 $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                                 break;
                             case 'экстремальная прочность' :
-                                $icon = '/wp-content/themes/storefront-child/svg/экстремальная прочность.svg';
+                                $icon = '/wp-content/themes/storefront-child/svg/ekstremalnaya-prochnost.svg';
                                 $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                                 break;
                         }
                     }
                     if ($density) {
-                        $icon = '/wp-content/themes/storefront-child/svg/Плотность.svg';
+                        $icon = '/wp-content/themes/storefront-child/svg/Plotnost.svg';
                         $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="плотность">плотность ' . $density . ' кг/м³</span>';
                     }
                     if (is_array($props)) {
@@ -427,44 +427,44 @@ function get_products_by_category_slug($slug)
                             switch ($lowerProp) {
                                 case 'подготовка фундамента':
                                 case 'подготовительные работы':
-                                    $icon = '/wp-content/themes/storefront-child/svg/Подготовительные работы.svg';
+                                    $icon = '/wp-content/themes/storefront-child/svg/Podgotovitelnye-raboty.svg';
                                     $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'для стяжек':
-                                    $icon = '/wp-content/themes/storefront-child/svg/Стяжка.svg';
+                                    $icon = '/wp-content/themes/storefront-child/svg/Styazhka.svg';
                                     $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'для заливки фундамента':
-                                    $icon = '/wp-content/themes/storefront-child/svg/Заливка бетона.svg';
+                                    $icon = '/wp-content/themes/storefront-child/svg/Zalivka-betona.svg';
                                     $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'несущие конструкции':
-                                    $icon = '/wp-content/themes/storefront-child/svg/Несущие конструкции.svg';
+                                    $icon = '/wp-content/themes/storefront-child/svg/Nesushchie-konstrukcii.svg';
                                     $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'монолитный фундамент':
                                 case 'изготовление фундамента':
-                                    $icon = '/wp-content/themes/storefront-child/svg/Монолитный фундамент.svg';
+                                    $icon = '/wp-content/themes/storefront-child/svg/Monolitnyj-fundament.svg';
                                     $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'для жби':
-                                    $icon = '/wp-content/themes/storefront-child/svg/ЖБИ.svg';
+                                    $icon = '/wp-content/themes/storefront-child/svg/ZHBI.svg';
                                     $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'ответственные конструкции':
-                                    $icon = '/wp-content/themes/storefront-child/svg/Важные конструкции.svg';
+                                    $icon = '/wp-content/themes/storefront-child/svg/Vazhnye-konstrukcii.svg';
                                     $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'для кладки':
-                                    $icon = '/wp-content/themes/storefront-child/svg/Для кладки.svg';
+                                    $icon = '/wp-content/themes/storefront-child/svg/Dlya-kladki.svg';
                                     $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'для выравнивания':
-                                    $icon = '/wp-content/themes/storefront-child/svg/Выравнивание.svg';
+                                    $icon = '/wp-content/themes/storefront-child/svg/Vyravnivanie.svg';
                                     $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'для затирки':
-                                    $icon = '/wp-content/themes/storefront-child/svg/Для затирки.svg';
+                                    $icon = '/wp-content/themes/storefront-child/svg/Dlya-zatirki.svg';
                                     $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                             }

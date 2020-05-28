@@ -3,7 +3,7 @@ Theme Name:   	Richbee
 Author:       	Richbee
 Template:     	storefront
 Description:  	Дочерняя тема для storefront
-Version:      	1.0.6
+Version:      	1.0.7
 Theme URI:    https://richbee.ru/
 Author URI:   https://richbee.ru/
 
@@ -1528,8 +1528,8 @@ header#masthead {
 }
 
 .outer-menu .menu > div {
-    width: 200vw;
-    height: 200vw;
+    width: 300vw;
+    height: 300vw;
     color: #FEFEFE;
     background: #1C1C1C;
     border-radius: 50%;
@@ -2314,7 +2314,7 @@ html .bg-white {
 }
 
 .delivery-zone__body p:after {
-    content: url("/wp-content/themes/storefront-child/svg/Стрелка.svg");
+    content: url("/wp-content/themes/storefront-child/svg/Strelka.svg");
     right: -29%;
     top: -26%;
     position: absolute;
@@ -2761,11 +2761,19 @@ html body .blick:before {
     margin-bottom: 20px;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
 .card-mini-services .card-mini-services__info {
     font-weight: normal;
     font-size: 17px;
     line-height: 17px;
     color: #FFFFFF;
+}
+
+.big-map-mobile {
+    display: none;
 }
 
 .composition {
@@ -3460,6 +3468,39 @@ and (min-width: 768px) {
 @media screen
 and (max-width: 1199px) {
 
+    .outer-menu {
+        position: relative;
+    }
+
+    .header-phone-mobile {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 24px;
+        color: #0A5BAC;
+        display: table;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .outer-menu .checkbox-toggle:checked ~ .menu > div > div {
+        display: block;
+        text-align: left;
+        overflow: hidden;
+        padding-top: 30px;
+    }
+
+    .outer-menu:after {
+        position: absolute;
+        content: url("/wp-content/themes/storefront-child/svg/menu.svg");
+        width: 100%;
+        height: 100%;
+        left: 0;
+    }
+
+    .navbar-dark .navbar-toggler {
+        opacity: 0;
+    }
+
     .input.input-primary.caldera-custom input {
         width: 100%;
     }
@@ -3523,7 +3564,15 @@ and (max-width: 1199px) {
     }
 
     .outer-menu .menu .dropdown-menu {
-        display: none;
+        border: 0;
+    }
+
+    .outer-menu .menu > div
+    .outer-menu .menu .dropdown-menu li > a {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        text-transform: uppercase;
     }
 
     .navbar-collapse {
@@ -3615,6 +3664,15 @@ and (max-width: 1199px) {
 
     .outer-menu .menu ul {
         text-align: left;
+        padding: 0;
+    }
+
+    .outer-menu .menu li {
+        margin: 1em 0;
+    }
+
+    .dropdown-item {
+        font-size: 15px;
     }
 
     .pin-trace {
@@ -3634,6 +3692,29 @@ and (max-width: 991px) {
     .header-cards {
         display: block;
         position: relative;
+    }
+
+    .zone-container {
+        position: relative;
+        top: -3rem;
+        left: 5.7rem;
+    }
+
+    .big-map {
+        transform: scale(1.5);
+        margin-bottom: 5rem;
+    }
+
+    .zone {
+        z-index: 5;
+    }
+
+    .delivery-zone__body {
+        margin-bottom: 18rem;
+    }
+
+    .delivery-zone {
+        overflow: hidden;
     }
 
     .header-h1.h110 {
@@ -3880,9 +3961,116 @@ and (max-width: 991px) {
 }
 
 @media screen
+and (max-width: 991px) and (min-width: 768px) {
+    .input.input-primary.caldera-custom input {
+        max-width: 300px;
+    }
+
+    html .header-cards .btn.btn-primary, html .header-widget-catalog .btn.btn-outline-white {
+        margin-left: 0;
+    }
+
+    .contacts .contacts__list p, .contacts .contacts__list a {
+        font-size: 19px;
+        line-height: 19px;
+    }
+}
+
+@media screen
 and (max-width: 768px) {
     footer.site-footer {
         padding-bottom: 75px;
+    }
+
+    .big-map {
+        transform: scale(2.5);
+        margin-bottom: 15rem;
+        padding-right: 2rem;
+    }
+
+    .zone-container {
+        position: relative;
+        top: -13rem;
+        left: 12.7rem;
+    }
+
+    .zone-25km {
+        width: 23rem;
+        height: 23rem;
+        right: 16rem;
+        top: 3.9rem;
+    }
+
+    .zone-50km {
+        width: 37rem;
+        height: 37rem;
+        right: 9rem;
+        top: -3.5rem;
+    }
+
+    .zone-100km {
+        width: 50rem;
+        height: 50rem;
+        right: 2.6rem;
+        top: -9.5rem;
+    }
+
+    .zone-container {
+        position: relative;
+        top: -11rem;
+        left: 12.7rem;
+    }
+
+    .delivery-zone__body {
+        margin-bottom: 30rem;
+    }
+
+    .pin-trace {
+        display: none;
+    }
+
+    .pin {
+        display: none;
+    }
+
+    .delivery-zone__absolute {
+        bottom: 25px;
+        left: 0;
+    }
+
+    .modal-primary .modal-primary__title {
+        margin-bottom: 45px;
+    }
+
+    .modal-primary .modal-body {
+        padding: 57px 30px;
+    }
+
+    .modal-primary-form .single {
+        display: block;
+    }
+
+    .modal-primary__wait-link {
+        display: block;
+        max-width: 100%;
+    }
+
+    .modal-primary__wait {
+        margin-bottom: 15px;
+    }
+
+    .modal-primary__wait-link a {
+        display: table;
+        margin-bottom: 10px;
+    }
+
+    .modal-primary-form .input.input-primary.caldera-custom input {
+        margin-bottom: 30px;
+    }
+
+    .modal-primary-form .btn.btn-primary {
+        width: 100%;
+        max-width: 100%;
     }
 
     header#masthead {
@@ -4196,12 +4384,83 @@ and (max-width: 768px) {
 @media screen
 and (max-width: 576px) {
 
+    .sidenav .sidenav-body{
+        padding: 0 30px;
+    }
+
+    #masthead .masthead-container {
+        padding: 0;
+    }
+
+    .sidenav-header{
+        padding: 0 30px;
+    }
+
+    .big-map {
+        transform: scale(1.5);
+        margin-bottom: 5rem;
+        padding: 0 4rem;
+    }
+
+    .zone-container{
+        display: none;
+    }
+
+    .big-map-mobile {
+        display: block;
+    }
+
+    .delivery-zone__body {
+        margin-bottom: 15rem;
+    }
+
+    .delivery-zone__absolute {
+        bottom: 25px;
+        left: 30px;
+    }
+
+    .delivery-zone .zone {
+        border: 0;
+    }
+
+    .big-map-desktop {
+        display: none;
+    }
+
+    header#masthead {
+        padding: 30px !important;
+    }
+
+    .outer-menu .menu > div > div {
+        width: 100%;
+    }
+
+    .navbar-dark .navbar-brand {
+        z-index: 5;
+    }
+
+    .outer-menu .menu li {
+        margin-bottom: 25px;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+        color: #000000;
+    }
+
     html .container {
         padding: 0 30px;
     }
 
+    .card-control {
+        height: auto;
+    }
+
     .header-h1.h110 {
         font-size: 60px;
+        margin-top: 123px;
     }
 
     .card-service.type-3 .card-service__title {
@@ -4301,6 +4560,93 @@ and (max-width: 576px) {
     .company-pluses-card .company-pluses-card__title {
         font-size: 24px;
     }
+
+    .card-product-item a p, .card-product-item a {
+        font-size: 12px;
+    }
+}
+
+@media screen
+and (max-width: 490px) {
+    .header-h1.h110 {
+        font-size: 45px;
+    }
+
+    .swiper-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .card-service.type-3 a {
+        padding: 24px 10px;
+    }
+
+    .card-service.type-3 .card-service__info {
+        margin-bottom: 5rem;
+    }
+
+    .card-companies-big .card-companies-big__list {
+        display: block;
+    }
+
+    .pre-footer .pre-footer__avatar {
+        max-width: 90px;
+        width: 100%;
+        max-height: 90px;
+        height: auto;
+        margin-right: 15px;
+    }
+
+    .pre-footer .pre-footer__contacts a {
+        max-width: 100%;
+        width: 100%;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .footer-socials a {
+        font-size: 1.3625rem;
+    }
+
+    .with-love {
+        font-size: 14px;
+    }
+
+    .card-products-list__header {
+        display: block;
+    }
+
+    .card-products-list__header > img {
+        max-width: 130px;
+        height: 155px;
+        margin: auto;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .about-block .about-block__point p {
+        font-size: 14px;
+    }
+
+    .about-block .about-block__after-header, .about-block .about-block__info {
+        font-size: 17px;
+    }
+
+    .about-block .about-block__point img {
+        max-height: 90px;
+    }
+
+    .card-team .card-team__title {
+        font-size: 25px;
+    }
+
+    .card-team .card-team__info {
+        font-size: 17px;
+    }
+
+    .passports .passports__header {
+        font-size: 2.225rem;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -4324,7 +4670,7 @@ and (max-width: 576px) {
 /*--------------------------------------------------------------
 ## iPad
 --------------------------------------------------------------*/
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 991px) {
     html {
         font-size: 85%;
     }

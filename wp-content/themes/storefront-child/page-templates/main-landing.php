@@ -99,7 +99,7 @@ Template Post Type: post, page, product
                     <div class="card-product__header card-product__header-gost">
                         <p class="card-product__title">Продукция изготовлена по нормам ГОСТ 7473-2010</p>
                         <p class="card-product__marks">
-                            <img src="/wp-content/themes/storefront-child/svg/ГОСТ.svg"
+                            <img src="/wp-content/themes/storefront-child/svg/gost-svg.svg"
                                  alt="mark">
                             государственный стандарт от 01.01.2012
                         </p>
