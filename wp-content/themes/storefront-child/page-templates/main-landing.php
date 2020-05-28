@@ -157,7 +157,7 @@ Template Post Type: post, page, product
             </div>
         </div>
         <div class="row">
-            <div class="col card-control-col">
+            <div class="col-12 col-md card-control-col">
                 <div class="card-control">
                     <div class="card-control__img">
                         <img src="/wp-content/themes/storefront-child/svg/svg-gost.svg" alt="gost">
@@ -166,7 +166,7 @@ Template Post Type: post, page, product
                     <p class="card-control__info">Обеспечиваем соблюдения ГОСТ 7473-2010</p>
                 </div>
             </div>
-            <div class="col card-control-col">
+            <div class="col-12 col-md card-control-col">
                 <div class="card-control">
                     <div class="card-control__img">
                         <img src="/wp-content/themes/storefront-child/svg/svg-control.svg" alt="control">
@@ -175,7 +175,7 @@ Template Post Type: post, page, product
                     <p class="card-control__info">Следим за отгрузкой продукции и выборочно проводим проверки</p>
                 </div>
             </div>
-            <div class="col card-control-col">
+            <div class="col-12 col-md card-control-col">
                 <div class="card-control">
                     <div class="card-control__img">
                         <img src="/wp-content/themes/storefront-child/svg/svg-term.svg" alt="term">

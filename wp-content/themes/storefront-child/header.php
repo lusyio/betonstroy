@@ -43,7 +43,7 @@
 
     switch ($widget_type) {
         case 'type_1':
-            $widget = '<div class="container">
+            $widget = '
             <div class="header-cards container">
                 <div class="header-card type-1">
                     <img src="/wp-content/themes/storefront-child/svg/Завод.svg" alt="">
@@ -64,7 +64,7 @@
                     ' . do_shortcode("[caldera_form id=\"CF5ec66084d9ee4\"]") . '
                 </div>
                 </div>
-            </div>';
+           ';
             break;
         case 'type_2':
             $after_header = '<p class="header-products-list">Классы ' . get_product_titles_by_category($page_slug) . '</p>

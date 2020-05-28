@@ -60,8 +60,8 @@ Template Post Type: post, page, product
                     </div>
                     <div class="card-team__body">
                         <p class="card-team__title"><?= get_field('fio_first') ?></p>
-                        <p class="cart-team__info"><?= get_field('post_first') ?></p>
-                        <a class="cart-item__email"
+                        <p class="card-team__info"><?= get_field('post_first') ?></p>
+                        <a class="card-item__email"
                            href="mailto:<?= get_field('email_first') ?>"><?= get_field('email_first') ?></a>
                     </div>
                 </div>
@@ -72,8 +72,8 @@ Template Post Type: post, page, product
                     </div>
                     <div class="card-team__body">
                         <p class="card-team__title"><?= get_field('fio_second') ?></p>
-                        <p class="cart-team__info"><?= get_field('post_second') ?></p>
-                        <a class="cart-item__email"
+                        <p class="card-team__info"><?= get_field('post_second') ?></p>
+                        <a class="card-item__email"
                            href="mailto:<?= get_field('email_second') ?>"><?= get_field('email_second') ?></a>
                     </div>
                 </div>
@@ -186,9 +186,11 @@ Template Post Type: post, page, product
                     </div>
                 </div>
             </div>
-            <div class="contacts__map">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab78ff9a0398894c79b4d7789f0e62d644266cc8ce0fb893157dd55ff2790db07&amp;source=constructor"
-                        width="100%" height="100%" frameborder="0"></iframe>
+            <div class="col-lg-7 col-12 contacts__map-container">
+                <div class="contacts__map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab78ff9a0398894c79b4d7789f0e62d644266cc8ce0fb893157dd55ff2790db07&amp;source=constructor"
+                            width="100%" height="100%" frameborder="0"></iframe>
+                </div>
             </div>
         </div>
     </div>
@@ -201,7 +203,7 @@ Template Post Type: post, page, product
         'disableScrolling': true
     })
     const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 30,
         freeMode: true,
         loop: true,
@@ -209,6 +211,20 @@ Template Post Type: post, page, product
             nextEl: '.passports-arrows-next',
             prevEl: '.passports-arrows-prev',
         },
+        breakpoints: {
+            350: {
+                slidesPerView: 1.5,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            991: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+        }
     });
 </script>
 <?php get_footer(); ?>

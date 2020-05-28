@@ -2181,6 +2181,10 @@ html .bg-white {
     padding: 70px 0;
 }
 
+.contacts .contacts__map-container {
+    position: unset;
+}
+
 .main-control .main-control__header {
     font-weight: bold;
     font-size: 2.625rem;
@@ -2502,6 +2506,7 @@ html body .delivery-zone .card-zone > p:last-of-type {
     line-height: 2.625rem;
     color: #FFFFFF;
     margin-bottom: 14px;
+    text-transform: uppercase;
 }
 
 .companies .companies__after-header {
@@ -3318,6 +3323,7 @@ html .btn.btn-outline-white {
     line-height: 2.625rem;
     color: #000000;
     margin-bottom: 14px;
+    text-transform: uppercase;
 }
 
 .contacts .contacts__after-header {
@@ -3581,7 +3587,7 @@ and (max-width: 1199px) {
 
     .pre-footer-img-container__contacts {
         top: 9.3rem;
-        left: 3.9rem;
+        left: 3.85rem;
         max-width: 279px;
     }
 
@@ -3606,6 +3612,16 @@ and (max-width: 1199px) {
         text-align: left;
     }
 
+    .pin-trace {
+        top: 8.5rem;
+        left: 7.4rem;
+    }
+
+    .pin {
+        top: 24.8rem;
+        left: 6.2rem;
+    }
+
 }
 
 @media screen
@@ -3617,7 +3633,88 @@ and (max-width: 991px) {
 
     .header-h1.h110 {
         font-size: 75px;
-        margin-top: 136px;
+        margin-top: 135px;
+    }
+
+    .header-h1.h70 {
+        margin-bottom: 0;
+        padding-bottom: 8rem;
+        font-size: 57px;
+    }
+
+    .header-h1.h70:after {
+        bottom: 70px;
+    }
+
+    .card-team {
+        margin-bottom: 20px;
+    }
+
+    .card-team {
+        margin-bottom: 20px;
+    }
+
+    .about-block__point:not(:first-of-type):not(:last-of-type) {
+        text-align: center;
+    }
+
+    .about-block .about-block__after-header {
+        margin-bottom: 25px;
+    }
+
+    .about-block__point:last-of-type {
+        text-align: right;
+    }
+
+    .about-block .btn {
+        display: none;
+    }
+
+    .contacts .contacts__map-container {
+        position: relative;
+    }
+
+    .contacts .contacts__map {
+        width: 100%;
+        position: relative;
+        height: 576px;
+    }
+
+    .card-team .card-team__header {
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+
+    .header-card-products {
+        margin-bottom: 50px;
+    }
+
+    .header-products-list {
+        margin-bottom: 70px;
+    }
+
+    .contacts-left {
+        padding-bottom: 50px;
+    }
+
+    .header-h1.h32 {
+        max-width: 100%;
+    }
+
+    .help-banner-left {
+        padding-bottom: 40px;
+    }
+
+    .help-banner .help-banner__info {
+        display: none;
+    }
+
+    .help-banner img {
+        animation: none;
+    }
+
+    .help-banner .help-banner__after-header {
+        margin-bottom: 55px;
     }
 
     .header-bg {
@@ -3750,12 +3847,295 @@ and (max-width: 991px) {
         margin-top: 0;
     }
 
+    .card-products-list .card-products-list__header {
+        height: auto;
+    }
+
+    .card-products-list .btn.btn-primary {
+        margin-left: 0;
+    }
+
+    .card-products-list .btn.btn-outline-primary {
+        margin-right: 0;
+    }
+
+    .card-products-list .card-products-list-discount .d-flex {
+        margin-bottom: 50px;
+    }
+
+    .card-mini-services {
+        background-size: cover !important;
+        margin-bottom: 20px;
+    }
+
+    .pre-footer .pre-footer__header {
+        text-align: center;
+    }
+
 }
 
 @media screen
 and (max-width: 768px) {
     footer.site-footer {
         padding-bottom: 75px;
+    }
+
+    header#masthead {
+        background: #fff;
+    }
+
+    .navbar-brand .navbar-brand__link p span {
+        font-size: 19px;
+        line-height: 19px;
+        color: #767676;
+        margin-bottom: 0;
+    }
+
+    .navbar-brand .navbar-brand__link p {
+        font-size: 19px;
+        line-height: 19px;
+        font-weight: 500;
+        color: #000;
+    }
+
+    .header-h1.h110 {
+        max-width: 100%;
+        font-size: 70px;
+        line-height: 70px;
+    }
+
+    .header-bg .header-cards {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .header-card .header-card__link {
+        bottom: 32px;
+    }
+
+    html .header-bg .btn.btn-primary {
+        max-width: 100%;
+    }
+
+    .header-card .header-card__title {
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 25px;
+        margin-bottom: 17px;
+    }
+
+    .header-card .header-card__text {
+        font-size: 19px;
+        line-height: 19px;
+    }
+
+    .card-service {
+        padding: 50px 41px 50px 30px;
+    }
+
+    .main-products .card-product-col {
+        margin-bottom: 20px !important;
+    }
+
+    .header-card.type-3 .header-card__title {
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .main-products .main-products__header {
+        margin-bottom: 40px;
+    }
+
+    .main-products .main-products__after-title {
+        margin-bottom: 0;
+    }
+
+    .card-service.type-3 a {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .main-products {
+        padding: 50px 0;
+    }
+
+    .main-services {
+        padding: 50px 0;
+    }
+
+    .main-control {
+        padding: 50px 0;
+    }
+
+    .row .card-control-col {
+        padding: 0 15px;
+        margin-right: 0;
+        margin-bottom: 2px
+    }
+
+    .card-control {
+        height: 250px;
+    }
+
+    .card-control .card-control__title {
+        font-weight: bold;
+        font-size: 23px;
+        line-height: 25px;
+    }
+
+    .card-control .card-control__info {
+        font-size: 18px;
+        line-height: 19px;
+    }
+
+    .companies {
+        padding: 50px 0;
+    }
+
+    .card-companies-big .card-companies-big__body {
+        padding-bottom: 55px;
+    }
+
+    .pre-footer .pre-footer__header {
+        text-align: left;
+    }
+
+    .pre-footer .pre-footer__body {
+        justify-content: space-between;
+    }
+
+    .pre-footer .pre-footer__or {
+        text-align: left;
+    }
+
+    .pre-footer .btn.btn-primary {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .pre-footer .pre-footer__name {
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .pre-footer .pre-footer__info {
+        font-size: 19px;
+        line-height: 19px;
+    }
+
+    .pre-footer .pre-footer__contacts a {
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .pre-footer .pre-footer__avatar {
+        max-width: 120px;
+        width: 100%;
+        max-height: 120px;
+        height: auto;
+    }
+
+    .header-h1.h70 {
+        max-width: 100%;
+        font-size: 50px;
+        line-height: 50px;
+        padding-bottom: 12rem;
+    }
+
+    .header-h1.h70:after {
+        bottom: 100px;
+    }
+
+    .card-service.type-3 .card-service__info {
+        margin-bottom: 6rem;
+    }
+
+    .about-block {
+        padding: 50px 0;
+    }
+
+    .about-block .about-block__header {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .about-block .about-block__after-header {
+        font-size: 19px;
+        line-height: 19px;
+    }
+
+    .about-block .about-block__info {
+        font-size: 19px;
+        line-height: 19px;
+        margin-bottom: 40px;
+    }
+
+    .about-block .about-block__point img {
+        max-height: 140px;
+    }
+
+    .team {
+        padding: 50px 0;
+    }
+
+    .card-team .card-team__title {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .card-team .card-team__info {
+        font-size: 19px;
+        line-height: 19px;
+        color: #767676;
+    }
+
+    .card-team .card-item__email {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 20px;
+        color: #0A5BAC;
+    }
+
+    .passports-arrows {
+        margin-bottom: 100px;
+        justify-content: space-between;
+    }
+
+    .swiper-container{
+        width: 107%;
+        max-width: 110%;
+    }
+
+    .contacts .contacts__after-header{
+        margin-bottom: 40px;
+        font-size: 19px;
+        line-height: 19px;
+    }
+
+    .contacts .contacts__title{
+        font-size: 25px;
+        line-height: 25px;
+        margin-bottom: 55px;
+    }
+
+    .contacts .contacts__list p, .contacts .contacts__list a{
+        font-size: 19px;
+        line-height: 19px;
+    }
+
+    .help-banner .btn.btn-outline-white{
+        max-width: 100%;
+    }
+
+    .help-banner-left{
+        padding-top: 50px;
+    }
+
+    .storefront-handheld-footer-bar{
+        display: none;
     }
 }
 

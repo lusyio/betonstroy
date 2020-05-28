@@ -30,24 +30,24 @@
             </div>
             <div class="col-lg-7 col-12">
                 <div class="row">
-                    <div class="col card-companies-col">
+                    <div class="col-12 col-md card-companies-col">
                         <div class="card-companies">
                             <img src="<?= get_field('img_client_2', 9); ?>" alt="">
                         </div>
                     </div>
-                    <div class="col card-companies-col">
+                    <div class="col-12 col-md card-companies-col">
                         <div class="card-companies">
                             <img src="<?= get_field('img_client_3', 9); ?>" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col card-companies-col">
+                    <div class="col-12 col-md card-companies-col">
                         <div class="card-companies">
                             <img src="<?= get_field('img_client_4', 9); ?>" alt="">
                         </div>
                     </div>
-                    <div class="col card-companies-col">
+                    <div class="col-12 col-md card-companies-col">
                         <div class="card-companies">
                             <img src="<?= get_field('img_client_5', 9); ?>" alt="">
                         </div>
