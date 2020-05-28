@@ -4392,6 +4392,34 @@ and (max-width: 768px) {
 @media screen
 and (max-width: 576px) {
 
+    .zone-container {
+        display: block;
+        position: relative;
+        top: -11rem;
+        left: 0;
+    }
+
+    .zone-100km {
+        width: 100%;
+        height: 50rem;
+        right: 0;
+        top: -1.5rem;
+    }
+
+    .zone-50km {
+        width: 100%;
+        height: 37rem;
+        right: 0;
+        top: 4.5rem;
+    }
+
+    .zone-25km {
+        width: 100%;
+        height: 23rem;
+        right: 0;
+        top: 10.9rem;
+    }
+
     .sidenav .sidenav-body {
         padding: 0 30px;
     }
@@ -4409,10 +4437,7 @@ and (max-width: 576px) {
         margin-bottom: 8rem;
         padding: 0 4rem;
     }
-
-    .zone-container {
-        display: none;
-    }
+    
 
     .big-map-mobile {
         display: block;
