@@ -3,7 +3,7 @@ Theme Name:   	Richbee
 Author:       	Richbee
 Template:     	storefront
 Description:  	Дочерняя тема для storefront
-Version:      	1.0.7
+Version:      	1.0.8
 Theme URI:    https://richbee.ru/
 Author URI:   https://richbee.ru/
 
@@ -536,7 +536,7 @@ ul.menu li.current-menu-item > a:before {
     flex-direction: row;
 }
 
-.navbar-brand .navbar-brand__link img {
+.navbar-brand .navbar-brand__link svg {
     width: 18px;
     height: 18px;
     margin-right: 11px;
@@ -759,7 +759,7 @@ ul.menu li.current-menu-item > a:before {
     background-color: #00000010;
     overflow-x: hidden;
     padding: 70px 0;
-    transition: 0.5s;
+    transition: 0s;
 }
 
 .sidenav .sidenav-body {
@@ -3978,6 +3978,10 @@ and (max-width: 991px) and (min-width: 768px) {
 
 @media screen
 and (max-width: 768px) {
+    .composition {
+        padding: 50px 0;
+    }
+
     footer.site-footer {
         padding-bottom: 75px;
     }
@@ -4379,12 +4383,16 @@ and (max-width: 768px) {
     .card-mini-services-col:last-of-type .card-mini-services {
         margin-bottom: 0;
     }
+
+    .navbar-brand .navbar-brand__link svg path {
+        fill: #767676;
+    }
 }
 
 @media screen
 and (max-width: 576px) {
 
-    .sidenav .sidenav-body{
+    .sidenav .sidenav-body {
         padding: 0 30px;
     }
 
@@ -4392,17 +4400,17 @@ and (max-width: 576px) {
         padding: 0;
     }
 
-    .sidenav-header{
+    .sidenav-header {
         padding: 0 30px;
     }
 
     .big-map {
-        transform: scale(1.5);
-        margin-bottom: 5rem;
+        transform: scale(1.8);
+        margin-bottom: 8rem;
         padding: 0 4rem;
     }
 
-    .zone-container{
+    .zone-container {
         display: none;
     }
 
@@ -4568,13 +4576,55 @@ and (max-width: 576px) {
 
 @media screen
 and (max-width: 490px) {
+    .card-delivery {
+        padding: 20px 10px;
+    }
+
+    .delivery-zone__body p br {
+        display: none;
+    }
+
+    .delivery-zone__body p:after {
+        content: none;
+    }
+
     .header-h1.h110 {
         font-size: 45px;
+    }
+
+    .card-delivery .card-delivery__title {
+        font-size: 15px;
+    }
+
+    .card-delivery-counter .target-type-1, .card-delivery-counter .target-type-2, .card-delivery-counter .target-type-3, .card-delivery-counter .target-type-4 {
+        font-size: 1.3625rem;
+    }
+
+    .card-delivery-counter span {
+        font-size: 21px;
     }
 
     .swiper-container {
         width: 100%;
         max-width: 100%;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        font-size: 18px;
+    }
+
+    .outer-menu .menu li {
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+
+    .header-phone-mobile {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .outer-menu .menu li:first-of-type {
+        margin-top: 20px;
     }
 
     .card-service.type-3 a {
@@ -4646,6 +4696,142 @@ and (max-width: 490px) {
 
     .passports .passports__header {
         font-size: 2.225rem;
+    }
+
+    .header-h1.h70 {
+        font-size: 35px;
+    }
+}
+
+@media screen
+and (max-width: 320px) {
+    .company-pluses-card {
+        height: auto;
+        padding: 37px 20px;
+    }
+
+    .company-pluses-card .company-pluses-card__info {
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+    .footer-socials a {
+        font-size: 1rem;
+    }
+
+    .card-team .card-team__title {
+        font-size: 20px;
+    }
+
+    .header-h1.h70 {
+        font-size: 30px;
+    }
+
+    .company-pluses-card .company-pluses-card__title {
+        font-size: 22px;
+    }
+
+    .with-love {
+        font-size: 12px;
+    }
+
+    .composition .composition__header, .products-list .products-list__header, .delivery-zone .delivery-zone__header, .pre-footer .pre-footer__header, .passports .passports__header {
+        font-size: 1.9rem;
+    }
+
+    .card-products-list .btn.btn-outline-primary {
+        padding: 23px 11px;
+    }
+
+    .card-products-list .card-products-list-discount {
+        padding: 50px 20px 40px;
+    }
+
+    .help-banner .btn.btn-outline-white {
+        padding: 23px 16px;
+    }
+
+    .contacts .contacts__list p, .contacts .contacts__list a {
+        font-size: 17px;
+        line-height: 19px;
+    }
+
+    .card-passport {
+        display: block;
+    }
+
+    .card-passport .card-passport__img {
+        margin: auto;
+        margin-bottom: 15px;
+    }
+
+    .big-map {
+        transform: scale(2.5);
+        margin-bottom: 10rem;
+        padding: 0 4rem;
+    }
+
+    .delivery-zone .delivery-zone__header {
+        margin-bottom: 50px;
+    }
+
+    .delivery-zone__body p br {
+        display: none;
+    }
+
+    .card-companies img {
+        display: table;
+        margin: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: unset;
+    }
+
+    .pre-footer .pre-footer__header {
+        margin-bottom: 40px;
+        margin-top: 0;
+    }
+
+    .card-product-item:not(:last-of-type) {
+        border-bottom: 2px solid #EEEEEE;
+        border-right: 0;
+    }
+
+    html body .card-product-item .text-gost {
+        font-size: 44px;
+    }
+
+    .card-product .card-product__title {
+        font-size: 1.5rem;
+    }
+
+    .card-service .card-service__title, .card-service.type-3 .card-service__title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .card-product-item {
+        width: 100%;
+    }
+
+    .card-product .card-product__body {
+        display: block;
+    }
+
+    .header-h1.h110 {
+        font-size: 37px;
+    }
+
+    .pre-footer .pre-footer__avatar {
+        margin-bottom: 15px;
+    }
+
+    .pre-footer .pre-footer__body {
+        display: block;
+    }
+
+    .delivery-zone__body p:after {
+        content: none;
     }
 }
 
