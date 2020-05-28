@@ -4751,9 +4751,17 @@ and (max-width: 320px) {
         padding: 23px 16px;
     }
 
+    .header-card {
+        padding: 28px 15px 30px 15px;
+    }
+
     .contacts .contacts__list p, .contacts .contacts__list a {
         font-size: 17px;
         line-height: 19px;
+    }
+
+    html .container {
+        padding: 0 15px;
     }
 
     .card-passport {
