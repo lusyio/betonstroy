@@ -573,6 +573,28 @@ $products2 = wc_get_products($args2);
 
 <script>
     jQuery(function ($) {
+        if (document.documentElement.clientWidth < 991) {
+            $('.composition-block__part').on('mouseenter', function () {
+                const $dataFor = $(this).data('for')
+                 $(this).append($(`.${$dataFor}`))
+                $(`.${$dataFor}`).css({'transform': 'translateY(-5px)'}).show()
+            })
+
+            $('.composition-block__part').on('mouseleave', function () {
+                const $dataFor = $(this).data('for')
+                $(`.${$dataFor}`).css({'transform': 'translateY(0)'}).hide()
+            })
+        } else {
+            $('.composition-block__part').on('mouseenter', function () {
+                const $dataFor = $(this).data('for')
+                $(`.${$dataFor}`).css({'transform': 'translateY(-5px)'})
+            })
+
+            $('.composition-block__part').on('mouseleave', function () {
+                const $dataFor = $(this).data('for')
+                $(`.${$dataFor}`).css({'transform': 'translateY(0)'})
+            })
+        }
 
         $('.checkbox-toggle').on('change', function () {
             if ($('.checkbox-toggle').is(':checked')) {
@@ -596,10 +618,12 @@ $products2 = wc_get_products($args2);
         const $page = $('html, body');
         $('a[href*="#"]').on('click', function () {
             let blockId = $.attr(this, 'href').replace('/', '');
-            $page.animate({
-                scrollTop: $(`${blockId}`).offset().top - 30
-            }, 1000);
-            return false;
+            if (blockId !== '#') {
+                $page.animate({
+                    scrollTop: $(`${blockId}`).offset().top - 30
+                }, 1000);
+                return false;
+            }
         });
     })
 </script>

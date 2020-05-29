@@ -3,7 +3,7 @@ Theme Name:   	Richbee
 Author:       	Richbee
 Template:     	storefront
 Description:  	Дочерняя тема для storefront
-Version:      	1.0.10
+Version:      	1.0.11
 Theme URI:    https://richbee.ru/
 Author URI:   https://richbee.ru/
 
@@ -2850,6 +2850,72 @@ html body .blick:before {
     margin-bottom: 20px;
 }
 
+.composition-block .composition-block__part {
+    position: relative;
+}
+
+.composition-block {
+    position: relative;
+    margin-bottom: -15rem;
+}
+
+.composition-dobavki {
+    z-index: 5;
+}
+
+.composition-block .composition-block__part:nth-of-type(1n) {
+    z-index: 5;
+}
+
+.composition-block .composition-block__part:nth-of-type(1n) .card-composition__number {
+    left: 3rem;
+    right: unset;
+}
+
+.composition-block .composition-block__part:nth-of-type(2n) .card-composition__number {
+    right: 3rem;
+    left: unset;
+}
+
+.composition-block .composition-block__part:nth-of-type(3n) .card-composition__number {
+    left: 3rem;
+    right: unset;
+}
+
+.composition-block .composition-block__part:nth-of-type(4n) .card-composition__number {
+    right: 3rem;
+    left: unset;
+}
+
+.composition-block .composition-block__part:nth-of-type(5n) .card-composition__number {
+    left: 3rem;
+    right: unset;
+}
+
+.composition-block .composition-block__part:nth-of-type(2n) {
+    top: -6rem;
+    z-index: 4;
+}
+
+.composition-block .composition-block__part:nth-of-type(3n) {
+    top: -12rem;
+    z-index: 3;
+}
+
+.composition-block .composition-block__part:nth-of-type(4n) {
+    top: -18rem;
+    z-index: 2;
+}
+
+.composition-block .composition-block__part:nth-of-type(5n) {
+    top: -24rem;
+    z-index: 1;
+}
+
+.composition-block .composition-block__part:hover img {
+    transform: scale(1.07);
+}
+
 .card-composition .card-composition__title {
     font-weight: bold;
     font-size: 1.5625rem;
@@ -3705,6 +3771,86 @@ and (max-width: 991px) {
         left: 5.7rem;
     }
 
+    .composition-block .composition-block__part img {
+        display: table;
+        margin: auto;
+    }
+
+    .composition-block .composition-block__part .card-composition__number {
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+
+    .card-composition {
+        position: absolute;
+    }
+
+    .composition-block .composition-block__part .card-composition {
+        top: 50%;
+        z-index: 5;
+    }
+
+    .composition-block .composition-block__part:nth-of-type(1n) .card-composition {
+        right: 0;
+        left: unset;
+    }
+
+    .composition-block .composition-block__part:nth-of-type(2n) .card-composition {
+        left: 0;
+        right: unset;
+    }
+
+    .composition-block .composition-block__part:nth-of-type(3n) .card-composition {
+        right: 0;
+        left: unset;
+    }
+
+    .composition-block .composition-block__part:nth-of-type(4n) .card-composition {
+        left: 0;
+        right: unset;
+    }
+
+    .composition-block .composition-block__part:nth-of-type(5n) .card-composition {
+        right: 0;
+        left: unset;
+    }
+
+    .composition-block .composition-block__part:nth-of-type(1n) .card-composition__number {
+        margin: auto;
+        margin-left: 25%;
+        left: 0;
+        right: 0;
+    }
+
+    .composition-block .composition-block__part:nth-of-type(2n) .card-composition__number {
+        margin: auto;
+        margin-right: 25%;
+        left: 0;
+        right: 0;
+    }
+
+    .composition-block .composition-block__part:nth-of-type(3n) .card-composition__number {
+        margin: auto;
+        margin-left: 25%;
+        left: 0;
+        right: 0;
+    }
+
+    .composition-block .composition-block__part:nth-of-type(4n) .card-composition__number {
+        margin: auto;
+        margin-right: 25%;
+        left: 0;
+        right: 0;
+    }
+
+    .composition-block .composition-block__part:nth-of-type(5n) .card-composition__number {
+        margin: auto;
+        margin-left: 25%;
+        left: 0;
+        right: 0;
+    }
+
     .big-map {
         transform: scale(1.5);
         margin-bottom: 5rem;
@@ -3883,7 +4029,7 @@ and (max-width: 991px) {
         left: 1rem;
         bottom: 5%;
         top: unset;
-        z-index: 4;
+        z-index: 5;
         border-radius: 50%;
         background: #043465;
         color: #fff;
@@ -4777,6 +4923,13 @@ and (max-width: 490px) {
         max-height: 95px;
         max-width: 95px;
     }
+
+    .composition .composition__header, .products-list .products-list__header,
+    .delivery-zone .delivery-zone__header, .pre-footer .pre-footer__header,
+    .passports .passports__header, .main-products .main-products__title {
+        font-size: 2.4rem;
+    }
+
 }
 
 @media screen
@@ -4795,6 +4948,12 @@ and (max-width: 320px) {
         font-size: 1rem;
     }
 
+    .composition .composition__header, .products-list .products-list__header,
+    .delivery-zone .delivery-zone__header, .pre-footer .pre-footer__header,
+    .passports .passports__header, .main-products .main-products__title {
+        font-size: 1.9rem;
+    }
+
     .card-team .card-team__title {
         font-size: 20px;
     }
@@ -4809,10 +4968,6 @@ and (max-width: 320px) {
 
     .with-love {
         font-size: 12px;
-    }
-
-    .composition .composition__header, .products-list .products-list__header, .delivery-zone .delivery-zone__header, .pre-footer .pre-footer__header, .passports .passports__header {
-        font-size: 1.9rem;
     }
 
     .card-products-list .btn.btn-outline-primary {

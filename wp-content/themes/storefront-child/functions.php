@@ -389,33 +389,27 @@ function get_products_by_category_slug($slug)
                         switch ($durability) {
                             case 'пластичный':
                                 $icon = '/wp-content/themes/storefront-child/svg/plastichnyj.svg';
-                                $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                                 break;
                             case 'высокооднородный':
                                 $icon = '/wp-content/themes/storefront-child/svg/Vysokoodnorodnyj.svg';
-                                $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                                 break;
                             case 'низкая прочность':
                                 $icon = '/wp-content/themes/storefront-child/svg/nizkaya-prochnost.svg';
-                                $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                                 break;
                             case 'средняя прочность':
                                 $icon = '/wp-content/themes/storefront-child/svg/srednyaya-prochnost.svg';
-                                $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                                 break;
                             case 'высокая прочность':
                                 $icon = '/wp-content/themes/storefront-child/svg/vysokaya-prochnost.svg';
-                                $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                                 break;
                             case 'повышенная прочность':
                                 $icon = '/wp-content/themes/storefront-child/svg/povyshennaya-prochnost.svg';
-                                $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                                 break;
                             case 'экстремальная прочность' :
                                 $icon = '/wp-content/themes/storefront-child/svg/ekstremalnaya-prochnost.svg';
-                                $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                                 break;
                         }
+                        $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $durability . '">' . $durability . '</span>';
                     }
                     if ($density) {
                         $icon = '/wp-content/themes/storefront-child/svg/Plotnost.svg';
@@ -428,46 +422,37 @@ function get_products_by_category_slug($slug)
                                 case 'подготовка фундамента':
                                 case 'подготовительные работы':
                                     $icon = '/wp-content/themes/storefront-child/svg/Podgotovitelnye-raboty.svg';
-                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'для стяжек':
                                     $icon = '/wp-content/themes/storefront-child/svg/Styazhka.svg';
-                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'для заливки фундамента':
                                     $icon = '/wp-content/themes/storefront-child/svg/Zalivka-betona.svg';
-                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'несущие конструкции':
                                     $icon = '/wp-content/themes/storefront-child/svg/Nesushchie-konstrukcii.svg';
-                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'монолитный фундамент':
                                 case 'изготовление фундамента':
                                     $icon = '/wp-content/themes/storefront-child/svg/Monolitnyj-fundament.svg';
-                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'для жби':
                                     $icon = '/wp-content/themes/storefront-child/svg/ZHBI.svg';
-                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'ответственные конструкции':
                                     $icon = '/wp-content/themes/storefront-child/svg/Vazhnye-konstrukcii.svg';
-                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'для кладки':
                                     $icon = '/wp-content/themes/storefront-child/svg/Dlya-kladki.svg';
-                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'для выравнивания':
                                     $icon = '/wp-content/themes/storefront-child/svg/Vyravnivanie.svg';
-                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                                 case 'для затирки':
                                     $icon = '/wp-content/themes/storefront-child/svg/Dlya-zatirki.svg';
-                                    $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                                     break;
                             }
+                            $properties[] = '<span class="card-products-list__property"><img src="' . $icon . '" alt="' . $lowerProp . '">' . $lowerProp . '</span>';
                         }
                     }
                     ?>
@@ -563,3 +548,23 @@ function get_post_gallery_images_with_info($postvar = NULL, $pos = 0)
     }
     return $image_gallery_with_info;
 }
+
+// Удаление инлайн-скриптов из хедера
+add_filter('storefront_customizer_css', '__return_false');
+add_filter('storefront_customizer_woocommerce_css', '__return_false');
+add_filter('storefront_gutenberg_block_editor_customizer_css', '__return_false');
+
+add_action( 'wp_print_styles', function () {
+    wp_styles()->add_data('woocommerce-inline', 'after', '');
+} );
+
+add_action('init', function () {
+    remove_action( 'wp_head', 'wc_gallery_noscript' );
+});
+add_action('init', function () {
+    global $heateor_sss;
+    remove_action( 'wp_head', 'wc_gallery_noscript' );
+    remove_action( 'wp_enqueue_scripts', array( $heateor_sss->plugin_public, 'frontend_inline_style' ) );
+    add_action( 'wp_footer', array( $heateor_sss->plugin_public, 'frontend_inline_style' ) );
+});
+// Конец удаления инлайн-скриптов из хедера

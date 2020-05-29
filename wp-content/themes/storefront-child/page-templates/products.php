@@ -26,42 +26,46 @@ if (mb_strtolower(get_field('sostav')) === 'кладочного раствор�
             </div>
             <div class="row">
                 <div class="col-lg-4 col-12">
-                    <div class="card-composition">
+                    <div class="card-composition part-dobavki">
                         <p class="card-composition__title">1.Специальные добавки</p>
                         <p class="card-composition__list">-Противоморозные</p>
                         <p class="card-composition__list">-Повышающие эластичность</p>
                         <p class="card-composition__list">-Меняющие время схватывания смеси</p>
-                        <div class="card-composition__number left">
-                            1
-                        </div>
                     </div>
-                    <div class="card-composition card-composition-mb">
+                    <div class="card-composition card-composition-mb part-voda">
                         <p class="card-composition__title">3.Вода</p>
                         <p class="card-composition__list">Очищенная</p>
-                        <div class="card-composition__number left">
-                            3
-                        </div>
                     </div>
                     <p class="composition__info">Согласно ГОСТ 23732-2011. Вода для бетонов и строительных растворов</p>
                 </div>
                 <div class="col-lg-4 col-12 pl-lg-0 pr-lg-0 pl-3 pr-3 ">
-                    <img class="composition__img mt-5"
-                         src="/wp-content/themes/storefront-child/images/img-composition-type-2.png" alt="">
-                </div>
-                <div class="col-lg-4 col-12 mt-auto">
-                    <div class="card-composition ml-auto">
-                        <p class="card-composition__title">2.Песок</p>
-                        <p class="card-composition__list">Гранитный/Гравийный</p>
-                        <div class="card-composition__number right">
-                            2
+                    <div class="composition-block">
+                        <div class="composition-block__part composition-dobavki" data-for="part-dobavki">
+                            <div class="card-composition__number">1</div>
+                            <img src="/wp-content/themes/storefront-child/images/beton/dobavki.png" alt="">
+                        </div>
+                        <div class="composition-block__part composition-pesok"  data-for="part-pesok">
+                            <div class="card-composition__number">2</div>
+                            <img src="/wp-content/themes/storefront-child/images/beton/pesok.png" alt="">
+                        </div>
+                        <div class="composition-block__part composition-voda"  data-for="part-voda">
+                            <div class="card-composition__number">3</div>
+                            <img src="/wp-content/themes/storefront-child/images/beton/voda.png" alt="">
+                        </div>
+                        <div class="composition-block__part composition-cement"  data-for="part-cement">
+                            <div class="card-composition__number">4</div>
+                            <img src="/wp-content/themes/storefront-child/images/beton/cement.png" alt="">
                         </div>
                     </div>
-                    <div class="card-composition card-composition-mb ml-auto">
+                </div>
+                <div class="col-lg-4 col-12 mt-auto">
+                    <div class="card-composition ml-auto part-pesok">
+                        <p class="card-composition__title">2.Песок</p>
+                        <p class="card-composition__list">Гранитный/Гравийный</p>
+                    </div>
+                    <div class="card-composition card-composition-mb ml-auto part-cement">
                         <p class="card-composition__title">4.Цемент</p>
                         <p class="card-composition__list">Высококачественный</p>
-                        <div class="card-composition__number right">
-                            4
-                        </div>
                     </div>
                     <p class="composition__info mb-0 ml-auto">Согласно СНиП 5.01.23-83. Расхода цемента для
                         приготовления
@@ -84,55 +88,65 @@ if (mb_strtolower(get_field('sostav')) === 'бетонного раствора'
             </div>
             <div class="row">
                 <div class="col-lg-4 col-12">
-                    <div class="card-composition">
+                    <div class="card-composition part-dobavki">
                         <p class="card-composition__title">1.Специальные добавки</p>
                         <p class="card-composition__list">-Противоморозные</p>
                         <p class="card-composition__list">-Водонепроницаемые</p>
                         <p class="card-composition__list">-Повышающие эластичность</p>
                         <p class="card-composition__list">-Меняющие время схватывания смеси</p>
-                        <div class="card-composition__number left">
-                            1
-                        </div>
                     </div>
-                    <div class="card-composition card-composition-mb">
+                    <div class="card-composition card-composition-mb part-pesok">
                         <p class="card-composition__title">3.Песок</p>
                         <p class="card-composition__list">Подготовленный, мытый</p>
-                        <div class="card-composition__number left">
-                            3
-                        </div>
                     </div>
                     <p class="composition__info">Согласно ГОСТ 8736-93. Песок для строительных работ</p>
-                    <div class="card-composition card-composition-mb">
+                    <div class="card-composition card-composition-mb part-cement">
                         <p class="card-composition__title">5.Цемент</p>
                         <p class="card-composition__list">Высококачественный</p>
-                        <div class="card-composition__number left">
-                            5
-                        </div>
                     </div>
                     <p class="composition__info mb-0">Согласно СНиП 5.01.23-83. Расхода цемента для приготовления
                         бетонов</p>
                 </div>
                 <div class="col-lg-4 col-12 pl-lg-0 pr-lg-0 pl-3 pr-3">
-                    <img class="composition__img mt-5"
-                         src="/wp-content/themes/storefront-child/images/img-composition-type-1.png" alt="">
+                    <div class="composition-block">
+                        <div class="composition-block__part composition-dobavki" data-for="part-dobavki">
+                            <div class="card-composition__number">1</div>
+                            <img class="dont-hover" src="/wp-content/themes/storefront-child/images/beton/dobavki.png"
+                                 alt="">
+                        </div>
+                        <div class="composition-block__part composition-sheben" data-for="part-sheben">
+                            <div class="card-composition__number">2</div>
+                            <img class="dont-hover" src="/wp-content/themes/storefront-child/images/beton/sheben.png"
+                                 alt="">
+                        </div>
+                        <div class="composition-block__part composition-pesok" data-for="part-pesok">
+                            <div class="card-composition__number">3</div>
+                            <img class="dont-hover" src="/wp-content/themes/storefront-child/images/beton/pesok.png"
+                                 alt="">
+                        </div>
+                        <div class="composition-block__part composition-voda" data-for="part-voda">
+                            <div class="card-composition__number">4</div>
+                            <img class="dont-hover" src="/wp-content/themes/storefront-child/images/beton/voda.png"
+                                 alt="">
+                        </div>
+                        <div class="composition-block__part composition-cement" data-for="part-cement">
+                            <div class="card-composition__number">5</div>
+                            <img class="dont-hover" src="/wp-content/themes/storefront-child/images/beton/cement.png"
+                                 alt="">
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-4 col-12 mt-auto mb-auto">
-                    <div class="card-composition card-composition-mb ml-auto">
+                    <div class="card-composition card-composition-mb part-sheben ml-auto">
                         <p class="card-composition__title">2.Щебень</p>
                         <p class="card-composition__list">Гранитный/Гравийный</p>
-                        <div class="card-composition__number right">
-                            2
-                        </div>
                     </div>
                     <p class="composition__info ml-auto">Согласно ГОСТ 8267-93. Щебень и гравий из плотных горных пород
                         для
                         строительных работ</p>
-                    <div class="card-composition card-composition-mb ml-auto">
+                    <div class="card-composition card-composition-mb part-voda ml-auto">
                         <p class="card-composition__title">4.Вода</p>
                         <p class="card-composition__list">Очищенная</p>
-                        <div class="card-composition__number right">
-                            4
-                        </div>
                     </div>
                     <p class="composition__info ml-auto">Согласно ГОСТ 23732-2011. Вода для бетонов и строительных
                         растворов</p>
