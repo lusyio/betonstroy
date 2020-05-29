@@ -17,6 +17,7 @@
     <span>
         Рассчитать стоимость
     </span>
+    <img src="/wp-content/themes/storefront-child/svg/calculator.svg" alt="">
 </div>
 
 <?php
@@ -350,8 +351,8 @@ $products2 = wc_get_products($args2);
             if (e.target !== this) {
                 return;
             }
-            document.getElementById("mySidenav").style.width = '0'
-            document.getElementById("mySidenav").style.right = '-70%'
+            document.getElementById("mySidenav").style.width = '100%'
+            document.getElementById("mySidenav").style.right = '-100%'
             document.getElementById("sidenavContainer").style.width = '0'
             document.body.style.overflowY = 'auto'
         })

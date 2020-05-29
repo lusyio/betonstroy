@@ -3,7 +3,7 @@ Theme Name:   	Richbee
 Author:       	Richbee
 Template:     	storefront
 Description:  	Дочерняя тема для storefront
-Version:      	1.0.9
+Version:      	1.0.10
 Theme URI:    https://richbee.ru/
 Author URI:   https://richbee.ru/
 
@@ -738,11 +738,11 @@ ul.menu li.current-menu-item > a:before {
 
 .sidenav {
     height: 100%;
-    width: 0;
+    width: 100%;
     position: fixed;
     z-index: 10;
     top: 0;
-    right: 0;
+    right: -100%;
     background-color: #ffffff;
     overflow-x: hidden;
     padding: 70px 0;
@@ -993,7 +993,12 @@ ul.menu li.current-menu-item > a:before {
     cursor: pointer;
 }
 
+.fixed-btn img {
+    display: none;
+}
+
 .fixed-btn {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
     transition: 145ms ease-in-out;
     position: fixed;
     left: 0;
@@ -3864,8 +3869,35 @@ and (max-width: 991px) {
         margin-top: 40px;
     }
 
-    .fixed-btn {
+    .fixed-btn span {
         display: none;
+    }
+
+    .fixed-btn img {
+        display: block;
+    }
+
+    .fixed-btn {
+        transition: 145ms ease-in-out;
+        position: fixed;
+        left: 1rem;
+        bottom: 5%;
+        top: unset;
+        z-index: 4;
+        border-radius: 50%;
+        background: #043465;
+        color: #fff;
+        height: 48px;
+        width: 48px;
+        line-height: 1.5;
+        box-sizing: border-box;
+        white-space: nowrap;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        padding: 10px;
+        font-size: 19px;
+        transform: none;
     }
 
     .site-info {
@@ -4597,6 +4629,20 @@ and (max-width: 576px) {
     .card-product-item a p, .card-product-item a {
         font-size: 12px;
     }
+
+    html .sidenav-body {
+        padding-top: 40px !important;
+    }
+
+    .sidenav-header .sidenav-header__title {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2.625rem;
+        color: #000000;
+        max-width: 90%;
+        margin-bottom: 56px;
+        position: relative;
+    }
 }
 
 @media screen
@@ -4725,6 +4771,11 @@ and (max-width: 490px) {
 
     .header-h1.h70 {
         font-size: 35px;
+    }
+
+    .card-product-item img {
+        max-height: 95px;
+        max-width: 95px;
     }
 }
 
