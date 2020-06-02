@@ -555,8 +555,7 @@ $products2 = wc_get_products($args2);
                     <p class="footer-name-p">
                         &copy; 2012 - <?= date('Y'); ?> <?= get_bloginfo('name') ?>
                     </p>
-                    <p class="mb-0 with-love">Сделано с любовью в <a target="_blank" href="http://yurin.biz/">Студии
-                            Юрина</a></p>
+                    <p class="mb-0 with-love"><a target="_blank" href="https://richbee.ru/"><img src="/wp-content/themes/storefront-child/svg/logo-footer.svg" alt=""></a></p>
                 </div>
             </div>
         </div>
