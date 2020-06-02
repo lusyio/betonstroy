@@ -1748,6 +1748,7 @@ footer .site-info .site-title .site-title__a {
     font-size: 15px;
     line-height: 15px;
     color: #767676;
+    align-self: center;
 }
 
 .footer-hr {
