@@ -33,7 +33,7 @@ $products2 = wc_get_products($args2);
 <div id="sidenavContainer" class="sidenav-container">
     <div id="mySidenav" class="sidenav">
         <div class="sidenav-header">
-            <a id="closeNav" class="closebtn">&times;</a>
+            <a id="closeNav" class="closebtn"><img src="/wp-content/themes/storefront-child/svg/svg-close-modal.svg" alt=""></a>
             <p class="sidenav-header__title">Рассчитать стоимость</p>
         </div>
         <div class="sidenav-body container">
@@ -347,10 +347,17 @@ $products2 = wc_get_products($args2);
             calculate()
         })
 
-        $('#closeNav, #sidenavContainer').on('click', function (e) {
+        $('#sidenavContainer').on('click', function (e) {
             if (e.target !== this) {
                 return;
             }
+            document.getElementById("mySidenav").style.width = '100%'
+            document.getElementById("mySidenav").style.right = '-100%'
+            document.getElementById("sidenavContainer").style.width = '0'
+            document.body.style.overflowY = 'auto'
+        })
+
+        $('#closeNav').on('click', function (e) {
             document.getElementById("mySidenav").style.width = '100%'
             document.getElementById("mySidenav").style.right = '-100%'
             document.getElementById("sidenavContainer").style.width = '0'
@@ -618,6 +625,9 @@ $products2 = wc_get_products($args2);
         const $page = $('html, body');
         $('a[href*="#"]').on('click', function () {
             let blockId = $.attr(this, 'href').replace('/', '');
+            if ($('.checkbox-toggle').is(':checked')) {
+                $('.checkbox-toggle').trigger('click')
+            }
             if (blockId !== '#') {
                 $page.animate({
                     scrollTop: $(`${blockId}`).offset().top - 30
