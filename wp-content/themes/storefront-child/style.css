@@ -4626,7 +4626,7 @@ and (max-width: 576px) {
     }
 
     .sidenav-header {
-        padding: 0 30px;
+        padding: 30px 30px 0;
     }
 
     .big-map {
