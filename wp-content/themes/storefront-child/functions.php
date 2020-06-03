@@ -385,6 +385,12 @@ function get_products_by_category_slug($slug)
                     $image_id = $product->get_image_id();
                     $properties = [];
                     $icon = '';
+                    $item_label = get_post_meta($product->get_id(), 'item_label', true);
+                    if ($item_label === 'Востребованный') {
+                        $item_label_class = 'green';
+                    } else {
+                        $item_label_class = 'orange';
+                    }
                     if ($durability) {
                         switch ($durability) {
                             case 'пластичный':
@@ -460,7 +466,8 @@ function get_products_by_category_slug($slug)
                         <div class="card-products-list">
                             <div class="card-products-list__header">
                                 <div>
-                                    <p class="card-products-list__title"><?= $product->name; ?></p>
+                                    <p class="card-products-list__title"><?= $product->name; ?>
+                                        <?= $item_label_class ? '<span class="' . $item_label_class . '">' . $item_label . ' </span>' : '' ?></p>
                                     <?php foreach ($properties as $property) {
                                         echo $property;
                                     } ?>
@@ -554,14 +561,14 @@ add_filter('storefront_customizer_css', '__return_false');
 add_filter('storefront_customizer_woocommerce_css', '__return_false');
 add_filter('storefront_gutenberg_block_editor_customizer_css', '__return_false');
 
-add_action( 'wp_print_styles', function () {
+add_action('wp_print_styles', function () {
     wp_styles()->add_data('woocommerce-inline', 'after', '');
-} );
+});
 
 add_action('init', function () {
-    remove_action( 'wp_head', 'wc_gallery_noscript' );
+    remove_action('wp_head', 'wc_gallery_noscript');
 });
 add_action('init', function () {
-    remove_action( 'wp_head', 'wc_gallery_noscript' );
+    remove_action('wp_head', 'wc_gallery_noscript');
 });
 // Конец удаления инлайн-скриптов из хедера

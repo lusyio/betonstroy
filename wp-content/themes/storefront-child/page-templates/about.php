@@ -99,7 +99,7 @@ Template Post Type: post, page, product
                     <div class="swiper-slide">
                         <div class="card-certificate">
                             <div class="card-certificate__header">
-                                <img src="<?= $image_obj['src'] ?> ?>" alt="">
+                                <img src="<?= $image_obj['src'] ?>" alt="">
                             </div>
                             <div class="card-certificate__body">
                                 <p class="card-certificate__title"><?= $image_obj['caption'] ?></p>
