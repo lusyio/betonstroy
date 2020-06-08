@@ -478,11 +478,6 @@ $products2 = wc_get_products($args2);
                         <p class="site-title__a"><?php esc_url(bloginfo('name')); ?></p>
                         <p class="site-description"><?php bloginfo('description'); ?></p>
                     </a>
-                    <p class="mb-0 footer-credits d-lg-block d-none">
-                        <a class="credits" href="https://richbee.ru/" target="_blank"><img
-                                    src="/wp-content/themes/storefront-child/svg/Richbee-black.svg" alt=""></a>
-                    </p>
-
                 </div><!-- close .site-info -->
             </div>
             <div class="col-6 col-lg-5">
