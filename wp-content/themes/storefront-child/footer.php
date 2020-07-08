@@ -33,7 +33,8 @@ $products2 = wc_get_products($args2);
 <div id="sidenavContainer" class="sidenav-container">
     <div id="mySidenav" class="sidenav">
         <div class="sidenav-header">
-            <a id="closeNav" class="closebtn"><img src="/wp-content/themes/storefront-child/svg/svg-close-modal.svg" alt=""></a>
+            <a id="closeNav" class="closebtn"><img src="/wp-content/themes/storefront-child/svg/svg-close-modal.svg"
+                                                   alt=""></a>
             <p class="sidenav-header__title">Рассчитать стоимость</p>
         </div>
         <div class="sidenav-body container">
@@ -555,7 +556,8 @@ $products2 = wc_get_products($args2);
                     <p class="footer-name-p">
                         &copy; 2012 - <?= date('Y'); ?> <?= get_bloginfo('name') ?>
                     </p>
-                    <p class="mb-0 with-love"><a target="_blank" href="https://richbee.ru/"><img src="/wp-content/themes/storefront-child/svg/logo-footer.svg" alt=""></a></p>
+                    <p class="mb-0 with-love"><a target="_blank" href="https://richbee.ru/"><img
+                                    src="/wp-content/themes/storefront-child/svg/logo-footer.svg" alt=""></a></p>
                 </div>
             </div>
         </div>
@@ -579,10 +581,25 @@ $products2 = wc_get_products($args2);
 
 <script>
     jQuery(function ($) {
+
+        $('.single input[type=phone]').on('keyup', function () {
+            let newString = $(this).val().replace(/\D/g, '')
+            const btn = $(this).parents('.single').find('input[type=submit]')
+            if (newString.length === 11) {
+                $(this).removeClass('is-invalid')
+                $(this).addClass('is-valid')
+                btn.prop('disabled', false)
+            } else {
+                $(this).addClass('is-invalid')
+                $(this).removeClass('is-valid')
+                btn.prop('disabled', true)
+            }
+        })
+
         if (document.documentElement.clientWidth < 991) {
             $('.composition-block__part').on('mouseenter', function () {
                 const $dataFor = $(this).data('for')
-                 $(this).append($(`.${$dataFor}`))
+                $(this).append($(`.${$dataFor}`))
                 $(`.${$dataFor}`).css({'transform': 'translateY(-5px)'}).show()
             })
 
